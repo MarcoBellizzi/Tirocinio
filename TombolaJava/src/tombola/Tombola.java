@@ -28,10 +28,8 @@ public class Tombola {
 			Cartella cartella = new Cartella();
 
 			AnswerSets answers = (AnswerSets) handler.startSync();
-			
-			int n = 0;
+	
 			for(AnswerSet a : answers.getAnswersets()){
-				n++;
 				for(Object obj : a.getAtoms()) {
 					if(obj instanceof Casella) {
 						Casella c = (Casella) obj;
@@ -41,7 +39,7 @@ public class Tombola {
 			}
 
 			cartella.stampa();
-			System.out.println(n);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
