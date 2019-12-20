@@ -8,4 +8,4 @@ start(X) :- from(X), path(X,_,_).
 end(X) :- path(_,X,_).
 :- to(X), not end(X).
 
-:~ path(X,Y,W). [W@1 ,X,Y]
+:~ path(X,Y,W). [W@1,X,Y]

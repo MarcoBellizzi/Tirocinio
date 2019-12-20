@@ -17,18 +17,17 @@ namespace ShortestPath
         {
             try
             {
-               
                 Handler handler = new DesktopHandler(new DLV2DesktopService("C:/Users/Marco/source/repos/ShortestPath/dlv2.win.x64_2"));
 
                 ASPMapper.Instance.RegisterClass(typeof(Edge));
+                ASPMapper.Instance.RegisterClass(typeof(Path));
                 ASPMapper.Instance.RegisterClass(typeof(From));
                 ASPMapper.Instance.RegisterClass(typeof(To));
-                ASPMapper.Instance.RegisterClass(typeof(Path));
 
                 InputProgram input = new ASPInputProgram();
 
-                from = 0;
-                to = 7;
+                from = 0;   // source node
+                to = 7;     // destination node
 
                 input.AddProgram("from(" + from + "). to(" + to + ").");
 
@@ -43,25 +42,26 @@ namespace ShortestPath
 
                 AnswerSets answerSets = (AnswerSets)handler.StartSync();
 
-                foreach (AnswerSet answerSet in answerSets.Answersets)
+                foreach (AnswerSet answerSet in answerSets.GetOptimalAnswerSets())
                 {
-                    List<Couple> path = new List<Couple>();
-                    int sum = 0;
 
-                    foreach(object obj in answerSet.Atoms)
+                    List<Path> path = new List<Path>();    //  edges in the shortest path (unsorted)
+                    int sum = 0;                           //  total weight of the path
+
+                    foreach (object obj in answerSet.Atoms)
                     {
-                        if(typeof(Path).IsInstanceOfType(obj))
+                        if (typeof(Path).IsInstanceOfType(obj))
                         {
-                            Path p = (Path)obj;
-                            path.Add(new Couple(p.getFrom(), p.getTo()));
-                            sum += p.getWeight();
+                            path.Add((Path)obj);
+                            sum += ((Path)obj).getWeight();
                         }
                     }
 
-                    sortedPath = new List<int>();
+                    sortedPath = new List<int>();     // edges in the shorted path (sorted)
                     sortedPath.Add(from);
-                    join(from, path, sortedPath);
-                    print(sortedPath, sum);
+
+                    join(from, path, sortedPath);     // sorts the edges
+                    print(sortedPath, sum);           // show the result
                 }
             
             }
@@ -92,18 +92,18 @@ namespace ShortestPath
             return edges;
         }
 
-       private static void join(int from, List<Couple> path, List<int> sortedPath)
+       private static void join(int from, List<Path> path, List<int> sortedPath)
        {
-            foreach(Couple couple in path)
+            foreach(Path p in path)
             {
-                if(couple.getX() == from)
+                if(p.getFrom() == from)
                 {
-                    sortedPath.Add(couple.getY());
-                    if(couple.getY() == to)
+                    sortedPath.Add(p.getTo());
+                    if(p.getTo() == to)
                     {
                         return;
                     }
-                    join(couple.getY(), path, sortedPath);
+                    join(p.getTo(), path, sortedPath);
                     return;
                 }
             }
@@ -111,6 +111,7 @@ namespace ShortestPath
         
         private static void print(List<int> path, int sum)
         {
+            Console.Write("path = ");
             bool first = true;
             foreach(int n in path)
             {
