@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Downloads\EmbASP-C#\EmbASP.csproj" />
+    <ProjectReference Include="..\..\Downloads\EmbASP-C#\EmbASP.csproj" />
   </ItemGroup>
 
 </Project>

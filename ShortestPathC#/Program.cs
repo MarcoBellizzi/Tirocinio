@@ -17,7 +17,7 @@ namespace ShortestPath
         {
             try
             {
-                Handler handler = new DesktopHandler(new DLV2DesktopService("C:/Users/Marco/source/repos/ShortestPath/dlv2.win.x64_2"));
+                Handler handler = new DesktopHandler(new DLV2DesktopService("C:/Users/Marco/Desktop/ShortestPathC#/dlv2.win.x64_2"));
 
                 ASPMapper.Instance.RegisterClass(typeof(Edge));
                 ASPMapper.Instance.RegisterClass(typeof(Path));
@@ -31,7 +31,7 @@ namespace ShortestPath
 
                 input.AddProgram("from(" + from + "). to(" + to + ").");
 
-                input.AddFilesPath("C:/Users/Marco/source/repos/ShortestPath/codiceASP.txt");
+                input.AddFilesPath("C:/Users/Marco/Desktop/ShortestPathC#/encoding.txt");
 
                 foreach (Edge edge in getEdges())
                 {
