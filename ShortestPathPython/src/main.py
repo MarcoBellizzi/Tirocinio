@@ -1,5 +1,6 @@
 from platforms.desktop.desktop_handler import DesktopHandler
-from specializations.dlv2.desktop.dlv2_desktop_service import DLV2DesktopService
+from specializations.dlv.desktop.dlv_desktop_service import DLVDesktopService
+#from specializations.dlv2.desktop.dlv2_desktop_service import DLV2DesktopService
 from languages.asp.asp_mapper import ASPMapper
 from languages.asp.asp_input_program import ASPInputProgram
 from predicates.Path import Path
@@ -46,49 +47,53 @@ def show(path, sum_):
         print(n, end='')
     print("\nsum = " + str(sum_))
     
+
+try:
+
+    handler = DesktopHandler(DLVDesktopService("../lib/dlv"))
+    #handler = DesktopHandler(DLV2DesktopService("../lib/dlv2"))
+
+    ASPMapper.get_instance().register_class(Edge)
+    ASPMapper.get_instance().register_class(Path)
+    ASPMapper.get_instance().register_class(Source)
+    ASPMapper.get_instance().register_class(Destination)
+
+    inputProgram = ASPInputProgram()
+
+    source = 0
+    destination = 7
+
+    inputProgram.add_files_path("../encoding/rulesDlv")
+    #inputProgram.add_files_path("../encoding/rulesDlv2")
+
+    inputProgram.add_program("source(" + str(source) + "). destination(" + str(destination) + ").")
+    inputProgram.add_objects_input(getEdges())
+
+    handler.add_program(inputProgram)
+
+    answerSets = handler.start_sync()
+
+    for answerSet in answerSets.get_answer_sets() :
     
-
-handler = DesktopHandler(DLV2DesktopService("../lib/dlv2"))
-
-ASPMapper.get_instance().register_class(Edge)
-ASPMapper.get_instance().register_class(Path)
-ASPMapper.get_instance().register_class(Source)
-ASPMapper.get_instance().register_class(Destination)
-
-inputProgram = ASPInputProgram()
-
-source = 0
-destination = 7
-
-inputProgram.add_files_path("../encoding/rules")
-#inputProgram.add_program("source(" + str(source) + "). destination(" + str(destination) + ").")
-#inputProgram.add_objects_input(getEdges())
+        path = []
+        sum_ = 0
     
-handler.add_program(inputProgram)
-
-answerSets = handler.start_sync()
-
-#for answerSet in answerSets.get_optimal_answer_sets() :
-for answerSet in answerSets.get_answer_sets() :
-    
-    path = []
-    sum_ = 0
-    
-    for obj in answerSet.get_atoms():
+        for obj in answerSet.get_atoms():
         
-        if isinstance(obj, Path):
+            if isinstance(obj, Path):
             
-            path.append(obj)
-            sum_ += int(obj.get_weight())
+                path.append(obj)
+                sum_ += int(obj.get_weight())
 
 
-    sortedPath = []
-    sortedPath.append(source)
+        sortedPath = []
+        sortedPath.append(source)
     
-    join(source, path, sortedPath)
-    show(sortedPath, sum_)
-    
-    
+        join(source, path, sortedPath)
+        show(sortedPath, sum_)
+
+except Exception as e:
+    print(str(e))
     
     
     
