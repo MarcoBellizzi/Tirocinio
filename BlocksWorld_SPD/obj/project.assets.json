@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "EmbASP/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/EmbASP.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmbASP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmbASP/1.0.0": {
+      "type": "project",
+      "path": "../EmbASP-CSharp/EmbASP.csproj",
+      "msbuildProject": "../EmbASP-CSharp/EmbASP.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "EmbASP >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Marco\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Marco\\source\\repos\\BlocksWorld_SPD\\BlocksWorld_SPD.csproj",
+      "projectName": "BlocksWorld_SPD",
+      "projectPath": "C:\\Users\\Marco\\source\\repos\\BlocksWorld_SPD\\BlocksWorld_SPD.csproj",
+      "packagesPath": "C:\\Users\\Marco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marco\\source\\repos\\BlocksWorld_SPD\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "C:\\Users\\Marco\\source\\repos\\EmbASP-CSharp\\EmbASP.csproj": {
+              "projectPath": "C:\\Users\\Marco\\source\\repos\\EmbASP-CSharp\\EmbASP.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
