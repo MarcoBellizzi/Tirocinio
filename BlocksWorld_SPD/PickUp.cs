@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlocksWorld_SPD
 {
-    [Id("edge")]
+    [Id("pick-up")]
     class PickUp
     {
         [Param(0)]
