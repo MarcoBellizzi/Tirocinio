@@ -3,10 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _index:
+
 .. figure:: _image/EmbASP_Logo.png
 
 EmbASP
 ======
+
+vai alle :doc:`FAQ <faq>`
 
 A framework for the integration (embedding) of **Logic Programming** in external systems for generic applications.
 It helps developers at designing and implementing complex reasoning tasks by means of solvers on different platforms.
