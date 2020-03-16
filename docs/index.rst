@@ -6,7 +6,7 @@
 .. _index:
 
 .. image:: _image/EmbASP_Logo.png
-   :height: 500 px
+   :height: 300 px
    :width: 500 px
    :align: center
 
