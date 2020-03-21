@@ -52,3 +52,5 @@ The classes **DLVAnswerSets**, **DLV2AnswerSets**, **ClingoAnswerSets**, **DLVHE
 
 Moreover, this module can contain classes extending **OptionDescriptor** to implement specific options of the solver at hand. 
 
+
+For further information, contact *embasp@mat.unical.it* or visit our `Website <https://www.mat.unical.it/calimeri/projects/embasp/>`_

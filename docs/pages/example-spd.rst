@@ -118,12 +118,14 @@ At this point, supposing that we are given two files defining the blocks-world d
 
 
 
-The class contains an Handler instance as field, that is initialized with a DesktopHandler using the required parameter SPDDesktopService.
+The class contains an **Handler** instance as field, that is initialized with a **DesktopHandler** using the required parameter **SPDDesktopService**.
 
-Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two PDDLInputProgram are created and then given to the handler.
+Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two **PDDLInputProgram** are created and then given to the handler.
 
-The next lines inform the PDDLMapper about what classes are intended to map the output actions.
+The next lines inform the **PDDLMapper** about what classes are intended to map the output actions.
 
 Finally the solver is invoked, and the output is retrieved.
 
 The output actions can be managed accordingly to the user's desiderata. 
+
+For further information, contact *embasp@mat.unical.it* or visit our `Website <https://www.mat.unical.it/calimeri/projects/embasp/>`_

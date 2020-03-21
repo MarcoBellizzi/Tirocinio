@@ -195,13 +195,13 @@
 <h2>Using EmbASP<a class="headerlink" href="#using-embasp" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we describe an the actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Android application for solving Sudoku puzzles.</p>
-<p>The framework features a annotation-guided mapping, offered by the ASPMapper component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
+<p>The framework features a annotation-guided mapping, offered by the <strong>ASPMapper</strong> component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
 By means of this feature, the ASP-based aspects can be separated from the Java coding: the programmer doesn’t even necessarily need to be aware of ASP.</p>
 <p>Let us think of a user that designed (or has been given) a proper logic program P to solve a sudoku puzzle and has also an initial schema.
 We assume that the initial schema is well-formed i.e. the complete schema solution exists and is unique.
 A possible program P is embedded in the complete example, that, coupled with a set of facts F representing the given initial schema, allows to obtain the only admissible solution.</p>
 <p>By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects.
-To this extent, we define the class Cell, aimed at representing the single cell of the sudoku schema, as follows:</p>
+To this extent, we define the class <strong>Cell</strong>, aimed at representing the single cell of the sudoku schema, as follows:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Id</span><span class="o">(</span><span class="s">&quot;cell&quot;</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cell</span> <span class="o">{</span>
 
@@ -224,7 +224,7 @@ To this extent, we define the class Cell, aimed at representing the single cell 
 <li>&#64;Id(string_name): the target must be a class, and defines the predicate name the class is mapped to;</li>
 <li>&#64;Param(integer_position): the target must be a field of a class annotated via &#64;Id, and defines the term (and its position) in the ASP atom the field is mapped to.</li>
 </ul>
-<p>Thanks to these annotations the ASPMapper class will be able to map Cell objects into strings properly recognizable from the ASP solver as logic facts of the form cell(Row,Column,Value).
+<p>Thanks to these annotations the <strong>ASPMapper</strong> class will be able to map <strong>Cell</strong> objects into strings properly recognizable from the ASP solver as logic facts of the form <em>cell(Row,Column,Value)</em>.
 At this point, we can create an <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a> , and start deploying our sudoku application:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
@@ -266,15 +266,15 @@ At this point, we can create an <a class="reference external" href="https://deve
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The class contains an Handler instance as field, that is initialized when the Activity is created as an AndroidHandler.
-Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of AndroidService to use, in our case a DLVAndroidService.</p>
+<p>The class contains an <strong>Handler</strong> instance as field, that is initialized when the Activity is created as an <strong>AndroidHandler</strong>.
+Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of <strong>AndroidService</strong> to use, in our case a <strong>DLVAndroidService</strong>.</p>
 <p>In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where position (i,j) contains the value of cell (i,j) in the initial schema; cells initially empty are represented by positions containing zero.</p>
 <p>The method startReasoning is in charge of actually managing the reasoning: in our case, it is invoked in response to a click event that is generated when the user asks for the solution.
-It is firstly created an InputProgram object that is filled with Cell objects representing the initial schema, which is then provided to the handler;
+It is firstly created an <strong>InputProgram</strong> object that is filled with Cell objects representing the initial schema, which is then provided to the handler;
 then it is provided with the sudoku encoding. It could be loaded, for instance, by means of an utility function that retrieves it from the Android Resources folder, which, within Android applications, is typically meant for containing images, sounds, files and resources in general.</p>
 <p>At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback object is in charge of fetching the output when the ASP system has done.</p>
 <p>Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects.
-For instance, in our case an inner class MyCallback implements the interface Callback:</p>
+For instance, in our case an inner class MyCallback implements the interface <strong>Callback</strong>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">class</span> <span class="nc">MyCallback</span> <span class="kd">implements</span> <span class="n">Callback</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
@@ -298,6 +298,7 @@ For instance, in our case an inner class MyCallback implements the interface Cal
 <span class="o">}</span>
 </pre></div>
 </div>
+<p>For further information, contact <em>embasp&#64;mat.unical.it</em> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">Website</a></p>
 </div>
 </div>
 
