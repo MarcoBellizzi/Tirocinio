@@ -14,9 +14,6 @@
 EmbASP
 ======
 
-Presentation
-============
-
 A framework for the integration (embedding) of **Logic Programming** in external systems for generic applications.
 It helps developers at designing and implementing complex reasoning tasks by means of solvers on different platforms.
 
@@ -53,19 +50,6 @@ Documentation
 :doc:`pages/example-spd`
    SPD example
 
-Download
-========
-
-You can find the current development version on `GitHub <https://github.com/DeMaCS-UNICAL/EmbASP-Java>`_ 
-
-Core Team
-=========
-
-* Francesco Calimeri
-* Davide Fuscà
-* Stefano Germano
-* Simona Perri
-* Jessica Zangari
 
 Contacts
 ========
