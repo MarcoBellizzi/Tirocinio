@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Java Implementation &mdash; EmbASP-Java 0 documentation</title>
+  <title>Java implementation &mdash; EmbASP 6.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="EmbASP-Java 0 documentation" href="../index.html"/>
-        <link rel="next" title="Example SPD" href="example-spd.html"/>
+    <link rel="top" title="EmbASP 6.0 documentation" href="../index.html"/>
+        <link rel="next" title="C# implementation" href="csharp-implementation.html"/>
         <link rel="prev" title="EmbASP" href="../index.html"/> 
 
   
@@ -56,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> EmbASP-Java
+            <a href="../index.html" class="icon icon-home"> EmbASP
           
 
           
@@ -92,18 +92,22 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Java Implementation</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Java implementation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#base-module-implementation">Base module implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#platforms-module-implementation">Platforms module implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#languages-module-implementation">Languages module implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#specialization-module-implementation">Specialization module Implementation</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="csharp-implementation.html">C# implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-implementation.html">Python implementation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="example-spd.html">Example SPD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example-android.html">Example Android</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-java.html">Java SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-csharp.html">C# SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-python.html">Python SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-android.html">Android example</a></li>
 </ul>
 
             
@@ -118,7 +122,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">EmbASP-Java</a>
+          <a href="../index.html">EmbASP</a>
         
       </nav>
 
@@ -148,13 +152,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Java Implementation</li>
+      <li>Java implementation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/pages/implementation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_pages/java-implementation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -167,26 +171,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="java-implementation">
-<span id="pages-implementation"></span><h1>Java Implementation<a class="headerlink" href="#java-implementation" title="Permalink to this headline">¶</a></h1>
+  <style> .strong {color:red; font-weight: bold;} </style><div class="section" id="java-implementation">
+<h1>Java implementation<a class="headerlink" href="#java-implementation" title="Permalink to this headline">¶</a></h1>
 <p>The following figure provides some details about classes and interfaces of the implementation.</p>
 <img alt="../_images/class_diagram_java_v6.png" src="../_images/class_diagram_java_v6.png" />
 <div class="section" id="base-module-implementation">
 <h2>Base module implementation<a class="headerlink" href="#base-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>Each component in the <strong>Base</strong> module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.</p>
-<p>In particular, the <strong>Handler</strong> class collects <strong>InputProgram</strong> and <strong>OptionDescriptor</strong> objects communicated by the user.</p>
-<p>For what the asynchronous mode is concerned, the interface <strong>Service</strong> depends from the interface <strong>Callback</strong>, since once the reasoning service has terminated, the result of the computation is returned back via a class <strong>Callback</strong>.</p>
+<p>Each component in the <span class="strong">Base</span> module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.</p>
+<p>In particular, the <span class="strong">Handler</span> class collects <span class="strong">InputProgram</span> and <span class="strong">OptionDescriptor</span> objects communicated by the user.</p>
+<p>For what the asynchronous mode is concerned, the interface <span class="strong">Service</span> depends from the interface <span class="strong">Callback</span>, since once the reasoning service has terminated, the result of the computation is returned back via a class <span class="strong">Callback</span>.</p>
 </div>
 <div class="section" id="platforms-module-implementation">
 <h2>Platforms module implementation<a class="headerlink" href="#platforms-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>In order to support a new platform, the <strong>Handler</strong> and Service components must be adapted.</p>
-<p>As for the Android platform, we developed an <strong>AndroidHandler</strong> that handles the execution of an <strong>AndroidService</strong>, which provides facilities to manage the execution of a solver on the Android platform.</p>
-<p>Similarly, for the desktop platform we developed a <strong>DesktopHandler</strong> and a <strong>DesktopService</strong>, which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.</p>
+<p>In order to support a new platform, the <span class="strong">Handler</span> and Service components must be adapted.</p>
+<p>As for the Android platform, we developed an <span class="strong">AndroidHandler</span> that handles the execution of an <span class="strong">AndroidService</span>, which provides facilities to manage the execution of a solver on the Android platform.</p>
+<p>Similarly, for the desktop platform we developed a <span class="strong">DesktopHandler</span> and a <span class="strong">DesktopService</span>, which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.</p>
 </div>
 <div class="section" id="languages-module-implementation">
 <h2>Languages module implementation<a class="headerlink" href="#languages-module-implementation" title="Permalink to this headline">¶</a></h2>
 <p>This module includes specific classes for the management of input and output to ASP and PDDL solvers.</p>
-<p>The <strong>Mapper</strong> component of the <strong>Languages</strong> module is implemented via a <strong>Mapper</strong> class, that allows to translate input and output into Java objects.
+<p>The <span class="strong">Mapper</span> component of the <span class="strong">Languages</span> module is implemented via a <span class="strong">Mapper</span> class, that allows to translate input and output into Java objects.
 Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/annotations">Java</a> Annotations, a form of metadata that mark Java code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
 <p>In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two custom annotations, defined according to the following syntax:</p>
 <ul class="simple">
@@ -195,12 +199,12 @@ Such translations are guided by <a class="reference external" href="https://www.
 </ul>
 <p>By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define the translation.</p>
 <p>If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.</p>
-<p>In addition to the <strong>Mapper</strong>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
+<p>In addition to the <span class="strong">Mapper</span>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
 </div>
 <div class="section" id="specialization-module-implementation">
 <h2>Specialization module Implementation<a class="headerlink" href="#specialization-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>The classes <strong>DLVAnswerSets</strong>, <strong>DLV2AnswerSets</strong>, <strong>ClingoAnswerSets</strong>, <strong>DLVHEXAnswerSets</strong> and <strong>SPDPlan</strong> implement specific extensions of the <strong>AnswerSets</strong> or <strong>Plan</strong> classes, in charge of manipulating the output of the respective solvers.</p>
-<p>Moreover, this module can contain classes extending <strong>OptionDescriptor</strong> to implement specific options of the solver at hand.</p>
+<p>The classes <span class="strong">DLVAnswerSets</span>, <span class="strong">DLV2AnswerSets</span>, <span class="strong">ClingoAnswerSets</span>, <span class="strong">DLVHEXAnswerSets</span> and <span class="strong">SPDPlan</span> implement specific extensions of the <span class="strong">AnswerSets</span> or <span class="strong">Plan</span> classes, in charge of manipulating the output of the respective solvers.</p>
+<p>Moreover, this module can contain classes extending <span class="strong">OptionDescriptor</span> to implement specific options of the solver at hand.</p>
 <p>For further information, contact <em>embasp&#64;mat.unical.it</em> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">Website</a></p>
 </div>
 </div>
@@ -215,7 +219,7 @@ Such translations are guided by <a class="reference external" href="https://www.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="example-spd.html" class="btn btn-neutral float-right" title="Example SPD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="csharp-implementation.html" class="btn btn-neutral float-right" title="C# implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="EmbASP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -227,7 +231,7 @@ Such translations are guided by <a class="reference external" href="https://www.
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, DeMaCS.
+        &copy; Copyright 2020, DeMaCS-Unical.
 
     </p>
   </div>
@@ -249,7 +253,7 @@ Such translations are guided by <a class="reference external" href="https://www.
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0',
+            VERSION:'6.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

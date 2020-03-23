@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Example Android &mdash; EmbASP-Java 0 documentation</title>
+  <title>Android example &mdash; EmbASP 6.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="EmbASP-Java 0 documentation" href="../index.html"/>
-        <link rel="prev" title="Example SPD" href="example-spd.html"/> 
+    <link rel="top" title="EmbASP 6.0 documentation" href="../index.html"/>
+        <link rel="prev" title="Python SPD example" href="example-spd-python.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -55,7 +55,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> EmbASP-Java
+            <a href="../index.html" class="icon icon-home"> EmbASP
           
 
           
@@ -91,12 +91,16 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="implementation.html">Java Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java-implementation.html">Java implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csharp-implementation.html">C# implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-implementation.html">Python implementation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="example-spd.html">Example SPD</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Android</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-java.html">Java SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-csharp.html">C# SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-python.html">Python SPD example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Android example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-embasp">Using EmbASP</a></li>
 </ul>
@@ -115,7 +119,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">EmbASP-Java</a>
+          <a href="../index.html">EmbASP</a>
         
       </nav>
 
@@ -145,13 +149,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Example Android</li>
+      <li>Android example</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/pages/example-android.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_pages/example-android.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -164,8 +168,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="example-android">
-<span id="pages-example-android"></span><h1>Example Android<a class="headerlink" href="#example-android" title="Permalink to this headline">¶</a></h1>
+  <style> .strong {color:red; font-weight: bold;} </style><div class="section" id="android-example">
+<h1>Android example<a class="headerlink" href="#android-example" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>In order to use the framework in your applications you have to import it as module on Android Studio</p>
@@ -195,13 +199,13 @@
 <h2>Using EmbASP<a class="headerlink" href="#using-embasp" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we describe an the actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Android application for solving Sudoku puzzles.</p>
-<p>The framework features a annotation-guided mapping, offered by the <strong>ASPMapper</strong> component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
+<p>The framework features a annotation-guided mapping, offered by the <span class="strong">ASPMapper</span> component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
 By means of this feature, the ASP-based aspects can be separated from the Java coding: the programmer doesn’t even necessarily need to be aware of ASP.</p>
 <p>Let us think of a user that designed (or has been given) a proper logic program P to solve a sudoku puzzle and has also an initial schema.
 We assume that the initial schema is well-formed i.e. the complete schema solution exists and is unique.
 A possible program P is embedded in the complete example, that, coupled with a set of facts F representing the given initial schema, allows to obtain the only admissible solution.</p>
 <p>By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects.
-To this extent, we define the class <strong>Cell</strong>, aimed at representing the single cell of the sudoku schema, as follows:</p>
+To this extent, we define the class <span class="strong">Cell</span>, aimed at representing the single cell of the sudoku schema, as follows:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Id</span><span class="o">(</span><span class="s">&quot;cell&quot;</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cell</span> <span class="o">{</span>
 
@@ -224,7 +228,7 @@ To this extent, we define the class <strong>Cell</strong>, aimed at representing
 <li>&#64;Id(string_name): the target must be a class, and defines the predicate name the class is mapped to;</li>
 <li>&#64;Param(integer_position): the target must be a field of a class annotated via &#64;Id, and defines the term (and its position) in the ASP atom the field is mapped to.</li>
 </ul>
-<p>Thanks to these annotations the <strong>ASPMapper</strong> class will be able to map <strong>Cell</strong> objects into strings properly recognizable from the ASP solver as logic facts of the form <em>cell(Row,Column,Value)</em>.
+<p>Thanks to these annotations the <span class="strong">ASPMapper</span> class will be able to map <span class="strong">Cell</span> objects into strings properly recognizable from the ASP solver as logic facts of the form <em>cell(Row,Column,Value)</em>.
 At this point, we can create an <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a> , and start deploying our sudoku application:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
@@ -266,15 +270,15 @@ At this point, we can create an <a class="reference external" href="https://deve
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The class contains an <strong>Handler</strong> instance as field, that is initialized when the Activity is created as an <strong>AndroidHandler</strong>.
-Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of <strong>AndroidService</strong> to use, in our case a <strong>DLVAndroidService</strong>.</p>
+<p>The class contains an <span class="strong">Handler</span> instance as field, that is initialized when the Activity is created as an <span class="strong">AndroidHandler</span>.
+Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of <span class="strong">AndroidService</span> to use, in our case a <span class="strong">DLVAndroidService</span>.</p>
 <p>In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where position (i,j) contains the value of cell (i,j) in the initial schema; cells initially empty are represented by positions containing zero.</p>
 <p>The method startReasoning is in charge of actually managing the reasoning: in our case, it is invoked in response to a click event that is generated when the user asks for the solution.
-It is firstly created an <strong>InputProgram</strong> object that is filled with Cell objects representing the initial schema, which is then provided to the handler;
+It is firstly created an <span class="strong">InputProgram</span> object that is filled with <span class="strong">Cell</span> objects representing the initial schema, which is then provided to the handler;
 then it is provided with the sudoku encoding. It could be loaded, for instance, by means of an utility function that retrieves it from the Android Resources folder, which, within Android applications, is typically meant for containing images, sounds, files and resources in general.</p>
 <p>At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback object is in charge of fetching the output when the ASP system has done.</p>
 <p>Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects.
-For instance, in our case an inner class MyCallback implements the interface <strong>Callback</strong>:</p>
+For instance, in our case an inner class MyCallback implements the interface <span class="strong">Callback</span>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">class</span> <span class="nc">MyCallback</span> <span class="kd">implements</span> <span class="n">Callback</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
@@ -313,7 +317,7 @@ For instance, in our case an inner class MyCallback implements the interface <st
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="example-spd.html" class="btn btn-neutral" title="Example SPD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="example-spd-python.html" class="btn btn-neutral" title="Python SPD example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -322,7 +326,7 @@ For instance, in our case an inner class MyCallback implements the interface <st
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, DeMaCS.
+        &copy; Copyright 2020, DeMaCS-Unical.
 
     </p>
   </div>
@@ -344,7 +348,7 @@ For instance, in our case an inner class MyCallback implements the interface <st
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0',
+            VERSION:'6.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

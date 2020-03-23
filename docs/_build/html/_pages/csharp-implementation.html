@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>C# implementation &mdash; EmbASP 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="EmbASP 6.0 documentation" href="../index.html"/>
+        <link rel="next" title="Python implementation" href="python-implementation.html"/>
+        <link rel="prev" title="Java implementation" href="java-implementation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EmbASP
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="java-implementation.html">Java implementation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">C# implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#base-module-implementation">Base module implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#platforms-module-implementation">Platforms module implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#languages-module-implementation">Languages module implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specialization-module-implementation">Specialization module implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python-implementation.html">Python implementation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-java.html">Java SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-csharp.html">C# SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-spd-python.html">Python SPD example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-android.html">Android example</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EmbASP</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>C# implementation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/_pages/csharp-implementation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style> .strong {color:red; font-weight: bold;} </style><div class="section" id="c-implementation">
+<h1>C# implementation<a class="headerlink" href="#c-implementation" title="Permalink to this headline">¶</a></h1>
+<p>The following figure provides some details about classes and interfaces of the implementation.</p>
+<img alt="../_images/class_diagram_csharp_v6.png" src="../_images/class_diagram_csharp_v6.png" />
+<div class="section" id="base-module-implementation">
+<h2>Base module implementation<a class="headerlink" href="#base-module-implementation" title="Permalink to this headline">¶</a></h2>
+<p>Each component in the <span class="strong">Base</span> module has been implemented by means of abstract class, generic class or interface that will specialize in the following packages.</p>
+<p>In particular, the <span class="strong">Handler</span> class collects <span class="strong">InputProgram</span> and <span class="strong">OptionDescriptor</span> objects communicated by the user.</p>
+<p>For what the asynchronous mode is concerned, the class <span class="strong">Service</span> depends from the interface <span class="strong">Callback</span>, since once the reasoning service has terminated, the result of the computation is returned back via a class <span class="strong">Callback</span>.</p>
+</div>
+<div class="section" id="platforms-module-implementation">
+<h2>Platforms module implementation<a class="headerlink" href="#platforms-module-implementation" title="Permalink to this headline">¶</a></h2>
+<p>In order to support a new platform, the <span class="strong">Handler</span> and <span class="strong">Service</span> components must be adapted.</p>
+<p>For the desktop platform we developed a <span class="strong">DesktopHandler</span> and a <span class="strong">DesktopService</span>, which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.</p>
+</div>
+<div class="section" id="languages-module-implementation">
+<h2>Languages module implementation<a class="headerlink" href="#languages-module-implementation" title="Permalink to this headline">¶</a></h2>
+<p>This module includes specific classes for the management of input and output to ASP and PDDL solvers.</p>
+<p>The <span class="strong">Mapper</span> component of the <span class="strong">Languages</span> module is implemented via a <span class="strong">Mapper</span> class, that allows to translate input and output into C# objects.
+Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and <strong>C# Attributes</strong>, a form of metadata that mark C# code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
+<p>In our setting, we make use of such features so that it is possible to translate facts into strings and vice-versa via two custom attributes, defined according to the following syntax:</p>
+<ul class="simple">
+<li><em>[Id(string_name)]</em> : the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;</li>
+<li><em>[Param(integer_position)]</em> : the target must be a field of a class annotated via <em>[Id(string_name)]</em>, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.</li>
+</ul>
+<p>By means of the <strong>C# Reflection</strong> mechanism, attributes are examined at runtime, and taken into account to properly define the translation.</p>
+<p>If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.</p>
+<p>In addition to the <span class="strong">Mapper</span>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
+</div>
+<div class="section" id="specialization-module-implementation">
+<h2>Specialization module implementation<a class="headerlink" href="#specialization-module-implementation" title="Permalink to this headline">¶</a></h2>
+<p>The classes <span class="strong">DLVAnswerSets</span>, <span class="strong">DLV2AnswerSets</span>, <span class="strong">ClingoAnswerSets</span>, <span class="strong">DLVHEXAnswerSets</span> and <span class="strong">SPDPlan</span> implement specific extensions of the <span class="strong">AnswerSets</span> or <span class="strong">Plan</span> classes, in charge of manipulating the output of the respective solvers.</p>
+<p>Moreover, this module can contain classes extending <span class="strong">OptionDescriptor</span> to implement specific options of the solver at hand.</p>
+<p>For further information, contact <em>embasp&#64;mat.unical.it</em> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">Website</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python-implementation.html" class="btn btn-neutral float-right" title="Python implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="java-implementation.html" class="btn btn-neutral" title="Java implementation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, DeMaCS-Unical.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'6.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,8 +1,14 @@
-.. _pages-example-spd:
+.. _pages-example-spd-java:
 
-===========
-Example SPD
-===========
+.. raw:: html
+
+    <style> .strong {color:red; font-weight: bold;} </style>
+
+.. role:: strong
+
+================
+Java SPD example
+================
 
 Getting started
 ===============
@@ -118,11 +124,11 @@ At this point, supposing that we are given two files defining the blocks-world d
 
 
 
-The class contains an **Handler** instance as field, that is initialized with a **DesktopHandler** using the required parameter **SPDDesktopService**.
+The class contains an :strong:`Handler` instance as field, that is initialized with a :strong:`DesktopHandler` using the required parameter :strong:`SPDDesktopService`.
 
-Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two **PDDLInputProgram** are created and then given to the handler.
+Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two :strong:`PDDLInputProgram` are created and then given to the handler.
 
-The next lines inform the **PDDLMapper** about what classes are intended to map the output actions.
+The next lines inform the :strong:`PDDLMapper` about what classes are intended to map the output actions.
 
 Finally the solver is invoked, and the output is retrieved.
 

@@ -1,8 +1,3 @@
-.. TirocinioProva documentation master file, created by
-   sphinx-quickstart on Tue Mar 10 16:45:37 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 .. _index:
 
 .. image:: _image/EmbASP_Logo.png
@@ -32,24 +27,41 @@ Documentation
    :caption: Documentation
    :hidden:
 
-   pages/implementation
+   _pages/java-implementation
+   _pages/csharp-implementation
+   _pages/python-implementation
 
-:doc:`pages/implementation`
-   Implementation description
+Implementations
+---------------
+
+   :doc:`_pages/java-implementation`
+
+   :doc:`_pages/csharp-implementation`
+
+   :doc:`_pages/python-implementation`
 
 .. toctree::
    :caption: Examples
    :hidden:
 
-   pages/example-spd
-   pages/example-android
+   _pages/example-spd-java
+   _pages/example-spd-csharp
+   _pages/example-spd-python
+   _pages/example-android
 
-:doc:`pages/example-android`
-   Android example
+SPD examples
+------------
 
-:doc:`pages/example-spd`
-   SPD example
+   :doc:`_pages/example-spd-java`
 
+   :doc:`_pages/example-spd-csharp`
+
+   :doc:`_pages/example-spd-python`
+
+Android example
+---------------
+
+   :doc:`_pages/example-android`
 
 Contacts
 ========
