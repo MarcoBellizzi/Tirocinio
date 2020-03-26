@@ -12,7 +12,7 @@ The framework needs [ANTLR4](https://www.antlr.org/) library for its operation.
 In the following, we describe an the actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
-![blocks-world](../_image/blocks-world.png)
+![](../_image/blocks-world.png)
 
 We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Python objects.
 
@@ -106,8 +106,6 @@ The next lines inform the `PDDLMapper` about what classes are intended to map th
 Finally the solver is invoked, and the output is retrieved.
 
 The output actions can be managed accordingly to the user's desiderata. 
-
-&nbsp;
 
 &nbsp;
 
