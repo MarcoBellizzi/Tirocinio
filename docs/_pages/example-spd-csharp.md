@@ -2,7 +2,7 @@
 
 ## Getting started
 
-The framework id released as DDL file, therefore it can be easily added and used in any C# project.
+The framework id released as DLL file, therefore it can be easily added and used in any C# project.
 
 ## Using EmbASP
 
