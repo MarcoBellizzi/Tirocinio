@@ -27,9 +27,9 @@ Documentation
    :caption: Documentation
    :hidden:
 
-   _pages/java-implementation
-   _pages/csharp-implementation
-   _pages/python-implementation
+   _pages/java-implementation.md
+   _pages/csharp-implementation.md
+   _pages/python-implementation.md
 
 Implementations
 ---------------
@@ -44,10 +44,10 @@ Implementations
    :caption: Examples
    :hidden:
 
-   _pages/example-spd-java
-   _pages/example-spd-csharp
-   _pages/example-spd-python
-   _pages/example-android
+   _pages/example-spd-java.md
+   _pages/example-spd-csharp.md
+   _pages/example-spd-python.md
+   _pages/example-android.md
 
 SPD examples
 ------------

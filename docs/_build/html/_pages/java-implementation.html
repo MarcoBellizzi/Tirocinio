@@ -17,42 +17,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="EmbASP 6.0 documentation" href="../index.html"/>
-        <link rel="next" title="C# implementation" href="csharp-implementation.html"/>
-        <link rel="prev" title="EmbASP" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C# Implementation" href="csharp-implementation.html" />
+    <link rel="prev" title="EmbASP" href="../index.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,10 +58,6 @@
 
           
             
-            
-              <div class="version">
-                6.0
-              </div>
             
           
 
@@ -99,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#specialization-module-implementation">Specialization module Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="csharp-implementation.html">C# implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csharp-implementation.html">C# Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-implementation.html">Python implementation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
@@ -119,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">EmbASP</a>
@@ -127,9 +117,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -158,7 +149,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/_pages/java-implementation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_pages/java-implementation.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,58 +162,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <style> .strong {color:red; font-weight: bold;} </style><div class="section" id="java-implementation">
+  <div class="section" id="java-implementation">
 <h1>Java implementation<a class="headerlink" href="#java-implementation" title="Permalink to this headline">¶</a></h1>
 <p>The following figure provides some details about classes and interfaces of the implementation.</p>
-<img alt="../_images/class_diagram_java_v6.png" src="../_images/class_diagram_java_v6.png" />
+<p><img alt="java-implementation" src="../_images/class_diagram_java_v6.png" /></p>
 <div class="section" id="base-module-implementation">
 <h2>Base module implementation<a class="headerlink" href="#base-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>Each component in the <span class="strong">Base</span> module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.</p>
-<p>In particular, the <span class="strong">Handler</span> class collects <span class="strong">InputProgram</span> and <span class="strong">OptionDescriptor</span> objects communicated by the user.</p>
-<p>For what the asynchronous mode is concerned, the interface <span class="strong">Service</span> depends from the interface <span class="strong">Callback</span>, since once the reasoning service has terminated, the result of the computation is returned back via a class <span class="strong">Callback</span>.</p>
+<p>Each component in the <code class="docutils literal notranslate"><span class="pre">Base</span></code> module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.</p>
+<p>In particular, the <code class="docutils literal notranslate"><span class="pre">Handler</span></code> class collects <code class="docutils literal notranslate"><span class="pre">InputProgram</span></code> and <code class="docutils literal notranslate"><span class="pre">OptionDescriptor</span></code> objects communicated by the user.</p>
+<p>For what the asynchronous mode is concerned, the interface <code class="docutils literal notranslate"><span class="pre">Service</span></code> depends from the interface <code class="docutils literal notranslate"><span class="pre">Callback</span></code>, since once the reasoning service has terminated, the result of the computation is returned back via a class <code class="docutils literal notranslate"><span class="pre">Callback</span></code>.</p>
 </div>
 <div class="section" id="platforms-module-implementation">
 <h2>Platforms module implementation<a class="headerlink" href="#platforms-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>In order to support a new platform, the <span class="strong">Handler</span> and Service components must be adapted.</p>
-<p>As for the Android platform, we developed an <span class="strong">AndroidHandler</span> that handles the execution of an <span class="strong">AndroidService</span>, which provides facilities to manage the execution of a solver on the Android platform.</p>
-<p>Similarly, for the desktop platform we developed a <span class="strong">DesktopHandler</span> and a <span class="strong">DesktopService</span>, which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.</p>
+<p>In order to support a new platform, the <code class="docutils literal notranslate"><span class="pre">Handler</span></code> and Service components must be adapted.</p>
+<p>As for the Android platform, we developed an <code class="docutils literal notranslate"><span class="pre">AndroidHandler</span></code> that handles the execution of an <code class="docutils literal notranslate"><span class="pre">AndroidService</span></code>, which provides facilities to manage the execution of a solver on the Android platform.</p>
+<p>Similarly, for the desktop platform we developed a <code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code> and a <code class="docutils literal notranslate"><span class="pre">DesktopService</span></code>, which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.</p>
 </div>
 <div class="section" id="languages-module-implementation">
 <h2>Languages module implementation<a class="headerlink" href="#languages-module-implementation" title="Permalink to this headline">¶</a></h2>
 <p>This module includes specific classes for the management of input and output to ASP and PDDL solvers.</p>
-<p>The <span class="strong">Mapper</span> component of the <span class="strong">Languages</span> module is implemented via a <span class="strong">Mapper</span> class, that allows to translate input and output into Java objects.
-Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/annotations">Java</a> Annotations, a form of metadata that mark Java code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Mapper</span></code> component of the <code class="docutils literal notranslate"><span class="pre">Languages</span></code> module is implemented via a <code class="docutils literal notranslate"><span class="pre">Mapper</span></code> class, that allows to translate input and output into Java objects.
+Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and [Java Annatations](&lt;https://docs.oracle.com/javase/tutorial/java/annotations), a form of metadata that mark Java code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
 <p>In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two custom annotations, defined according to the following syntax:</p>
 <ul class="simple">
-<li><em>&#64;Id (string_name)</em>: the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;</li>
-<li><em>&#64;Param (integer_position)</em>: the target must be a field of a class annotated via <em>&#64;Id</em>, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.</li>
+<li><code class="docutils literal notranslate"><span class="pre">&#64;Id</span> <span class="pre">(string_name)</span></code>: the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;</li>
+<li><code class="docutils literal notranslate"><span class="pre">&#64;Param</span> <span class="pre">(integer_position)</span></code>: the target must be a field of a class annotated via <code class="docutils literal notranslate"><span class="pre">&#64;Id</span></code>, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.</li>
 </ul>
 <p>By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define the translation.</p>
 <p>If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.</p>
-<p>In addition to the <span class="strong">Mapper</span>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
+<p>In addition to the <code class="docutils literal notranslate"><span class="pre">Mapper</span></code>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
 </div>
 <div class="section" id="specialization-module-implementation">
 <h2>Specialization module Implementation<a class="headerlink" href="#specialization-module-implementation" title="Permalink to this headline">¶</a></h2>
-<p>The classes <span class="strong">DLVAnswerSets</span>, <span class="strong">DLV2AnswerSets</span>, <span class="strong">ClingoAnswerSets</span>, <span class="strong">DLVHEXAnswerSets</span> and <span class="strong">SPDPlan</span> implement specific extensions of the <span class="strong">AnswerSets</span> or <span class="strong">Plan</span> classes, in charge of manipulating the output of the respective solvers.</p>
-<p>Moreover, this module can contain classes extending <span class="strong">OptionDescriptor</span> to implement specific options of the solver at hand.</p>
-<p>For further information, contact <em>embasp&#64;mat.unical.it</em> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">Website</a></p>
+<p>The classes <code class="docutils literal notranslate"><span class="pre">DLVAnswerSets</span></code>, <code class="docutils literal notranslate"><span class="pre">DLV2AnswerSets</span></code>, <code class="docutils literal notranslate"><span class="pre">ClingoAnswerSets</span></code>, <code class="docutils literal notranslate"><span class="pre">DLVHEXAnswerSets</span></code> and <code class="docutils literal notranslate"><span class="pre">SPDPlan</span></code> implement specific extensions of the <code class="docutils literal notranslate"><span class="pre">AnswerSets</span></code> or <code class="docutils literal notranslate"><span class="pre">Plan</span></code> classes, in charge of manipulating the output of the respective solvers.</p>
+<p>Moreover, this module can contain classes extending <code class="docutils literal notranslate"><span class="pre">OptionDescriptor</span></code> to implement specific options of the solver at hand.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>For further information, contact <em>embasp&#64;mat.unical.it</em> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">Website</a>.</p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="csharp-implementation.html" class="btn btn-neutral float-right" title="C# implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="csharp-implementation.html" class="btn btn-neutral float-right" title="C# Implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="EmbASP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="EmbASP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -231,11 +222,11 @@ Such translations are guided by <a class="reference external" href="https://www.
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, DeMaCS-Unical.
+        &copy; Copyright 2020, DeMaCS-Unical
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -248,36 +239,15 @@ Such translations are guided by <a class="reference external" href="https://www.
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'6.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

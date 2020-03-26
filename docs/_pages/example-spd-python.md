@@ -1,40 +1,24 @@
-.. _pages-example-spd-python:
+# Python SPD example
 
-.. raw:: html
-
-    <style> .strong {color:red; font-weight: bold;} </style>
-
-.. role:: strong
-
-==================
-Python SPD example
-==================
-
-Getting started
-===============
+## Getting started
 
 The framework is released as EGG file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.
 
-The framework needs `ANTLR4 <https://www.antlr.org/>`_ library for its operation.
+The framework needs [ANTLR4](https://www.antlr.org/) library for its operation.
 
 
-Using EmbASP
-============
+## Using EmbASP
 
 In the following, we describe an the actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
-.. image:: ../_image/blocks-world.png
-   :height: 200 px
-   :width: 500 px
-   :align: center
+![blocks-world](../_image/blocks-world.png)
 
 We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Python objects.
 
 To this purpose, the following classes are intended to represent possible actions that a blocks-world solution plan can feature:
 
-.. code-block:: python
-
+```python
   class PickUp(Predicate):
      predicateName="pick-up"
         
@@ -43,9 +27,8 @@ To this purpose, the following classes are intended to represent possible action
         self.block = block
             
      [...]
-
-.. code-block:: python
-
+```
+```python
   class PutDown (Predicate):
      predicateName="put-down"
         
@@ -54,9 +37,8 @@ To this purpose, the following classes are intended to represent possible action
         self.block = block
             
      [...]
-
-.. code-block:: python
-
+```
+```python
   class Stack (Predicate):
      predicateName="stack"
         
@@ -66,9 +48,8 @@ To this purpose, the following classes are intended to represent possible action
         self.block2 = block2
             
      [...]
-
-.. code-block:: python
-
+```
+```python
   class Unstack (Predicate):
      predicateName="unstack"
         
@@ -78,12 +59,11 @@ To this purpose, the following classes are intended to represent possible action
         self.block2 = block2
             
      [...]
-            
+```
 
 At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start deploying our application:
 
-.. code-block:: python
-
+```python
   class Blocksworld():
         
      __domainFileName = "domain.pddl"
@@ -115,16 +95,20 @@ At this point, supposing that we are given two files defining the blocks-world d
 
   if __name__ == '__main__':
         Blocksworld.main()
+```
 
+The class contains an `Handler` instance as field, that is initialized with a `DesktopHandler` using the required parameter `SPDDesktopService`.
 
-The class contains an :strong:`Handler` instance as field, that is initialized with a :strong:`DesktopHandler` using the required parameter :strong:`SPDDesktopService`.
+Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two `PDDLInputProgram` are created and then given to the handler.
 
-Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two :strong:`PDDLInputProgram` are created and then given to the handler.
-
-The next lines inform the :strong:`PDDLMapper` about what classes are intended to map the output actions.
+The next lines inform the `PDDLMapper` about what classes are intended to map the output actions.
 
 Finally the solver is invoked, and the output is retrieved.
 
 The output actions can be managed accordingly to the user's desiderata. 
 
-For further information, contact *embasp@mat.unical.it* or visit our `Website <https://www.mat.unical.it/calimeri/projects/embasp/>`_
+&nbsp;
+
+&nbsp;
+
+For further information, contact *embasp@mat.unical.it* or visit our [Website](https://www.mat.unical.it/calimeri/projects/embasp/).
