@@ -2,14 +2,14 @@
 
 ## Getting started
 
-The framework id released as DDL project, therefore it can be easily added and used in any C# project.
+The framework is released as DLL file to be used on a Desktop platform, therefore it can be easily added and used in any C# project.
 
 ## Using EmbASP
 
 In the following, we describe an the actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
-![blocks-world](../_image/blocks-world.png)
+![](../_image/blocks-world.png)
 
 We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via C# objects.
 
@@ -111,8 +111,6 @@ The next lines inform the `PDDLMapper` about what classes are intended to map th
 Finally the solver is invoked, and the output is retrieved.
 
 The output actions can be managed accordingly to the user's desiderata. 
-
-&nbsp;
 
 &nbsp;
 

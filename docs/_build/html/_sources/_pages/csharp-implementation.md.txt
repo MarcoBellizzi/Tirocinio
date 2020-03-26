@@ -1,8 +1,8 @@
-# C# Implementation
+# C# implementation
 
 The following figure provides some details about classes and interfaces of the implementation.
 
-![diagramma](../_image/class_diagram_csharp_v6.png)
+![](../_image/class_diagram_csharp_v6.png)
 
 ## Base module implementation
 
@@ -41,8 +41,6 @@ In addition to the `Mapper`, this module features two sub-modules which are more
 The classes `DLVAnswerSets`, `DLV2AnswerSets`, `ClingoAnswerSets`, `DLVHEXAnswerSets` and `SPDPlan` implement specific extensions of the `AnswerSets` or `Plan` classes, in charge of manipulating the output of the respective solvers.
 
 Moreover, this module can contain classes extending `OptionDescriptor` to implement specific options of the solver at hand. 
-
-&nbsp;
 
 &nbsp;
 

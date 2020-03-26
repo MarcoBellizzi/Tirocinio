@@ -135,6 +135,4 @@ private class MyCallback implements Callback {
 
 &nbsp;
 
-&nbsp;
-
 For further information, contact *embasp@mat.unical.it* or visit our [Website](https://www.mat.unical.it/calimeri/projects/embasp/).
