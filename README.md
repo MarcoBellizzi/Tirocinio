@@ -1,4 +1,4 @@
-<img src="img/EmbASP_Logo.png" width="300" height="200" align="middle">
+<img src="docs/_img/EmbASP_Logo.png" width="300" height="200" align="middle">
 
 # EmbASP website
 
