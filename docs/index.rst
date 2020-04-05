@@ -27,45 +27,41 @@ Documentation
    :caption: Documentation
    :hidden:
 
-   _pages/java-implementation.rst
-   _pages/csharp-implementation.rst
-   _pages/python-implementation.rst
+   documentation/java-implementation.rst
+   documentation/python-implementation.rst
+   documentation/csharp-implementation.rst
 
 Implementations
 ---------------
 
-   :doc:`_pages/java-implementation`
-
-   :doc:`_pages/csharp-implementation`
-
-   :doc:`_pages/python-implementation`
+*  :doc:`documentation/java-implementation`
+*  :doc:`documentation/python-implementation`
+*  :doc:`documentation/csharp-implementation`
 
 .. toctree::
    :caption: Examples
    :hidden:
 
-   _pages/example-spd-java.rst
-   _pages/example-spd-csharp.rst
-   _pages/example-spd-python.rst
-   _pages/example-android.rst
+   examples/blocks-world-spd-java.rst
+   examples/blocks-world-spd-python.rst
+   examples/blocks-world-spd-csharp.rst
+   examples/sudoku-android.rst
 
 SPD examples
 ------------
 
-   :doc:`_pages/example-spd-java`
-
-   :doc:`_pages/example-spd-csharp`
-
-   :doc:`_pages/example-spd-python`
+*  :doc:`examples/blocks-world-spd-java`
+*  :doc:`examples/blocks-world-spd-python`
+*  :doc:`examples/blocks-world-spd-csharp`
 
 Android example
 ---------------
 
-   :doc:`_pages/example-android`
+*  :doc:`examples/sudoku-android`
 
 Contacts
 ========
 
-For further information, contact *embasp@mat.unical.it* or visit our `Website <https://www.mat.unical.it/calimeri/projects/embasp/>`_
+For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ or visit our `website <https://www.mat.unical.it/calimeri/projects/embasp/>`_.
 
 
