@@ -51,4 +51,9 @@ public class Edge {
 		this.weight = weight;
 	}
 	
+	@Override
+	public String toString() {
+		return "edge(" + from + "," + to + "," + weight + ").";
+	}
+	
 }

@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+
 import it.unical.mat.embasp.base.Handler;
 import it.unical.mat.embasp.base.InputProgram;
 import it.unical.mat.embasp.languages.asp.ASPInputProgram;
@@ -10,9 +11,7 @@ import it.unical.mat.embasp.languages.asp.AnswerSets;
 import it.unical.mat.embasp.platforms.desktop.DesktopHandler;
 import it.unical.mat.embasp.specializations.dlv2.desktop.DLV2DesktopService;
 import predicates.Edge;
-import predicates.From;
 import predicates.Path;
-import predicates.To;
 
 public class MainClass {
 
@@ -23,12 +22,10 @@ public class MainClass {
 
 		try {
 
-			Handler handler = new DesktopHandler(new DLV2DesktopService("lib/dlv2"));
+			Handler handler = new DesktopHandler(new DLV2DesktopService("executable/dlv2"));
 
 			ASPMapper.getInstance().registerClass(Edge.class);
 			ASPMapper.getInstance().registerClass(Path.class);
-			ASPMapper.getInstance().registerClass(From.class);
-			ASPMapper.getInstance().registerClass(To.class);
 
 			InputProgram input = new ASPInputProgram();
 
