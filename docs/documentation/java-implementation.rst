@@ -30,14 +30,14 @@ Languages module implementation
 This module includes specific classes for the management of input and output to ASP and PDDL solvers.
 
 The :code:`Mapper` component of the :guilabel:`Languages` module is implemented via a :code:`Mapper` class, that allows to translate input and output into Java objects.
-Such translations are guided by `ANTLR4 <https://www.antlr.org/>`_ library and `Java <https://docs.oracle.com/javase/tutorial/java/annotations>`_ Annotations, a form of metadata that mark Java code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.
+Such translations are guided by `ANTLR4 <https://www.antlr.org/>`_ library and `Java Annotations <https://docs.oracle.com/javase/tutorial/java/annotations>`_ , a form of metadata that mark Java code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.
 
 In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two custom annotations, defined according to the following syntax:
 
 * *@Id (string_name)* : the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;
 * *@Param (integer_position)* : the target must be a field of a class annotated via *@Id*, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.
 
-By means of the **Java Reflection** mechanisms, annotations are examined at runtime, and taken into account to properly define the translation.
+By means of the `Java Reflection <https://docs.oracle.com/javase/8/docs/technotes/guides/reflection/index.html>`_ mechanisms, annotations are examined at runtime, and taken into account to properly define the translation.
 
 If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
 
