@@ -13,7 +13,7 @@ import it.unical.mat.embasp.specializations.solver_planning_domains.desktop.SPDD
 public class Blocksworld {
 	
 	private static String domainFileName = "domain.pddl";
-	private static String problemFileName = "p01.pddl";;
+	private static String problemFileName = "p01.pddl";
 
 	public static void main(String[] args) {
 		Handler handler = new DesktopHandler(new SPDDesktopService());
