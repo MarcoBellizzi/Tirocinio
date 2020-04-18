@@ -82,7 +82,7 @@ The following figure provides some details about classes and interfaces of the i
     </script>
 
     <div class="img-magnifier-container">
-      <img id="myimage" src="../../../_image/class_diagram_java_v6.png" width="1341" height="641">
+      <img id="myimage" src="../../../_image/class_diagram_java_v6.png" width="1000" height="500">
     </div>
 
     <script>

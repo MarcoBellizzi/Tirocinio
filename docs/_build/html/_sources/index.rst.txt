@@ -4,6 +4,8 @@
    :height: 300 px
    :width: 500 px
    :align: center
+   :class: classe
+   :name: nome
 
 ======
 EmbASP
