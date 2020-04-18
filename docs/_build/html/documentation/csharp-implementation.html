@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples/blocks-world-spd-java.html">Blocks-world SPD Java</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/blocks-world-spd-python.html">Blocks-world SPD Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/blocks-world-spd-csharp.html">Blocks-world SPD C#</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/sudoku-android.html">Example Android</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/sudoku-android.html">Sudoku Android</a></li>
 </ul>
 
             
@@ -181,13 +181,13 @@
 <h2>Languages module implementation<a class="headerlink" href="#languages-module-implementation" title="Permalink to this headline">¶</a></h2>
 <p>This module includes specific classes for the management of input and output to ASP and PDDL solvers.</p>
 <p>The <code class="code docutils literal notranslate"><span class="pre">Mapper</span></code> component of the <span class="guilabel">Languages</span> module is implemented via a <code class="code docutils literal notranslate"><span class="pre">Mapper</span></code> class, that allows to translate input and output into C# objects.
-Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and <strong>C# Attributes</strong>, a form of metadata that mark C# code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
+Such translations are guided by <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library and <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/">C# Attributes</a>, a form of metadata that mark C# code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.</p>
 <p>In our setting, we make use of such features so that it is possible to translate facts into strings and vice-versa via two custom attributes, defined according to the following syntax:</p>
 <ul class="simple">
 <li><em>[Id(string_name)]</em> : the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;</li>
 <li><em>[Param(integer_position)]</em> : the target must be a field of a class annotated via <em>[Id(string_name)]</em>, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.</li>
 </ul>
-<p>By means of the <strong>C# Reflection</strong> mechanism, attributes are examined at runtime, and taken into account to properly define the translation.</p>
+<p>By means of the <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection">C# Reflection</a> mechanism, attributes are examined at runtime, and taken into account to properly define the translation.</p>
 <p>If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.</p>
 <p>In addition to the <code class="code docutils literal notranslate"><span class="pre">Mapper</span></code>, this module features two sub-modules which are more strictly related to ASP and PDDL.</p>
 </div>
