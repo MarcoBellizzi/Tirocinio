@@ -1,5 +1,0 @@
-marco(1).
-
-marco(5) | marco(10) :- marco(1).
-
-:~ marco(X). [X@1, X]
