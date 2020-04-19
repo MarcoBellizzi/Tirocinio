@@ -48,7 +48,7 @@ def show(path, sum_):
 
 try:
     
-    handler = DesktopHandler(DLV2DesktopService("../../lib/dlv2"))
+    handler = DesktopHandler(DLV2DesktopService("../../executable/dlv2"))
 
     ASPMapper.get_instance().register_class(Edge)
     ASPMapper.get_instance().register_class(Path)
