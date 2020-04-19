@@ -31,10 +31,15 @@ public class MainClass {
 
 			from = 0;   // source node
 			to = 7;     // destination node
-
-			input.addProgram("from(" + from + "). to(" + to + ").");
 			
-			input.addFilesPath("encoding/rules");
+			String rules = "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
+					+ "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
+					+ "end(X) :- to(X), path(_,X,_)."
+					+ ":- to(X), not end(X)."
+					+ ":~ path(X,Y,W). [W@1 ,X,Y]";
+			
+			input.addProgram(rules);
+			input.addProgram("from(" + from + "). to(" + to + ").");
 			
 			for(Edge edge : getEdges()) {
 				input.addObjectInput(edge);
