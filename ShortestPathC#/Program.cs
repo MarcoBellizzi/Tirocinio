@@ -17,21 +17,24 @@ namespace ShortestPath
         {
             try
             {
-                Handler handler = new DesktopHandler(new DLV2DesktopService("C:/Users/Marco/Desktop/ShortestPathC#/dlv2.win.x64_2"));
+                Handler handler = new DesktopHandler(new DLV2DesktopService("../../../executable/dlv2.win"));
 
                 ASPMapper.Instance.RegisterClass(typeof(Edge));
                 ASPMapper.Instance.RegisterClass(typeof(Path));
-                ASPMapper.Instance.RegisterClass(typeof(From));
-                ASPMapper.Instance.RegisterClass(typeof(To));
 
                 InputProgram input = new ASPInputProgram();
 
                 from = 0;   // source node
                 to = 7;     // destination node
 
-                input.AddProgram("from(" + from + "). to(" + to + ").");
+                String rules = "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)." +
+                    "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)." +
+                    "end(X) :- to(X), path(_,X,_)." +
+                    ":- to(X), not end(X)." +
+                    ":~ path(X,Y,W). [W@1,X,Y]";
 
-                input.AddFilesPath("C:/Users/Marco/Desktop/ShortestPathC#/encoding.txt");
+                input.AddProgram("from(" + from + "). to(" + to + ").");
+                input.AddProgram(rules);
 
                 foreach (Edge edge in getEdges())
                 {
@@ -44,7 +47,6 @@ namespace ShortestPath
 
                 foreach (AnswerSet answerSet in answerSets.GetOptimalAnswerSets())
                 {
-
                     List<Path> path = new List<Path>();    //  edges in the shortest path (unsorted)
                     int sum = 0;                           //  total weight of the path
 
@@ -63,7 +65,7 @@ namespace ShortestPath
                     join(from, path, sortedPath);     // sorts the edges
                     print(sortedPath, sum);           // show the result
                 }
-            
+
             }
             catch (Exception e)
             {
