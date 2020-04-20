@@ -45,6 +45,8 @@ Implementations
    :hidden:
 
    examples/shortest-path-asp-java.rst
+   examples/shortest-path-asp-python.rst
+   examples/shortest-path-asp-csharp.rst
    examples/blocks-world-spd-java.rst
    examples/blocks-world-spd-python.rst
    examples/blocks-world-spd-csharp.rst
@@ -54,6 +56,8 @@ Desktop ASP exemples
 --------------------
 
 * :doc:`examples/shortest-path-asp-java`
+* :doc:`examples/shortest-path-asp-python`
+* :doc:`examples/shortest-path-asp-csharp`
 
 Desktop SPD examples
 --------------------

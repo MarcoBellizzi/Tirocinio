@@ -15,7 +15,8 @@ Using EmbASP
 In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the shortest-path problem.
 
-Immagine
+.. image:: ../_image/shortest-path.png
+   :align: center
 
 We will make use of the annotation-guided mapping, in order to create Java object constituting ASP predicates.
 
@@ -73,8 +74,8 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
 
   public class ShortestPath {
 
-    private static int from, to;
-    private static ArrayList<Integer> sortedPath;
+    private static int from, to;       // source and destination node
+    private static ArrayList<Integer> sortedPath;   // edges in the shortest path (sorted)
 
     public static void main(String[] args) {
 
@@ -87,8 +88,8 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
 
         InputProgram input = new ASPInputProgram();
 
-        from = 0;   // source node
-        to = 7;     // destination node
+        from = 0;
+        to = 7;
 			
         String rules = "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
           + "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
@@ -119,9 +120,6 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
             }
           }
 
-          sortedPath = new ArrayList<Integer>();    // edges in the shortest path (sorted)
-          sortedPath.add(from);
-			
           join(from,path,sortedPath);   // sorts the edges
           print(sortedPath,sum);        // shows the path
         }
@@ -152,31 +150,7 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
       return edges;
     }
 
-    private static void join(int from, ArrayList<Path> path, ArrayList<Integer> sortedPath) {
-      for(Path p : path) {
-        if(p.getFrom() == from) {
-          sortedPath.add(p.getTo());
-          if(p.getTo() == to) {
-            return;
-          }
-          join(p.getTo(), path, sortedPath);
-          return;
-        }
-      }
-    }
-
-    private static void print(ArrayList<Integer> path, int sum) {
-      boolean first = true;
-      System.out.print("path = ");
-      for(int n : path) {
-        if(!first)
-          System.out.print(" - ");
-        else
-          first = false;
-        System.out.print(n);
-      }
-      System.out.println("\nsum = " + sum);
-    }
+    [...]
 
   }
 
