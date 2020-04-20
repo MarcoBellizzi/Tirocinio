@@ -55,8 +55,8 @@ try:
 
     inputProgram = ASPInputProgram()
 
-    source = 0
-    destination = 7
+    source = 0   # source node
+    destination = 7   # destination node
     
     rules = "path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W)."
     rules += "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
@@ -75,8 +75,8 @@ try:
 
     for answerSet in answerSets.get_optimal_answer_sets():
     
-        path = []
-        sum_ = 0
+        path = []   # edges in the shortest path (unsorted)
+        sum_ = 0   # total weight of the path
     
         for obj in answerSet.get_atoms():
         
@@ -85,11 +85,11 @@ try:
                 path.append(obj)
                 sum_ += int(obj.get_weight())
 
-        sortedPath = []
+        sortedPath = []   # edges in the shortest path (sorted)
         sortedPath.append(source)
     
-        join(source, path, sortedPath)
-        show(sortedPath, sum_)
+        join(source, path, sortedPath)   # sorts the edges
+        show(sortedPath, sum_)    # shows the path
     
 except Exception as e:
     print(str(e))
