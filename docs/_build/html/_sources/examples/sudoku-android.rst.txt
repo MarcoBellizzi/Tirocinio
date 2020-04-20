@@ -23,7 +23,7 @@ In order to use the framework in your applications you have to import it as modu
 Using EmbASP
 ============
 
-In the following, we describe an the actual usage of the framework by means of a running example;
+In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Android application for solving Sudoku puzzles.
 
 The framework features a annotation-guided mapping, offered by the :code:`ASPMapper` component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications. 

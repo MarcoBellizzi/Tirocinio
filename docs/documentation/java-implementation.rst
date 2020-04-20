@@ -11,7 +11,7 @@ Base module implementation
 
 Each component in the :guilabel:`Base` module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.
 
-In particular, the `:code:`Handler`<https://www.antlr.org/>`_ class collects :code:`InputProgram` and :code:`OptionDescriptor` objects communicated by the user.
+In particular, the :code:`Handler` class collects :code:`InputProgram` and :code:`OptionDescriptor` objects communicated by the user.
 
 For what the asynchronous mode is concerned, the interface :code:`Service` depends from the interface :code:`Callback`, since once the reasoning service has terminated, the result of the computation is returned back via a class :code:`Callback`.
 

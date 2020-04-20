@@ -1,0 +1,195 @@
+======================
+Shortest-path ASP Java
+======================
+
+Getting started
+===============
+
+The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any Java project.
+
+The framework needs `ANTLR4 <https://www.antlr.org>`_ library for its operation. You can download the JAR and include directly in your project or you can use Gradle or Maven.
+
+Using EmbASP
+============
+
+In the following, we describe an actual usage of the framework by means of a running example;
+as a use case, we will develop a simple Desktop application to solve the shortest-path problem.
+
+Immagine
+
+We will make use of the annotation-guided mapping, in order to create Java object constituting ASP predicates.
+
+To this purpose, the following classes are intended to represent possible predicates that an ASP program can use:
+
+.. code-block:: java
+
+  @Id("edge")
+  public class Edge {
+
+    @Param(0)
+    private int from;
+
+    @Param(1)
+    private int to;
+
+    @Param(2)
+    private int weight;
+
+    public Edge(int from, int to, int weight) {
+      this.from = from;
+      this.to = to;
+      this.weight = weight;
+    }
+
+    [...]
+  }
+
+.. code-block:: java
+
+  @Id("path")
+  public class Path {
+
+    @Param(0)
+    private int from;
+
+    @Param(1)
+    private int to;
+
+    @Param(2)
+    private int weight;
+
+    public Path(int from, int to, int weight) {
+      this.from = from;
+      this.to = to;
+      this.weight = weight;
+    }
+
+    [...]
+  }
+
+At this point, supposing that we have embedded the DLV2 solver in this project, we can start deploying our application:
+
+.. code-block:: java
+
+  public class ShortestPath {
+
+    private static int from, to;
+    private static ArrayList<Integer> sortedPath;
+
+    public static void main(String[] args) {
+
+      try {
+
+        Handler handler = new DesktopHandler(new DLV2DesktopService("executable/dlv2"));
+
+        ASPMapper.getInstance().registerClass(Edge.class);
+        ASPMapper.getInstance().registerClass(Path.class);
+
+        InputProgram input = new ASPInputProgram();
+
+        from = 0;   // source node
+        to = 7;     // destination node
+			
+        String rules = "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
+          + "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
+          + "end(X) :- to(X), path(_,X,_)."
+          + ":- to(X), not end(X)."
+          + ":~ path(X,Y,W). [W@1 ,X,Y]";
+	
+        input.addProgram(rules);
+        input.addProgram("from(" + from + "). to(" + to + ").");
+	
+        for(Edge edge : getEdges()) {
+          input.addObjectInput(edge);
+        }
+
+        handler.addProgram(input);
+
+        AnswerSets answerSets = (AnswerSets) handler.startSync();
+
+        for(AnswerSet answerSet : answerSets.getOptimalAnswerSets()) {
+			
+          ArrayList<Path> path = new ArrayList<Path>();  // edges in the shortest path (unsorted)
+          int sum = 0;        // total weight of the path
+
+          for(Object obj : answerSet.getAtoms()) {
+            if(obj instanceof Path) {
+              path.add((Path)obj);
+              sum += ((Path)obj).getWeight();
+            }
+          }
+
+          sortedPath = new ArrayList<Integer>();    // edges in the shortest path (sorted)
+          sortedPath.add(from);
+			
+          join(from,path,sortedPath);   // sorts the edges
+          print(sortedPath,sum);        // shows the path
+        }
+
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+
+    }
+
+    private static ArrayList<Edge> getEdges() {
+      ArrayList<Edge> edges = new ArrayList<Edge>();
+
+      edges.add(new Edge(0,1,1));
+      edges.add(new Edge(0,2,4));
+      edges.add(new Edge(1,2,2));
+      edges.add(new Edge(1,3,4));
+      edges.add(new Edge(1,4,1));
+      edges.add(new Edge(2,4,4));
+      edges.add(new Edge(3,5,6));
+      edges.add(new Edge(3,6,1));
+      edges.add(new Edge(4,3,1));
+      edges.add(new Edge(6,4,5));
+      edges.add(new Edge(6,5,9));
+      edges.add(new Edge(6,7,1));
+      edges.add(new Edge(7,5,2));
+
+      return edges;
+    }
+
+    private static void join(int from, ArrayList<Path> path, ArrayList<Integer> sortedPath) {
+      for(Path p : path) {
+        if(p.getFrom() == from) {
+          sortedPath.add(p.getTo());
+          if(p.getTo() == to) {
+            return;
+          }
+          join(p.getTo(), path, sortedPath);
+          return;
+        }
+      }
+    }
+
+    private static void print(ArrayList<Integer> path, int sum) {
+      boolean first = true;
+      System.out.print("path = ");
+      for(int n : path) {
+        if(!first)
+          System.out.print(" - ");
+        else
+          first = false;
+        System.out.print(n);
+      }
+      System.out.println("\nsum = " + sum);
+    }
+
+  }
+
+The class contains an :code:`Handler` instance as field, that is initialized with a :code:`DesktopHandler` using the parameter :code:`DLV2DesktopService` with a string representing the path to the DLV2 local solver.
+
+The :code:`ASPMapper` registers the classes created before in order to manage the input and output objects.
+
+Two string and a list of :code:`Edge` representing facts, rules and constraints of the ASP program are added to an :code:`ASPInputProgram`, and the :code:`InputProgram` is added to the :code:`Handler`.
+
+Finally the solver is invoked, and the output is retrieved.
+
+The output predicates can be managed accordingly to the user's desiderata. In this example the :code:`Path` predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.
+
+|
+
+For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ or visit our `website <https://www.mat.unical.it/calimeri/projects/embasp/>`_.

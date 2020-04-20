@@ -44,13 +44,19 @@ Implementations
    :caption: Examples
    :hidden:
 
+   examples/shortest-path-asp-java.rst
    examples/blocks-world-spd-java.rst
    examples/blocks-world-spd-python.rst
    examples/blocks-world-spd-csharp.rst
    examples/sudoku-android.rst
 
-SPD examples
-------------
+Desktop ASP exemples
+--------------------
+
+* :doc:`examples/shortest-path-asp-java`
+
+Desktop SPD examples
+--------------------
 
 *  :doc:`examples/blocks-world-spd-java`
 *  :doc:`examples/blocks-world-spd-python`

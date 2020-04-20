@@ -10,7 +10,7 @@ The framework is released as DLL file to be used on a Desktop platform, therefor
 Using EmbASP
 ============
 
-In the following, we describe an the actual usage of the framework by means of a running example;
+In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
 .. image:: ../_image/blocks-world.png

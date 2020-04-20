@@ -12,7 +12,7 @@ The framework needs `ANTLR4 <https://www.antlr.org>`_ library for its operation.
 Using EmbASP
 ============
 
-In the following, we describe an the actual usage of the framework by means of a running example;
+In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
 .. image:: ../_image/blocks-world.png
