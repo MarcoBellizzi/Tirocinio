@@ -158,7 +158,7 @@ The class contains an :code:`Handler` instance as field, that is initialized wit
 
 The :code:`ASPMapper` registers the classes created before in order to manage the input and output objects.
 
-Two string and a list of :code:`Edge` representing facts, rules and constraints of the ASP program are added to an :code:`ASPInputProgram`, and the :code:`InputProgram` is added to the :code:`Handler`.
+Two string and a list of :code:`Edge` representing facts, rules and constraints of the ASP program are added to an :code:`ASPInputProgram`, and the :code:`ASPInputProgram` is added to the :code:`Handler`.
 
 Finally the solver is invoked, and the output is retrieved.
 

@@ -32,6 +32,7 @@ Documentation
    documentation/java-implementation.rst
    documentation/python-implementation.rst
    documentation/csharp-implementation.rst
+   documentation/doxygen.rst
 
 Implementations
 ---------------
@@ -39,6 +40,11 @@ Implementations
 *  :doc:`documentation/java-implementation`
 *  :doc:`documentation/python-implementation`
 *  :doc:`documentation/csharp-implementation`
+
+Doxygen documentation
+---------------------
+
+*  :doc:`documentation/doxygen`
 
 .. toctree::
    :caption: Examples
