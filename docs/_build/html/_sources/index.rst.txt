@@ -1,11 +1,7 @@
-.. _index:
-
 .. image:: _image/EmbASP_Logo.png
    :height: 300 px
    :width: 500 px
    :align: center
-   :class: classe
-   :name: nome
 
 ======
 EmbASP
@@ -45,6 +41,9 @@ Doxygen documentation
 ---------------------
 
 *  :doc:`documentation/doxygen`
+
+Examples
+========
 
 .. toctree::
    :caption: Examples
