@@ -158,8 +158,8 @@ For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ 
 .. |Plan| replace:: ``Plan``
 
 .. _Handler: ../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html
-.. _InputProgram: ../_static/doxygen/java/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html
-.. _OptionDescriptor: ../_static/doxygen/java/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html
+.. _InputProgram: ../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html
+.. _OptionDescriptor: ../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html
 .. _Service: ../_static/doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Service.html
 .. _CallBack: ../_static/doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html
 .. _AndroidHandler: ../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidHandler.html
