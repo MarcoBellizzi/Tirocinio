@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../documentation/java-implementation.html">Java implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/python-implementation.html">Python implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/csharp-implementation.html">C# implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation/doxygen.html">Doxygen documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/technical_doc.html">Technical documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
@@ -179,7 +179,7 @@
 <h2>Using EmbASP<a class="headerlink" href="#using-embasp" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.</p>
-<img alt="../_images/blocks-world.png" class="align-center" src="../_images/blocks-world.png" />
+<div align="center" class="align-center"><img alt="../_images/blocks-world.svg" src="../_images/blocks-world.svg" /></div>
 <p>We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Python objects.</p>
 <p>To this purpose, the following classes are intended to represent possible actions that a blocks-world solution plan can feature:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PickUp</span><span class="p">(</span><span class="n">Predicate</span><span class="p">):</span>
@@ -258,9 +258,9 @@ as a use case, we will develop a simple Desktop application to solve the blocks-
       <span class="n">Blocksworld</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The class contains an <code class="code docutils literal notranslate"><span class="pre">Handler</span></code> instance as field, that is initialized with a <code class="code docutils literal notranslate"><span class="pre">DesktopHandler</span></code> using the required parameter <code class="code docutils literal notranslate"><span class="pre">SPDDesktopService</span></code>.</p>
-<p>Then it’s set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two <code class="code docutils literal notranslate"><span class="pre">PDDLInputProgram</span></code> are created and then given to the handler.</p>
-<p>The next lines inform the <code class="code docutils literal notranslate"><span class="pre">PDDLMapper</span></code> about what classes are intended to map the output actions.</p>
+<p>The class contains an <a class="reference external" href="../_static/doxygen/python/classbase_1_1handler_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized with a <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html"><code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code></a> using the required parameter <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__service_1_1DesktopService.html"><code class="docutils literal notranslate"><span class="pre">SPDDesktopService</span></code></a>.</p>
+<p>Then it’s set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__input__program_1_1PDDLInputProgram.html"><code class="docutils literal notranslate"><span class="pre">PDDLInputProgram</span></code></a> are created and then given to the handler.</p>
+<p>The next lines inform the <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__mapper_1_1PDDLMapper.html"><code class="docutils literal notranslate"><span class="pre">PDDLMapper</span></code></a> about what classes are intended to map the output actions.</p>
 <p>Finally the solver is invoked, and the output is retrieved.</p>
 <p>The output actions can be managed accordingly to the user’s desiderata.</p>
 <div class="line-block">

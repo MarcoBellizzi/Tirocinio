@@ -88,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../documentation/java-implementation.html">Java implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/python-implementation.html">Python implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/csharp-implementation.html">C# implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation/doxygen.html">Doxygen documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/technical_doc.html">Technical documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
@@ -198,13 +198,13 @@
 <h2>Using EmbASP<a class="headerlink" href="#using-embasp" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Android application for solving Sudoku puzzles.</p>
-<p>The framework features a annotation-guided mapping, offered by the <code class="code docutils literal notranslate"><span class="pre">ASPMapper</span></code> component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
+<p>The framework features a annotation-guided mapping, offered by the <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html"><code class="docutils literal notranslate"><span class="pre">ASPMapper</span></code></a> component, for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly employable within applications.
 By means of this feature, the ASP-based aspects can be separated from the Java coding: the programmer doesn’t even necessarily need to be aware of ASP.</p>
 <p>Let us think of a user that designed (or has been given) a proper logic program P to solve a sudoku puzzle and has also an initial schema.
 We assume that the initial schema is well-formed i.e. the complete schema solution exists and is unique.
 A possible program P is embedded in the complete example, that, coupled with a set of facts F representing the given initial schema, allows to obtain the only admissible solution.</p>
 <p>By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects.
-To this extent, we define the class <code class="code docutils literal notranslate"><span class="pre">Cell</span></code>, aimed at representing the single cell of the sudoku schema, as follows:</p>
+To this extent, we define the class <code class="docutils literal notranslate"><span class="pre">Cell</span></code>, aimed at representing the single cell of the sudoku schema, as follows:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Id</span><span class="p">(</span><span class="s">&quot;cell&quot;</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cell</span> <span class="p">{</span>
 
@@ -227,7 +227,7 @@ To this extent, we define the class <code class="code docutils literal notransla
 <li><em>&#64;Id(string_name)</em> : the target must be a class, and defines the predicate name the class is mapped to;</li>
 <li><em>&#64;Param(integer_position)</em> : the target must be a field of a class annotated via <em>&#64;Id</em>, and defines the term (and its position) in the ASP atom the field is mapped to.</li>
 </ul>
-<p>Thanks to these annotations the <code class="code docutils literal notranslate"><span class="pre">ASPMapper</span></code> class will be able to map <code class="code docutils literal notranslate"><span class="pre">Cell</span></code> objects into strings properly recognizable from the ASP solver as logic facts of the form <em>cell(Row,Column,Value)</em>.
+<p>Thanks to these annotations the <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html"><code class="docutils literal notranslate"><span class="pre">ASPMapper</span></code></a> class will be able to map <code class="docutils literal notranslate"><span class="pre">Cell</span></code> objects into strings properly recognizable from the ASP solver as logic facts of the form <em>cell(Row,Column,Value)</em>.
 At this point, we can create an <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a> , and start deploying our sudoku application:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
 
@@ -269,15 +269,15 @@ At this point, we can create an <a class="reference external" href="https://deve
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The class contains an <code class="code docutils literal notranslate"><span class="pre">Handler</span></code> instance as field, that is initialized when the Activity is created as an <code class="code docutils literal notranslate"><span class="pre">AndroidHandler</span></code>.
-Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of <code class="code docutils literal notranslate"><span class="pre">AndroidService</span></code> to use, in our case a <code class="code docutils literal notranslate"><span class="pre">DLVAndroidService</span></code>.</p>
+<p>The class contains an <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized when the Activity is created as an <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidHandler.html"><code class="docutils literal notranslate"><span class="pre">AndroidHandler</span></code></a>.
+Required parameters include the Android Context (an Android utility, needed to start an Android Service Component) and the type of <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidService.html"><code class="docutils literal notranslate"><span class="pre">AndroidService</span></code></a> to use, in our case a <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1android_1_1DLVAndroidService.html"><code class="docutils literal notranslate"><span class="pre">DLVAndroidService</span></code></a>.</p>
 <p>In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where position (i,j) contains the value of cell (i,j) in the initial schema; cells initially empty are represented by positions containing zero.</p>
 <p>The method startReasoning is in charge of actually managing the reasoning: in our case, it is invoked in response to a click event that is generated when the user asks for the solution.
-It is firstly created an <code class="code docutils literal notranslate"><span class="pre">InputProgram</span></code> object that is filled with <code class="code docutils literal notranslate"><span class="pre">Cell</span></code> objects representing the initial schema, which is then provided to the handler;
+It is firstly created an <a class="reference external" href="../_static/doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html"><code class="docutils literal notranslate"><span class="pre">InputProgram</span></code></a> object that is filled with <code class="docutils literal notranslate"><span class="pre">Cell</span></code> objects representing the initial schema, which is then provided to the handler;
 then it is provided with the sudoku encoding. It could be loaded, for instance, by means of an utility function that retrieves it from the Android Resources folder, which, within Android applications, is typically meant for containing images, sounds, files and resources in general.</p>
-<p>At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback object is in charge of fetching the output when the ASP system has done.</p>
-<p>Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects.
-For instance, in our case an inner class <code class="code docutils literal notranslate"><span class="pre">MyCallback</span></code> implements the interface <code class="code docutils literal notranslate"><span class="pre">Callback</span></code>:</p>
+<p>At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a <a class="reference external" href="../_static/doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html"><code class="docutils literal notranslate"><span class="pre">Callback</span></code></a> object is in charge of fetching the output when the ASP system has done.</p>
+<p>Finally, once the computation is over, from within the <em>callback</em> function the output can be retrieved directly in form of Java objects.
+For instance, in our case an inner class <code class="docutils literal notranslate"><span class="pre">MyCallback</span></code> implements the interface <a class="reference external" href="../_static/doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html"><code class="docutils literal notranslate"><span class="pre">Callback</span></code></a>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">class</span> <span class="nc">MyCallback</span> <span class="kd">implements</span> <span class="n">Callback</span> <span class="p">{</span>
 
   <span class="nd">@Override</span>

@@ -1,4 +1,4 @@
-.. image:: _image/EmbASP_Logo.png
+.. image:: _image/EmbASP_Logo.svg
    :height: 300 px
    :width: 500 px
    :align: center
@@ -28,7 +28,7 @@ Documentation
    documentation/java-implementation.rst
    documentation/python-implementation.rst
    documentation/csharp-implementation.rst
-   documentation/doxygen.rst
+   documentation/technical_doc.rst
 
 Implementations
 ---------------
@@ -40,7 +40,7 @@ Implementations
 Doxygen documentation
 ---------------------
 
-*  :doc:`documentation/doxygen`
+*  :doc:`documentation/technical_doc`
 
 Examples
 ========

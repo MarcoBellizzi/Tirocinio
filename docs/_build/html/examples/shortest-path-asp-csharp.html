@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../documentation/java-implementation.html">Java implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/python-implementation.html">Python implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/csharp-implementation.html">C# implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation/doxygen.html">Doxygen documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/technical_doc.html">Technical documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
@@ -306,14 +306,15 @@ as a use case, we will develop a simple Desktop application to solve the shortes
   <span class="p">}</span>
 
 <span class="na">  [...]</span>
+
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The class contains an <code class="code docutils literal notranslate"><span class="pre">Handler</span></code> instance as field, that is initialized with a <code class="code docutils literal notranslate"><span class="pre">DesktopHandler</span></code> using the parameter <code class="code docutils literal notranslate"><span class="pre">DLV2DesktopService</span></code> with a string representing the path to the DLV2 local solver.</p>
-<p>The <code class="code docutils literal notranslate"><span class="pre">ASPMapper</span></code> registers the classes created before in order to manage the input and output objects.</p>
-<p>Two string and a list of <code class="code docutils literal notranslate"><span class="pre">Edge</span></code> representing facts, rules and constraints of the ASP program are added to an <code class="code docutils literal notranslate"><span class="pre">ASPInputProgram</span></code>, and the <code class="code docutils literal notranslate"><span class="pre">ASPInputProgram</span></code> is added to the <code class="code docutils literal notranslate"><span class="pre">Handler</span></code>.</p>
+<p>The class contains an <a class="reference external" href="../_static/doxygen/cSharp/classbase_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized with a <a class="reference external" href="../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html"><code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code></a> using the parameter <a class="reference external" href="../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1desktop_1_1DLV2DesktopService.html"><code class="docutils literal notranslate"><span class="pre">DLV2DesktopService</span></code></a> with a string representing the path to the DLV2 local solver.</p>
+<p>The <a class="reference external" href="../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html"><code class="docutils literal notranslate"><span class="pre">ASPMapper</span></code></a> registers the classes created before in order to manage the input and output objects.</p>
+<p>Two string and a list of <code class="docutils literal notranslate"><span class="pre">Edge</span></code> representing facts, rules and constraints of the ASP program are added to an <a class="reference external" href="../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html"><code class="docutils literal notranslate"><span class="pre">ASPInputProgram</span></code></a>, and the <a class="reference external" href="../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html"><code class="docutils literal notranslate"><span class="pre">ASPInputProgram</span></code></a> is added to the <a class="reference external" href="../_static/doxygen/cSharp/classbase_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a>.</p>
 <p>Finally the solver is invoked, and the output is retrieved.</p>
-<p>The output predicates can be managed accordingly to the user’s desiderata. In this example the <code class="code docutils literal notranslate"><span class="pre">Path</span></code> predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.</p>
+<p>The output predicates can be managed accordingly to the user’s desiderata. In this example the <code class="docutils literal notranslate"><span class="pre">Path</span></code> predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

@@ -1,6 +1,9 @@
-=====================
-Doxygen documentation
-=====================
+=======================
+Technical documentation
+=======================
+
+Doxygen
+=======
 
 * `Java Doxygen documentation <../_static/doxygen/java/index.html>`_
 * `Python Doxygen documentation <../_static/doxygen/python/index.html>`_

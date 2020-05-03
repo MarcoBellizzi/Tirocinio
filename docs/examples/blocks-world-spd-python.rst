@@ -15,7 +15,7 @@ Using EmbASP
 In the following, we describe an actual usage of the framework by means of a running example;
 as a use case, we will develop a simple Desktop application to solve the blocks-world problem.
 
-.. image:: ../_image/blocks-world.png
+.. image:: ../_image/blocks-world.svg
    :align: center
 
 We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Python objects.
@@ -106,11 +106,11 @@ At this point, supposing that we are given two files defining the blocks-world d
         Blocksworld.main()
 
 
-The class contains an :code:`Handler` instance as field, that is initialized with a :code:`DesktopHandler` using the required parameter :code:`SPDDesktopService`.
+The class contains an |Handler|_ instance as field, that is initialized with a |DesktopHandler|_ using the required parameter |SPDDesktopService|_.
 
-Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two :code:`PDDLInputProgram` are created and then given to the handler.
+Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two |PDDLInputProgram|_ are created and then given to the handler.
 
-The next lines inform the :code:`PDDLMapper` about what classes are intended to map the output actions.
+The next lines inform the |PDDLMapper|_ about what classes are intended to map the output actions.
 
 Finally the solver is invoked, and the output is retrieved.
 
@@ -119,3 +119,16 @@ The output actions can be managed accordingly to the user's desiderata.
 |
 
 For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ or visit our `website <https://www.mat.unical.it/calimeri/projects/embasp/>`_.
+
+.. |Handler| replace:: ``Handler``
+.. |DesktopHandler| replace:: ``DesktopHandler``
+.. |SPDDesktopService| replace:: ``SPDDesktopService``
+.. |PDDLInputProgram| replace:: ``PDDLInputProgram``
+.. |PDDLMapper| replace:: ``PDDLMapper``
+
+.. _Handler: ../_static/doxygen/python/classbase_1_1handler_1_1Handler.html
+.. _DesktopHandler: ../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html
+.. _SPDDesktopService: ../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__service_1_1DesktopService.html
+.. _PDDLInputProgram: ../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__input__program_1_1PDDLInputProgram.html
+.. _PDDLMapper: ../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__mapper_1_1PDDLMapper.html
+

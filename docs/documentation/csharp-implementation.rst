@@ -19,8 +19,8 @@ The following figure provides some details about classes and interfaces of the i
      border-radius: 50%;
      cursor: none;
      /*Set the size of the magnifier glass:*/
-     width: 170px;
-     height: 170px;
+     width: 220px;
+     height: 220px;
    }
    </style>
 
@@ -82,13 +82,13 @@ The following figure provides some details about classes and interfaces of the i
    </script>
 
    <div class="img-magnifier-container">
-     <img id="myimage" src="../_static/class_diagram_csharp_v6.png" width="1000" height="500">
+     <img id="myimage" src="../_static/class_diagram_csharp_v6.svg" width="1000" height="500">
    </div>
 
    <script>
    /* Initiate Magnify Function
    with the id of the image, and the strength of the magnifier glass:*/
-   magnify("myimage", 2.5);
+   magnify("myimage", 2);
    </script>
 
 

@@ -150,18 +150,32 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
     }
 
     [...]
+
   }
 
-The class contains an :code:`Handler` instance as field, that is initialized with a :code:`DesktopHandler` using the parameter :code:`DLV2DesktopService` with a string representing the path to the DLV2 local solver.
+The class contains an |Handler|_ instance as field, that is initialized with a |DesktopHandler|_ using the parameter |DLV2DesktopService|_ with a string representing the path to the DLV2 local solver.
 
-The :code:`ASPMapper` registers the classes created before in order to manage the input and output objects.
+The |ASPMapper|_ registers the classes created before in order to manage the input and output objects.
 
-Two string and a list of :code:`Edge` representing facts, rules and constraints of the ASP program are added to an :code:`ASPInputProgram`, and the :code:`ASPInputProgram` is added to the :code:`Handler`.
+Two string and a list of ``Edge`` representing facts, rules and constraints of the ASP program are added to an |ASPInputProgram|_, and the |ASPInputProgram|_ is added to the |Handler|_.
 
 Finally the solver is invoked, and the output is retrieved.
 
-The output predicates can be managed accordingly to the user's desiderata. In this example the :code:`Path` predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.
+The output predicates can be managed accordingly to the user's desiderata. In this example the ``Path`` predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.
 
 |
 
 For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ or visit our `website <https://www.mat.unical.it/calimeri/projects/embasp/>`_.
+
+.. |Handler| replace:: ``Handler``
+.. |DesktopHandler| replace:: ``DesktopHandler``
+.. |DLV2DesktopService| replace:: ``DLV2DesktopService``
+.. |ASPMapper| replace:: ``ASPMapper``
+.. |ASPInputProgram| replace:: ``ASPInputProgram``
+
+.. _Handler: ../_static/doxygen/cSharp/classbase_1_1Handler.html
+.. _DesktopHandler: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html
+.. _DLV2DesktopService: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1desktop_1_1DLV2DesktopService.html
+.. _ASPMapper: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html
+.. _ASPInputProgram: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html
+
