@@ -91,18 +91,17 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
         from = 0;
         to = 7;
 			
-        String rules = "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
-          + "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
-          + "end(X) :- to(X), path(_,X,_)."
-          + ":- to(X), not end(X)."
-          + ":~ path(X,Y,W). [W@1 ,X,Y]";
-	
+        String rules = "from(" + from + "). to(" + to + ")."
+           + "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
+           + "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X)."
+           + "visited(X) :- path(_,X,_)."
+           + ":- to(X), not visited(X)."
+           + ":~ path(X,Y,W). [W@1 ,X,Y]";
+
         input.addProgram(rules);
-        input.addProgram("from(" + from + "). to(" + to + ").");
-	
-        for(Edge edge : getEdges()) {
+
+        for(Edge edge : getEdges())
           input.addObjectInput(edge);
-        }
 
         handler.addProgram(input);
 

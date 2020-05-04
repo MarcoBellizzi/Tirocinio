@@ -100,9 +100,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="shortest-path-asp-python.html">Shortest-path ASP Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shortest-path-asp-csharp.html">Shortest-path ASP C#</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-java.html">Blocks-world SPD Java</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-python.html">Blocks-world SPD Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-csharp.html">Blocks-world SPD C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-java.html">Blocks-world PDDL Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-python.html">Blocks-world PDDL Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-csharp.html">Blocks-world PDDL C#</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sudoku-android.html">Sudoku Android</a></li>
 </ul>
 
@@ -246,18 +246,17 @@ as a use case, we will develop a simple Desktop application to solve the shortes
       <span class="n">from</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
       <span class="n">to</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
-      <span class="n">String</span> <span class="n">rules</span> <span class="o">=</span> <span class="s">&quot;path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W).&quot;</span>
-        <span class="o">+</span> <span class="s">&quot;path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W).&quot;</span>
-        <span class="o">+</span> <span class="s">&quot;end(X) :- to(X), path(_,X,_).&quot;</span>
-        <span class="o">+</span> <span class="s">&quot;:- to(X), not end(X).&quot;</span>
-        <span class="o">+</span> <span class="s">&quot;:~ path(X,Y,W). [W@1 ,X,Y]&quot;</span><span class="p">;</span>
+      <span class="n">String</span> <span class="n">rules</span> <span class="o">=</span> <span class="s">&quot;from(&quot;</span> <span class="o">+</span> <span class="n">from</span> <span class="o">+</span> <span class="s">&quot;). to(&quot;</span> <span class="o">+</span> <span class="n">to</span> <span class="o">+</span> <span class="s">&quot;).&quot;</span>
+         <span class="o">+</span> <span class="s">&quot;path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W).&quot;</span>
+         <span class="o">+</span> <span class="s">&quot;path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X).&quot;</span>
+         <span class="o">+</span> <span class="s">&quot;visited(X) :- path(_,X,_).&quot;</span>
+         <span class="o">+</span> <span class="s">&quot;:- to(X), not visited(X).&quot;</span>
+         <span class="o">+</span> <span class="s">&quot;:~ path(X,Y,W). [W@1 ,X,Y]&quot;</span><span class="p">;</span>
 
       <span class="n">input</span><span class="p">.</span><span class="na">addProgram</span><span class="p">(</span><span class="n">rules</span><span class="p">);</span>
-      <span class="n">input</span><span class="p">.</span><span class="na">addProgram</span><span class="p">(</span><span class="s">&quot;from(&quot;</span> <span class="o">+</span> <span class="n">from</span> <span class="o">+</span> <span class="s">&quot;). to(&quot;</span> <span class="o">+</span> <span class="n">to</span> <span class="o">+</span> <span class="s">&quot;).&quot;</span><span class="p">);</span>
 
-      <span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="n">edge</span> <span class="p">:</span> <span class="n">getEdges</span><span class="p">())</span> <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="n">edge</span> <span class="p">:</span> <span class="n">getEdges</span><span class="p">())</span>
         <span class="n">input</span><span class="p">.</span><span class="na">addObjectInput</span><span class="p">(</span><span class="n">edge</span><span class="p">);</span>
-      <span class="p">}</span>
 
       <span class="n">handler</span><span class="p">.</span><span class="na">addProgram</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
 

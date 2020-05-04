@@ -37,8 +37,8 @@ Implementations
 *  :doc:`documentation/python-implementation`
 *  :doc:`documentation/csharp-implementation`
 
-Doxygen documentation
----------------------
+Technical documentation
+-----------------------
 
 *  :doc:`documentation/technical_doc`
 
@@ -52,9 +52,9 @@ Examples
    examples/shortest-path-asp-java.rst
    examples/shortest-path-asp-python.rst
    examples/shortest-path-asp-csharp.rst
-   examples/blocks-world-spd-java.rst
-   examples/blocks-world-spd-python.rst
-   examples/blocks-world-spd-csharp.rst
+   examples/blocks-world-pddl-java.rst
+   examples/blocks-world-pddl-python.rst
+   examples/blocks-world-pddl-csharp.rst
    examples/sudoku-android.rst
 
 Desktop ASP exemples
@@ -64,12 +64,12 @@ Desktop ASP exemples
 * :doc:`examples/shortest-path-asp-python`
 * :doc:`examples/shortest-path-asp-csharp`
 
-Desktop SPD examples
---------------------
+Desktop PDDL examples
+---------------------
 
-*  :doc:`examples/blocks-world-spd-java`
-*  :doc:`examples/blocks-world-spd-python`
-*  :doc:`examples/blocks-world-spd-csharp`
+*  :doc:`examples/blocks-world-pddl-java`
+*  :doc:`examples/blocks-world-pddl-python`
+*  :doc:`examples/blocks-world-pddl-csharp`
 
 Android example
 ---------------

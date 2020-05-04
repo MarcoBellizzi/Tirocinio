@@ -100,9 +100,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="shortest-path-asp-csharp.html">Shortest-path ASP C#</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-java.html">Blocks-world SPD Java</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-python.html">Blocks-world SPD Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blocks-world-spd-csharp.html">Blocks-world SPD C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-java.html">Blocks-world PDDL Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-python.html">Blocks-world PDDL Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-csharp.html">Blocks-world PDDL C#</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sudoku-android.html">Sudoku Android</a></li>
 </ul>
 
@@ -239,16 +239,15 @@ as a use case, we will develop a simple Desktop application to solve the shortes
   <span class="n">source</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1"># source node</span>
   <span class="n">destination</span> <span class="o">=</span> <span class="mi">7</span>    <span class="c1"># destination node</span>
 
-  <span class="n">rules</span> <span class="o">=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W).&quot;</span>
-  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W).&quot;</span>
-  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;end(X) :- destination(X), path(_,X,_).&quot;</span>
-  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;:- destination(X), not end(X).&quot;</span>
+  <span class="n">rules</span> <span class="o">=</span> <span class="s2">&quot;source(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;). destination(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">destination</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;visited(X) :- path(_,X,_).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;:- destination(X), not visited(X).&quot;</span>
   <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;:~ path(X,Y,W). [W@1 ,X,Y]&quot;</span>
 
   <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">rules</span><span class="p">)</span>
-  <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="s2">&quot;source(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">source</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;). destination(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;).&quot;</span><span class="p">)</span>
-
-  <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_objects_input</span><span class="p">(</span><span class="n">getEdges</span><span class="p">())</span>
+  <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_objects_input</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEdges</span><span class="p">())</span>
 
   <span class="n">handler</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">inputProgram</span><span class="p">)</span>
 

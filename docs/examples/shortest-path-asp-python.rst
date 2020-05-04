@@ -84,16 +84,15 @@ At this point, supposing that we have embedded the DLV2 solver in this project, 
     source = 0    # source node
     destination = 7    # destination node
     
-    rules = "path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W)."
-    rules += "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W)."
-    rules += "end(X) :- destination(X), path(_,X,_)."
-    rules += ":- destination(X), not end(X)."
+    rules = "source(" + str(self.source) + "). destination(" + str(self.destination) + ")."
+    rules += "path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W)."
+    rules += "path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X)."
+    rules += "visited(X) :- path(_,X,_)."
+    rules += ":- destination(X), not visited(X)."
     rules += ":~ path(X,Y,W). [W@1 ,X,Y]"
 
     inputProgram.add_program(rules)
-    inputProgram.add_program("source(" + str(source) + "). destination(" + str(destination) + ").")
-    
-    inputProgram.add_objects_input(getEdges())
+    inputProgram.add_objects_input(self.getEdges())
 
     handler.add_program(inputProgram)
     
