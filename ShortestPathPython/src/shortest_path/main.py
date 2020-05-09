@@ -5,7 +5,6 @@ from specializations.dlv2.desktop.dlv2_desktop_service import DLV2DesktopService
 from languages.asp.asp_mapper import ASPMapper
 from languages.asp.asp_input_program import ASPInputProgram
 
-
 def getEdges():
     edges = []
     
@@ -47,7 +46,7 @@ def show(path, sum_):
     
 
 try:
-    
+
     handler = DesktopHandler(DLV2DesktopService("../../executable/dlv2"))
 
     ASPMapper.get_instance().register_class(Edge)

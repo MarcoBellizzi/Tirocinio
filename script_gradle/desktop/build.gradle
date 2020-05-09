@@ -1,0 +1,36 @@
+plugins {
+	id 'antlr'
+	id 'java'
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+			exclude 'it/unical/mat/embasp/platforms/android',
+				'it/unical/mat/embasp/specializations/dlv/android',
+                                'it/unical/mat/embasp/specializations/dlv2/android',
+				'it/unical/mat/embasp/specializations/solver_planning_domains/android',
+				'AndroidManifest.xml'
+		}
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	antlr 'org.antlr:antlr4-runtime:4.7.2'
+	testImplementation 'junit:junit:4.12'
+}
+
+jar{
+	archiveName 'embASP.jar'
+	
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+	
+	exclude 'resources/'
+}
