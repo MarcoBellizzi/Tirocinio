@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\source\repos\EmbASP-CSharp\EmbASP.csproj" />
+    <Reference Include="EmbASP">
+      <HintPath>lib\EmbASP.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
