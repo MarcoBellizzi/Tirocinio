@@ -4,7 +4,7 @@
     
     <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/ShortestPathPython/src</path>
-<path>/${PROJECT_DIR_NAME}/Python_version</path>
+<path>/${PROJECT_DIR_NAME}/lib/EmbASP</path>
 </pydev_pathproperty>
             
     
@@ -15,4 +15,7 @@
             
 
 
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>/home/rhode/git/EmbASP-Python/dist/EmbASP-6.0.0-py2.py3-none-any.whl</path>
+</pydev_pathproperty>
 </pydev_project>
