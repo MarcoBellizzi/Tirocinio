@@ -1,4 +1,4 @@
-package predicates;
+package shortest_path;
 
 import it.unical.mat.embasp.languages.Id;
 import it.unical.mat.embasp.languages.Param;

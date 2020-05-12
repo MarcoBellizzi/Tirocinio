@@ -1,4 +1,4 @@
-package main;
+package shortest_path;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,6 @@ import it.unical.mat.embasp.languages.asp.AnswerSet;
 import it.unical.mat.embasp.languages.asp.AnswerSets;
 import it.unical.mat.embasp.platforms.desktop.DesktopHandler;
 import it.unical.mat.embasp.specializations.dlv2.desktop.DLV2DesktopService;
-import predicates.Edge;
-import predicates.Path;
 
 public class MainClass {
 
