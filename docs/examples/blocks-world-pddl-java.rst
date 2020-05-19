@@ -104,10 +104,11 @@ At this point, supposing that we are given two files defining the blocks-world d
         Plan plan = (Plan)(handler.startSync());
                 
         for (final Object obj : plan.getActionsObjects())
-          // Manage objects as needed
+          if (obj instanceof PickUp || obj instanceof Stack || obj instanceof Unstack || obj instanceof PutDown) 
+            System.out.println(obj.toString());
                         
       } catch (Exception e) {
-        // Handle Exception
+        e.printStackTrace();
       }
     }
   }

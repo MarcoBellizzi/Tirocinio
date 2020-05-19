@@ -225,40 +225,30 @@ as a use case, we will develop a simple Desktop application to solve the blocks-
 </pre></div>
 </div>
 <p>At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start deploying our application:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Blocksworld</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">handler</span>  <span class="o">=</span> <span class="n">DesktopHandler</span><span class="p">(</span><span class="n">SPDDesktopService</span><span class="p">())</span>
 
-   <span class="n">__domainFileName</span> <span class="o">=</span> <span class="s2">&quot;domain.pddl&quot;</span>
-   <span class="n">__problemFileName</span> <span class="o">=</span> <span class="s2">&quot;p01.pddl&quot;</span>
+<span class="n">input_domain</span> <span class="o">=</span> <span class="n">PDDLInputProgram</span><span class="p">(</span><span class="n">PDDLProgramType</span><span class="o">.</span><span class="n">DOMAIN</span><span class="p">)</span>
+<span class="n">input_domain</span><span class="o">.</span><span class="n">add_files_path</span><span class="p">(</span><span class="s2">&quot;../domain.pddl&quot;</span><span class="p">)</span>
 
-   <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="n">handler</span> <span class="o">=</span> <span class="n">DesktopHandler</span><span class="p">(</span><span class="n">SPDDesktopService</span><span class="p">())</span>
-      <span class="n">inputProgramDomain</span> <span class="o">=</span> <span class="n">PDDLInputProgram</span><span class="p">(</span><span class="n">PDDLProgramType</span><span class="o">.</span><span class="n">DOMAIN</span><span class="p">)</span>
-      <span class="n">inputProgramDomain</span><span class="o">.</span><span class="n">addFilesPath</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__domainFileName</span><span class="p">)</span>
-      <span class="n">inputProgramProblem</span> <span class="o">=</span> <span class="n">PDDLInputProgram</span><span class="p">(</span><span class="n">PDDLProgramType</span><span class="o">.</span><span class="n">PROBLEM</span><span class="p">)</span>
-      <span class="n">inputProgramProblem</span><span class="o">.</span><span class="n">addFilesPath</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__problemFileName</span><span class="p">)</span>
-      <span class="n">handler</span><span class="o">.</span><span class="n">addProgram</span><span class="p">(</span><span class="n">inputProgramDomain</span><span class="p">)</span>
-      <span class="n">handler</span><span class="o">.</span><span class="n">addProgram</span><span class="p">(</span><span class="n">inputProgramProblem</span><span class="p">)</span>
+<span class="n">input_problem</span><span class="o">=</span> <span class="n">PDDLInputProgram</span><span class="p">(</span><span class="n">PDDLProgramType</span><span class="o">.</span><span class="n">PROBLEM</span><span class="p">)</span>
+<span class="n">input_problem</span><span class="o">.</span><span class="n">add_files_path</span><span class="p">(</span><span class="s2">&quot;../p01.pddl&quot;</span><span class="p">)</span>
 
-      <span class="k">try</span><span class="p">:</span>
-          <span class="n">PDDLMapper</span><span class="o">.</span><span class="n">getInstance</span><span class="p">()</span><span class="o">.</span><span class="n">registerClass</span><span class="p">(</span><span class="n">PickUp</span><span class="p">)</span>
-          <span class="n">PDDLMapper</span><span class="o">.</span><span class="n">getInstance</span><span class="p">()</span><span class="o">.</span><span class="n">registerClass</span><span class="p">(</span><span class="n">PutDown</span><span class="p">)</span>
-          <span class="n">PDDLMapper</span><span class="o">.</span><span class="n">getInstance</span><span class="p">()</span><span class="o">.</span><span class="n">registerClass</span><span class="p">(</span><span class="n">Stack</span><span class="p">)</span>
-          <span class="n">PDDLMapper</span><span class="o">.</span><span class="n">getInstance</span><span class="p">()</span><span class="o">.</span><span class="n">registerClass</span><span class="p">(</span><span class="n">Unstack</span><span class="p">)</span>
+<span class="n">handler</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">input_domain</span><span class="p">)</span>
+<span class="n">handler</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">input_problem</span><span class="p">)</span>
 
-          <span class="n">plan</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">startSync</span><span class="p">()</span>
+<span class="n">PDDLMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">PickUp</span><span class="p">)</span>
+<span class="n">PDDLMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">PutDown</span><span class="p">)</span>
+<span class="n">PDDLMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">Stack</span><span class="p">)</span>
+<span class="n">PDDLMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">Unstack</span><span class="p">)</span>
 
-          <span class="k">for</span> <span class="n">obj</span>  <span class="ow">in</span> <span class="n">plan</span><span class="o">.</span><span class="n">getActionsObjects</span><span class="p">():</span>
-              <span class="c1">#Manage objects as needed</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">start_sync</span><span class="p">()</span>
 
-      <span class="k">except</span><span class="p">:</span>
-          <span class="c1">#Handle Exception</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-      <span class="n">Blocksworld</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">get_actions_objects</span><span class="p">():</span>
+   <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">PickUp</span><span class="p">)</span> <span class="o">|</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">PutDown</span><span class="p">)</span> <span class="o">|</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Stack</span><span class="p">)</span> <span class="o">|</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Unstack</span><span class="p">)</span> <span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The class contains an <a class="reference external" href="../_static/doxygen/python/classbase_1_1handler_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized with a <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html"><code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code></a> using the required parameter <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__service_1_1DesktopService.html"><code class="docutils literal notranslate"><span class="pre">SPDDesktopService</span></code></a>.</p>
+<p>The file contains an <a class="reference external" href="../_static/doxygen/python/classbase_1_1handler_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized with a <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html"><code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code></a> using the required parameter <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__service_1_1DesktopService.html"><code class="docutils literal notranslate"><span class="pre">SPDDesktopService</span></code></a>.</p>
 <p>Then it’s set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__input__program_1_1PDDLInputProgram.html"><code class="docutils literal notranslate"><span class="pre">PDDLInputProgram</span></code></a> are created and then given to the handler.</p>
 <p>The next lines inform the <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1pddl_1_1pddl__mapper_1_1PDDLMapper.html"><code class="docutils literal notranslate"><span class="pre">PDDLMapper</span></code></a> about what classes are intended to map the output actions.</p>
 <p>Finally the solver is invoked, and the output is retrieved.</p>

@@ -254,13 +254,17 @@ as a use case, we will develop a simple Desktop application to solve the blocks-
 
             <span class="k">foreach</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span> <span class="k">in</span> <span class="n">plan</span><span class="p">.</span><span class="n">ActionsObjects</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="c1">// Manage objects as needed</span>
+                <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">PickUp</span><span class="p">).</span><span class="n">IsInstanceOfType</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">||</span> <span class="k">typeof</span><span class="p">(</span><span class="n">PutDown</span><span class="p">).</span><span class="n">IsInstanceOfType</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">||</span>
+                      <span class="k">typeof</span><span class="p">(</span><span class="n">Stack</span><span class="p">).</span><span class="n">IsInstanceOfType</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">||</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Unstack</span><span class="p">).</span><span class="n">IsInstanceOfType</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+                <span class="p">{</span>
+                   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+                <span class="p">}</span>
             <span class="p">}</span>
 
         <span class="p">}</span>
         <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="c1">// Handle Exception</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>

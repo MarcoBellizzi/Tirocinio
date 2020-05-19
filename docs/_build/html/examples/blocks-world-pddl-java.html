@@ -256,10 +256,11 @@ as a use case, we will develop a simple Desktop application to solve the blocks-
       <span class="n">Plan</span> <span class="n">plan</span> <span class="o">=</span> <span class="p">(</span><span class="n">Plan</span><span class="p">)(</span><span class="n">handler</span><span class="p">.</span><span class="na">startSync</span><span class="p">());</span>
 
       <span class="k">for</span> <span class="p">(</span><span class="kd">final</span> <span class="n">Object</span> <span class="n">obj</span> <span class="p">:</span> <span class="n">plan</span><span class="p">.</span><span class="na">getActionsObjects</span><span class="p">())</span>
-        <span class="c1">// Manage objects as needed</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">obj</span> <span class="k">instanceof</span> <span class="n">PickUp</span> <span class="o">||</span> <span class="n">obj</span> <span class="k">instanceof</span> <span class="n">Stack</span> <span class="o">||</span> <span class="n">obj</span> <span class="k">instanceof</span> <span class="n">Unstack</span> <span class="o">||</span> <span class="n">obj</span> <span class="k">instanceof</span> <span class="n">PutDown</span><span class="p">)</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// Handle Exception</span>
+      <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>

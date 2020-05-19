@@ -101,13 +101,17 @@ At this point, supposing that we are given two files defining the blocks-world d
 
               foreach(object obj in plan.ActionsObjects)
               {
-                  // Manage objects as needed
+                  if (typeof(PickUp).IsInstanceOfType(obj) || typeof(PutDown).IsInstanceOfType(obj) ||
+                        typeof(Stack).IsInstanceOfType(obj) || typeof(Unstack).IsInstanceOfType(obj)) 
+                  {
+                     Console.WriteLine(obj.ToString());
+                  }
               }
 
           }
           catch (Exception e)
           { 
-              // Handle Exception
+              Console.WriteLine(e.Message);
           }
       }
   }

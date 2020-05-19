@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>EmbASP-Python</name>
+			<type>2</type>
+			<location>/home/rhode/git/EmbASP-Python</location>
+		</link>
+		<link>
+			<name>antlr4-python3-runtime-4.7.2</name>
+			<type>2</type>
+			<location>/home/rhode/Librerie/antlr4-python3-runtime-4.7.2</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -157,7 +157,7 @@ The class contains an |Handler|_ instance as field, that is initialized with a |
 
 The |ASPMapper|_ registers the classes created before in order to manage the input and output objects.
 
-Two string and a list of ``Edge`` representing facts, rules and constraints of the ASP program are added to an |ASPInputProgram|_, and the |ASPInputProgram|_ is added to the |Handler|_.
+A string and a list of ``Edge`` representing facts, rules and constraints of the ASP program are added to an |ASPInputProgram|_, and the |ASPInputProgram|_ is added to the |Handler|_.
 
 Finally the solver is invoked, and the output is retrieved.
 

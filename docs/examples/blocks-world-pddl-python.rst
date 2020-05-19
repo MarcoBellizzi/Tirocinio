@@ -73,40 +73,30 @@ At this point, supposing that we are given two files defining the blocks-world d
 
 .. code-block:: python
 
-  class Blocksworld():
-        
-     __domainFileName = "domain.pddl"
-     __problemFileName = "p01.pddl"
-
-     def main(self):
-        handler = DesktopHandler(SPDDesktopService())
-        inputProgramDomain = PDDLInputProgram(PDDLProgramType.DOMAIN)
-        inputProgramDomain.addFilesPath(self.__domainFileName)
-        inputProgramProblem = PDDLInputProgram(PDDLProgramType.PROBLEM)
-        inputProgramProblem.addFilesPath(self.__problemFileName)
-        handler.addProgram(inputProgramDomain)
-        handler.addProgram(inputProgramProblem)
-        
-        try:
-            PDDLMapper.getInstance().registerClass(PickUp)
-            PDDLMapper.getInstance().registerClass(PutDown)
-            PDDLMapper.getInstance().registerClass(Stack)
-            PDDLMapper.getInstance().registerClass(Unstack)
-            
-            plan = handler.startSync()
-            
-            for obj  in plan.getActionsObjects():
-                #Manage objects as needed
-                 
-        except:
-            #Handle Exception
+  handler  = DesktopHandler(SPDDesktopService())
+  
+  input_domain = PDDLInputProgram(PDDLProgramType.DOMAIN)
+  input_domain.add_files_path("../domain.pddl")
+  
+  input_problem= PDDLInputProgram(PDDLProgramType.PROBLEM)
+  input_problem.add_files_path("../p01.pddl")
+  
+  handler.add_program(input_domain)
+  handler.add_program(input_problem)
+  
+  PDDLMapper.get_instance().register_class(PickUp)
+  PDDLMapper.get_instance().register_class(PutDown)
+  PDDLMapper.get_instance().register_class(Stack)
+  PDDLMapper.get_instance().register_class(Unstack)
+  
+  output = handler.start_sync()
+  
+  for obj in output.get_actions_objects():
+     if isinstance(obj, PickUp) | isinstance(obj, PutDown) | isinstance(obj, Stack) | isinstance(obj, Unstack) :
+        print(obj)
 
 
-  if __name__ == '__main__':
-        Blocksworld.main()
-
-
-The class contains an |Handler|_ instance as field, that is initialized with a |DesktopHandler|_ using the required parameter |SPDDesktopService|_.
+The file contains an |Handler|_ instance as field, that is initialized with a |DesktopHandler|_ using the required parameter |SPDDesktopService|_.
 
 Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two |PDDLInputProgram|_ are created and then given to the handler.
 
