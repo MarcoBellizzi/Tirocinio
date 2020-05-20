@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-	apply plugin: 'antlr'
+    apply plugin: 'antlr'
     implementation 'org.antlr:antlr4-runtime:4.8'
 }
 
