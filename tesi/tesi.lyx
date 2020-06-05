@@ -1,0 +1,6730 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\begin_preamble
+\renewcommand{\contentsname}{Indice}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language italian
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\rightmargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+EmbASP, un framework per l'integrazione della programmazione logica in sistemi
+ esterni
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduzione
+\end_layout
+
+\begin_layout Standard
+Cos’è l’Intelligenza Artificiale? In modo semplicistico potremmo definire
+ l’Intelligenza Artificiale come l’abilità di un sistema tecnologico di
+ risolvere problemi o svolgere compiti e attività tipici della mente e dell’abil
+ità umane.
+ Guardando al settore informatico, potremmo identificare l’Intelligenza
+ Artificiale come la disciplina che si occupa di realizzare macchine (hardware
+ e software) in grado di “agire” autonomamente (risolvere problemi, compiere
+ azioni, ecc.).
+ 
+\end_layout
+
+\begin_layout Standard
+Il fermento attuale attorno a questa disciplina si spiega con la maturità
+ tecnologica raggiunta sia nel calcolo computazionale sia nella capacità
+ di analisi in real-time di enormi quantità di dati e di qualsiasi forma.
+ L’interesse della comunità scientifica per l’Intelligenza Artificiale ha
+ però origini molto lontane: il primo vero progetto di Intelligenza Artificiale
+ (ormai nota con l’acronimo AI - Artificial Intelligence) risale al 1943
+ quando i due ricercatori statunitensi Warren McCulloch e Walter Pitts proposero
+ al mondo scientifico il primo neurone artificiale.
+ Ne seguì, nel 1949, il libro 
+\begin_inset Quotes fld
+\end_inset
+
+L'organizzazione del comportamento
+\begin_inset Quotes frd
+\end_inset
+
+ di Donald Olding Hebb, psicologo canadese, grazie al quale vennero analizzati
+ in dettaglio i collegamenti tra i neuroni artificiali ed i modelli complessi
+ del cervello umano.
+ I primi prototipi funzionanti di reti neurali (cioè modelli matematici/informat
+ici sviluppati per riprodurre il funzionamento dei neuroni biologici per
+ risolvere problemi di Intelligenza Artificiale) arrivarono poi verso la
+ fine degli anni ’50.
+ L’interesse del pubblico si fece maggiore grazie soprattutto al giovane
+ Alan Turing che già nel 1950 cercava di spiegare come un computer possa
+ comportarsi come un essere umano.
+ La sua formalizzazione dei concetti di algoritmo e calcolo mediante l'omonima
+ 
+\begin_inset Quotes fld
+\end_inset
+
+macchina di Turing
+\begin_inset Quotes frd
+\end_inset
+
+ da lui progettata, costiturono un significativo passo avanti nell'evoluzione
+ verso il moderno computer, e per questo contributo è solitamente considerato
+ il padre dell'Informatica e dell'Intelligenza Artificiale.
+ Il termine Intelligenza Artificiale in realtà parte “ufficialmente” dal
+ matematico statunitense John McCarthy, nel 1956, e con esso il “lancio”
+ dei primi linguaggi di programmazione (Lisp nel 1958 e Prolog nel 1973)
+ specifici per l’AI.
+ Da lì in poi la storia dell’Intelligenza Artificiale è stata abbastanza
+ altalenante, caratterizzata da avanzate significative dal punto di vista
+ dei modelli matematici ma con alti e bassi dal punto di vista della ricerca
+ sull’hardware e sulle reti neurali.
+ La prima grande svolta su quest’ultimo fronte è arrivata negli anni ’90
+ con l’ingresso sul mercato “allargato” (arrivando cioè al grande pubblico)
+ dei processori grafici, le Gpu (chip di elaborazione dati molto più veloci
+ delle Cpu, provenienti dal mondo del gaming ed in grado di supportare processi
+ complessi molto più rapidamente).
+ L’ondata più recente è arrivata nell’ultimo decennio con lo sviluppo dei
+ cosiddetti “chip neuromorfici”, ossia microchip che integrano elaborazione
+ dati e storage in un unico micro componente per emulare le funzioni sensoriali
+ e cognitive del cervello umano.
+\end_layout
+
+\begin_layout Standard
+Prendendo come base di partenza il funzionamento del cervello umano (pur
+ sapendo che ancora oggi non se ne comprende ancora a fondo l’esatto meccanismo)
+, un'Intelligenza Artificiale dovrebbe saper compiere alcune azioni/funzioni
+ tipiche dell’uomo:
+\end_layout
+
+\begin_layout Itemize
+agire umanamente (cioè in modo indistinto rispetto ad un essere umano);
+\end_layout
+
+\begin_layout Itemize
+pensare umanamente (risolvendo un problema con funzioni cognitive);
+\end_layout
+
+\begin_layout Itemize
+pensare razionalmente (sfruttando cioè la 
+\emph on
+logica
+\emph default
+ come fa un essere umano);
+\end_layout
+
+\begin_layout Itemize
+agire razionalmente (avviando un processo per ottenere il miglior risultato
+ atteso in base alle informazioni a disposizione, che è ciò che un essere
+ umano, spesso anche inconsciamente, fa d’abitudine).
+\end_layout
+
+\begin_layout Standard
+Queste considerazioni sono di assoluta importanza perché permettono di classific
+are l’AI in due grandi “filoni” di indagine:
+\end_layout
+
+\begin_layout Itemize
+Intelligenza Artificiale debole (weak AI).
+ Identifica sistemi tecnologici in grado di simulare alcune funzionalità
+ cognitive dell’uomo senza però raggiungere le reali capacità intellettuali
+ tipiche dell’uomo (parliamo di programmi matematici di problem-solving
+ con cui si sviluppano funzionalità per la risoluzione dei problemi o per
+ consentire alle macchine di prendere decisioni); 
+\end_layout
+
+\begin_layout Itemize
+Intelligenza Artificiale forte (strong AI).
+ In questo caso si parla di “sistemi sapienti” (alcuni scienziati si spingono
+ a dire addirittura “coscienti di sé”) che possono quindi sviluppare una
+ propria intelligenza senza emulare processi di pensiero o capacità cognitive
+ simili all’uomo ma sviluppandone una propria in modo autonomo.
+\end_layout
+
+\begin_layout Standard
+Lo sviluppo dell’Intelligenza Artificiale ha avuto molta influenza in diversi
+ campi dell’Informatica, poichè la realizzazione dei sistemi di AI ha portato
+ allo sviluppo di tecniche e strumenti innovativi.
+ Questo è certamente il caso dei linguaggi di programmazione: un campo nel
+ quale molti linguaggi sono stati sviluppati inizialmente per rendere più
+ efficiente la realizzazione di sistemi di AI.
+ In particolare lo studio di metodi e tecniche per la rappresentazione della
+ conoscenza ha portato alla realizzazione di ambienti basati sulla
+\emph on
+ logica
+\emph default
+, che offrono al programmatore la possibilità di sviluppare un sistema formalizz
+ando nel linguaggio di rappresentazione le conoscenze sul dominio e offrendo
+ strumenti per derivare le conseguenze delle conoscenze specificate.
+ I linguaggi utilizzati per rappresentare la conoscenza sono detti linguaggi
+ di programmazione dichiarativi, nel senso che consentono la specifica del
+ problema, lasciando agli strumenti offerti dal sistema il compito di trovare
+ algoritmicamente la soluzione.
+\end_layout
+
+\begin_layout Standard
+In genere un elaboratore offre la possibilità di usare uno o più linguaggi
+ di comandi ed uno o più linguaggi di programmazione.
+ Questi due tipi di linguaggi hanno, nella maggior parte dei casi, scopi
+ distinti: i linguaggi di comandi vengono utilizzati per la creazione, l’esecuzi
+one e la gestione dei programmi; i linguaggi di programmazione vengono utilizzat
+i dall’utente per scrivere i programmi che risolvono i problemi specifici
+ alle sue applicazioni.
+ La distinzione tra linguaggio di comandi e linguaggio di programmazione
+ deriva da esigenze di costruzione piuttosto che da un reale vantaggio per
+ l’utente.
+ Infatti, da un punto di vista realizzativo, è conveniente separare le operazion
+i che consentono l’utilizzo dell’elaboratore (linguaggio di comandi), dal
+ linguaggio di programmazione, che permette la specifica di operazioni di
+ carattere più generale.
+ I linguaggi di programmazione evoluti che sono stati introdotti a partire
+ dagli anni ’50 sono detti linguaggi ad alto livello; essi sono stati progettati
+ con lo scopo di rendere il linguaggio indipendente dalle caratteristiche
+ dell’elaboratore e più vicino alla logica del programmatore.
+ I programmmi scritti in un linguaggio ad alto livello non sono direttamente
+ eseguibili dall’elaboratore, ma devono essere prima tradotti da un interprete
+ o da un compilatore nel linguaggio macchina dell’elaboratore.
+ Osserviamo inoltre che i linguaggi ad alto livello consentono di utilizzare
+ lo stesso programma anche su macchine di tipo diverso.
+\end_layout
+
+\begin_layout Standard
+Linguaggi di questo tipo sono detti linguaggi imperativi o anche linguaggi
+ di Von Neumann, perchè fanno riferimento all’omonimo modello di calcolo.
+ Come i linguaggi di basso livello essi fanno riferimento al modello di
+ esecuzione delle istruzioni fornito dall’elaboratore: un programma è cioè
+ costituito da una sequenza di istruzioni il cui effetto è quello di modificare
+ il contenuto della memoria dell’elaboratore.
+ I linguaggi per l’AI appartengono ad altre categorie di linguaggi di programmaz
+ione che prescindono dal modello di funzionamento dell’elaboratore, cercando
+ di fornire un mezzo espressivo per specificare il compito da eseguire in
+ modo semplice e sintetico.
+ Questi tipi di linguaggi vengono anche detti non Von Neumann , proprio
+ perchè svincolati dal modello su cui si basano i linguaggi imperativi,
+ facendo uso della 
+\emph on
+logica
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Lo scopo di questa tesi è la presentazione di EmbASP, framework sviluppato
+ dal dipartimento di Matematica e Informatica dell'Università della Calabria,
+ che permette l'integrazione della programmazione logica in sistemi esterni.
+ Verranno esposti i principi fondamentali dei due linguaggi logici attualmente
+ supportati da EmbASP (ASP e PDDL) e verrà esposto come viene fatta la loro
+ integrazione nei tre linguaggi di programmazione in cui il framework è
+ implementato (Java, Python e C#).
+ La tesi è strutturata come segue:
+\end_layout
+
+\begin_layout Itemize
+Nel Capitolo 2 verrà esposta la programmazione ASP (Answer Set Programming),
+ partendo dai principi base della programmazione logica.
+ Sarà poi esposto il linguaggio Prolog, che rappresenta le origini del linguaggi
+o ASP.
+ Ne sarà analizzata la semantica e sarà introdotta la programmazione logica
+ disgiuntiva.
+ Saranno poi presentate le principali estenzioni sintattiche del linguaggio
+ ASP.
+\end_layout
+
+\begin_layout Itemize
+Nel Capitolo 3 varrà esposta la programmazione PDDL (Planning Domain Definition
+ Language), introducendo inizialmente i problemi di pianificazione e presentando
+ poi STRIPS, un linguaggio basato sulla logica in grado di affrontare tali
+ problemi.
+ Verrà poi esposto come PDDL implementi STRIPS e come PDDL2.1 favorisca la
+ pianificazione con vincoli sulle risorse.
+\end_layout
+
+\begin_layout Itemize
+Nel capitolo 4 sarà presentato EmbASP, ne sarà analizzata la struttura e
+ verranno esposti degli esempi pratici del suo funzionamento.
+\end_layout
+
+\begin_layout Itemize
+Nel capitolo 5 verranno esposte le principali attività da me effettuate
+ durante il periodo di tirocinio svolto presso il dipartimento di Matematica
+ e Informatica dell'Università della Calabria, durante il quale ho avuto
+ l'opportunità di collaborare con alcuni membri del dipartimento per contribuire
+ all'evoluzione di EmbASP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Programmazione ASP
+\end_layout
+
+\begin_layout Subsection
+Introduzione alla programmazione logica
+\end_layout
+
+\begin_layout Standard
+La logica (dal greco logos, ovvero “parola”, “pensiero”, “idea”) è uno strumento
+ di espressione che trae origine dall’esigenza di formalizzare il ragionamento
+ umano.
+ La logica è tradizionalmente una delle discipline filosofiche, ma essa
+ riguarda anche numerose attività tecniche e scientifiche, tra cui matematica,
+ semantica e informatica.
+\end_layout
+
+\begin_layout Standard
+Nella logica proposizionale esistono due valori (I cioè vero, e O cioè falso)
+ e si basa su un insieme di proposizioni, e su un insieme di connettivi
+ attraverso i quali è possibile combinare le proposizioni per creare formule
+ arbitrariamente complesse.
+ Per proposizione intendiamo un’affermazione relativa ad un singolo fatto
+ di cui può essere stabilita la verità.
+ Il valore di verità di una formula ben formata può quindi variare a seconda
+ di quanto stabilito dallo specifico assegnamento di verità utilizzato per
+ le proposizioni presenti nella formula stessa.
+\end_layout
+
+\begin_layout Standard
+Gli elementi sintattici di base della logica proposizionale sono i seguenti:
+\end_layout
+
+\begin_layout Itemize
+Un insieme di proposizioni.
+\end_layout
+
+\begin_layout Itemize
+Il seguente connettivo logico unario:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Negazione: ¬
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+I seguenti connettivi logici binari:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Disgiunzione: ∨
+\end_layout
+
+\begin_layout Itemize
+Congiunzione: ∧
+\end_layout
+
+\begin_layout Itemize
+Implicazione: → 
+\end_layout
+
+\begin_layout Itemize
+Doppia implicazione: ↔
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+La logica proposizionale non è, però, sufficientemente espressiva per rappresent
+are ragionamenti relativi ad una moltitudine di oggetti, come “tutti gli
+ oggetti godono di una certa proprietà” oppure “esiste almeno un oggetto
+ che gode di una certa proprietà”.
+ La logica proposizionale si concentra infatti sui connettivi logici e su
+ come il valore di verità di una formula ben formata dipenda dal valore
+ di verità delle sue sotto-formule immediate, senza considerare l’eventuale
+ struttura interna delle proposizioni presenti nella formula.
+ La logica dei predicati ovvia a questi inconvenienti includendo degli ulteriori
+ operatori, detti quantificatori, in aggiunta ai connettivi logici della
+ logica proposizionale e sostituendo le proposizioni con predicati (o atomi)
+ applicati a termini.
+ I termini, che individuano gli oggetti di interesse, sono espressi tramite
+ costanti, variabili e funzioni definite sui termini.
+ I predicati, che specificano le proprietà di interesse per gli oggetti
+ precedentemente individuati, sono espressi tramite relazioni su insiemi
+ di termini.
+\end_layout
+
+\begin_layout Standard
+La logica dei predicati ha un quantificatore universale denotato con ∀ (“per
+ ogni”) ed un quantificatore esistenziale denotato con ∃ (“esiste”), i quali
+ possono fare riferimento solo a termini variabili che compaiono come argomenti
+ di funzioni e predicati.
+\end_layout
+
+\begin_layout Standard
+La programmazione logica nacque all’inizio degli anni ‘70 grazie soprattutto
+ alle ricerche di due studiosi : Robert Kowalski ne elaborò i fondamenti
+ teorici.
+ In particolare a lui si deve la scoperta della doppia interpretazione,
+ procedurale e dichiarativa, delle clausole di Horn; e Alain Colmeraurer,
+ fu il primo a progettare e implementare un interprete per un linguaggio
+ logico: il Prolog.
+\end_layout
+
+\begin_layout Standard
+In programmazione logica un problema viene descritto con un insieme di formule
+ della logica, dunque in forma dichiarativa.
+ La programmazione classica, procedurale, è più adatta a problemi quotidiani,
+ ben definiti.
+ Essa adotta un paradigma imperativo: richiede cioè che siano specificate
+ delle rigorose sequenze di passi (algoritmi) che, a partire dai dati a
+ disposizione, portino ad ottenere i risultati desiderati.
+ Nella programmazione logica i dati e il controllo sono ben distinti, bisogna
+ preoccuparsi di specificare solo la componente logica mentre il controllo
+ spetta al sistema.
+ Ciò significa che bisogna solo definire il problema senza comunicare alla
+ macchina come risolverlo.
+ Nella programmazione logica si deve abbandonare il modo di pensare orientato
+ al processo.
+ Il programma è una descrizione della soluzione, non del processo, e si
+ costruisce descrivendo in un linguaggio formale l'area applicativa, ossia
+ gli oggetti che in essa esistono, le relazioni fra loro e i fatti che li
+ riguardano.
+ 
+\end_layout
+
+\begin_layout Standard
+Il linguaggio formale alla base della programmazione logica è rappresentato
+ dalle clausole di Horn.
+ Un letterale è una formula atomica e viene definito positivo oppure negativo
+ a seconda che sia della forma p oppure ¬p, con p una proposizione.
+ Una clausola è una disgiunzione di letterali.
+ Chiamiamo clausola di Horn una clausola che contiene al più un letterale
+ positivo, la quale viene classificata come:
+\end_layout
+
+\begin_layout Itemize
+Un fatto se è della forma p, che è equivalente a I → p.
+\end_layout
+
+\begin_layout Itemize
+Un vincolo se è della forma 
+\begin_inset Formula $\left(\bigvee_{i=1}^{n}¬p_{i}\right)$
+\end_inset
+
+, che è equivalente a 
+\begin_inset Formula $\left(\bigwedge_{i=1}^{n}p_{i}\right)$
+\end_inset
+
+ → O.
+\end_layout
+
+\begin_layout Itemize
+Una regola se è della forma p ∨ 
+\begin_inset Formula $\left(\bigvee_{i=1}^{n}\neg p_{i}\right)$
+\end_inset
+
+, che è equivalente a 
+\begin_inset Formula $\left(\bigwedge_{i=1}^{n}p_{i}\right)$
+\end_inset
+
+ → p.
+\end_layout
+
+\begin_layout Subsection
+Prolog
+\end_layout
+
+\begin_layout Standard
+Nato nel 1972 grazie alle ricerche di Alain Colmerauer e Robert Kowalski,
+ il Prolog (acronimo per PROgramming in LOGic) è uno dei primi linguaggi
+ di programmazione logica.
+ E' molto potente e flessibile, ed è adatto particolarmente all'Intelligenza
+ Artificiale.
+ Il programmatore pone la sua attenzione sugli oggetti e sulle relazioni
+ che li legano, esprimendo la conoscenza ad essi relativa sotto forma di
+ fatti e di regole, per poi poter porre domande.
+ L'interprete Prolog tenta poi di rispondere alle domande ponendole in relazione
+ con i fatti e le regole della base di conoscenza.
+\end_layout
+
+\begin_layout Standard
+Dunque, le componenti fondamentali del Prolog sono:
+\end_layout
+
+\begin_layout Itemize
+Dichiarazioni di fatti sugli oggetti e le loro relazioni
+\end_layout
+
+\begin_layout Itemize
+Dichiarazioni di regole sugli oggetti e le loro relazioni
+\end_layout
+
+\begin_layout Itemize
+Domande sugli oggetti e le loro relazioni.
+\end_layout
+
+\begin_layout Standard
+Tramite esse il programmatore interagisce col linguaggio: con le prime due
+ scrive i programmi, con l'ultima li esegue.
+ Programmare in Prolog equivale a descrivere il dominio del problema tramite
+ fatti e regole sotto forma di clausole di Horn.
+ Un predicato (o atomo) ha forma p(t
+\begin_inset Formula $_{1}$
+\end_inset
+
+, ...
+ , t
+\begin_inset Formula $_{n}$
+\end_inset
+
+) dove p è il nome del predicato, t
+\begin_inset Formula $_{1}$
+\end_inset
+
+, ...
+ , t
+\begin_inset Formula $_{n}$
+\end_inset
+
+ sono i termini e n (>= 0) è l’arietà del predicato.
+\end_layout
+
+\begin_layout Standard
+I fatti Prolog sono predicati rappresentanti clausole di Horn non condizionali.
+ Essi, cioè, esprimono un'affermazione che non è vincolata alla preventiva
+ verifica di un insieme di condizioni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\align center
+persona(marco).
+ → marco è una persona
+\end_layout
+
+\begin_layout Standard
+Una relazione è, in genere, definita come l'insieme di tutte le sue istanze.
+ Il Prolog tratta ogni relazione come una pura entità sintattica.
+ Ciò vuol dire che il significato di una relazione è dato dal programmatore
+ (intendendo con ciò l’ordine degli argomenti, il modo in cui vengono messi
+ in relazione, il nome), ed è a suo carico usarla sempre in modo coerente
+ con tale significato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\align center
+genitore(stefano, marco) → stefano è genitore di marco
+\end_layout
+
+\begin_layout Standard
+Le regole Prolog sono clausole di Horn condizionali, cioè esprimono un'affermazi
+one che è vincolata alla preventiva verifica di un insieme di condizioni.
+ Un fatto è una cosa sempre, incondizionatamente, vera; una regola specifica
+ una cosa vera a patto che la condizione sia soddisfatta.
+ L’uso dei quantificatori (∀, ∃) viene espresso dall’uso delle variabili
+ nelle regole.
+ Le regole indicano situazioni di carattere generale servendosi di oggetti
+ e relazioni tra essi.
+ Una regola è costituita da una parte condizione (corpo, a destra) e una
+ parte conclusione (testa, a sinistra), separate dal simbolo :- ("Se", che
+ rappresenta l'implicazione).
+ Una regola si dice safe se ogni variabile che appare in testa, in un letterale
+ negativo o in un’operazione di comparazione (<, >, <=, …) appare anche
+ in un letterale positivo.
+ In un programma logico sono ammesse solo regole safe.
+ In un contesto guidato dagli obiettivi come quello del Prolog, ogni regola
+ di un programma si presta ad una duplice interpretazione.
+ Il significato dichiarativo della regola è che la formula di testa è vera
+ se la formula del corpo è vera.
+ Il significato procedurale della regola è che per raggiungere l’obiettivo
+ della formula di testa bisogna prima raggiungere l’ obiettivo della formula
+ del corpo.
+ Si distinguono perciò due tipi di predicati: i predicati EDB appaiono solo
+ nel corpo delle regole o nei fatti, mentre i predicati IDB appaiono anche
+ nella testa di qualche regola.
+ Un programma Prolog parte con i fatti rappresentanti predicati EDB e iterativam
+ente deriva i predicati IDB attraverso le regole.
+ L’insieme dei fatti e delle regole costituisce la base di conoscenza.
+ Una regola si definisce ricorsiva se tra i predicati nel corpo è presente
+ il predicato in testa.
+ La ricorsione è tipicamente usata nella programmazione logica per ottenere
+ la chiusura transitiva di una relazione.
+ La chiusura transitiva di una relazione R è un'altra relazione che aggiunge
+ ad R tutti quegli elementi che, pur non essendo in relazione direttamente
+ fra loro, possono essere raggiunti da una "catena" di elementi tra loro
+ in relazione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\align center
+antenato(X,Y) :- genitore(X,Y).
+ → se X è genitore di Y allora X è antenato di Y
+\end_layout
+
+\begin_layout Standard
+\align center
+antenato(X,Y) :- genitore(X,Z), antenato(Z,Y).
+ → chiusura transitiva
+\end_layout
+
+\begin_layout Standard
+Il primo passo, nella programmazione Prolog, consiste nella creazione della
+ base di conoscenza tramite un apposito ambiente di editing.
+ Successivamente sarà possibile interrogarla in quello che viene chiamato
+ ambiente di query.
+ Nell’ambiente di query il Prolog avverte che è pronto a rispondere a delle
+ eventuali domande riguardanti la base di conoscenza in suo possesso.
+ Tali domande, in Prolog, vanno sotto il nome di goal (ossia obiettivi da
+ dimostrare) o query (ossia interrogazioni da soddisfare).
+\end_layout
+
+\begin_layout Standard
+Per risolvere problemi definiti attraverso clausole di Horn, il Prolog impiega
+ il metodo di risoluzione di Robinson basato sulla strategia SLD [1].
+ L’esecuzione di un programma Prolog viene attivata da un obiettivo.
+ L’obiettivo è una clausola di Horn data da un vincolo ed è descritto sintattica
+mente come una regola senza testa in cui il simbolo :- è sostituito dal
+ simbolo ?- .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\align center
+?- antenato(francesco, marco).
+ → francesco è un antenato di marco?
+\end_layout
+
+\begin_layout Standard
+Il raggiungimento dell’obiettivo viene perseguito applicando il metodo di
+ risoluzione basato sulla strategia SLD ai fatti e alle regole del programma
+ e all’obiettivo dato.
+ Dati un programma Prolog (insieme di clausole C) ed un obiettivo (clausola
+ iniziale c1 ), bisogna trovare per tutte le formule atomiche dell’obiettivo
+ considerate, dei fatti che siano unificabili con quelle formule o delle
+ regole le cui teste siano unificabili con quelle formule.
+ Nel caso la risoluzione avvenga con una regola, bisogna poi procedere nello
+ stesso modo con le formule atomiche del corpo della regola considerate.
+ Poiché ogni formula atomica presente in un obiettivo potrebbe essere unificabil
+e con più fatti e teste di regole di un programma, in Prolog la risoluzione
+ della formule atomiche vengono esaminate rispetto a tutte le clausole del
+ programma considerate nell’ordine in cui sono scritte.
+ Perciò, per motivi di efficienza, nei programmi conviene elencare i fatti
+ prima delle regole.
+ Posta una domanda, il Prolog risponde Yes o No per confermarne o meno la
+ validità all'interno della base di conoscenza e, nel caso in cui la domanda
+ contenga una variabile, Prolog risponde anche, se la risposta è affermativa,
+ per quali oggetti la domanda è soddisfatta.
+\end_layout
+
+\begin_layout Standard
+L’esecuzione di un programma Prolog su un obiettivo può essere rappresentata
+ graficamente tramite un albero e-o, così chiamato perché ogni nodo rappresenta
+ un obiettivo (congiunzione) e ha tanti nodi figli quanti sono i fatti e
+ le regole alternativi tra loro con i quali può avvenire la risoluzione
+ (disgiunzione).
+ Durante l’applicazione della risoluzione, l’albero viene costruito in profondit
+à per via dell’ordine LIFO imposto dalla strategia SLD [1].
+\end_layout
+
+\begin_layout Standard
+La radice dell’albero e-o contiene l’obiettivo iniziale, mentre ogni foglia
+ può contenere # oppure un obiettivo alla cui formula atomica più a sinistra
+ non è applicabile la risoluzione.
+ Ogni ramo dell’albero è etichettato con i legami creati per unificazione
+ durante la corrispondente applicazione della regola di inferenza per risoluzion
+e.
+ Ogni cammino dalla radice ad una foglia contenente # è un cammino di successo,
+ mentre tutti gli altri cammini sono cammini di fallimento o cammini infiniti.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideriamo il seguente programma Prolog:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+genitore(francesco, stefano).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+genitore(stefano, marco).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+antenato(X, Y) :- genitore(X, Y).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+antenato(X, Y) :- genitore(X, Z), antenato(Z, Y).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideriamo poi l’obiettivo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+?- antenato(X, marco).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Osserviamo che l’obiettivo contiene una variabile, dunque l’esecuzione del
+ programma consiste nel trovare tutti gli antenati della persona specificata,
+ sulla base delle informazioni fornite dal programma.
+ La risposta del Prolog sarà:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+antenato(stefano,marco).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+antenato(francesco,marco).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+e l’albero e-o risultante è il seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/rhode/Immagini/albero.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Semantica
+\end_layout
+
+\begin_layout Standard
+Un termine (un predicato, una regola o un programma) è detto ground se non
+ contiene nessuna variabile [2].
+ Dato un programma logico P, chiamiamo Universo di Herbrand (Up) l’insieme
+ di tutte le costanti in P.
+ Chiamiamo Base di Herbrand l’insieme di tutti i possibili predicati ground
+ costruibili dai predicati in P con le costanti nell’Universo di Herbrand
+ (considerando anche la negazione).
+\end_layout
+
+\begin_layout Standard
+Un’interpretazione I è un insieme di atomi ground.
+ Un letterale positivo è vero rispetto ad I se appartiene ad I, falso altrimenti
+; mentre un letterale negativo è vero rispetto ad I se non appartiene ad
+ I, falso altrimenti.
+ 
+\end_layout
+
+\begin_layout Standard
+Un’interpretazione I è un modello per P se, per ogni regola in P, la verità
+ del corpo della regola implica la verità della testa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+a :- b, c.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+c :- d.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+d.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I1 = {b,c,d}, I2 = {a,b,c,d}, I3 = {c,d}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I2 e I3 sono modelli, mentre I1 non lo è perché il corpo della prima regola
+ è vero rispetto a I1 (b e c appartengono a I1) mentre la testa è falsa
+ (a non appartiene a I1).
+ 
+\end_layout
+
+\begin_layout Standard
+L’intersezione di tutti i possibili modelli è detto modello minimale.
+ Un programma positivo (ovvero che non contiene negazione in nessuna regola)
+ ha un unico modello minimale, mentre un programma con negazione potrebbe
+ averne diversi.
+\end_layout
+
+\begin_layout Standard
+Dato un programma P e un interpretazione I, si definisce conseguenza immediata
+ di I l’insieme di tutti gli atomi che compaiono in testa a qualche regola
+ in P di cui il corpo è vero rispetto ad I.
+ Nella prima iterazione si analizzano i corpi delle regole con i predicati
+ nell’insieme di partenza (ovvero i fatti).
+ Se un corpo risulta vero, si deriva la testa.
+ L’insieme di tutte le teste così derivate si unisce poi all’insieme di
+ partenza e verrà usato nell’iterazione successiva.
+ Il processo termina quando non vengono più generati nuovi predicati.
+ Questo processo prende il nome di Tp ed è usato per l’individuazione dei
+ modelli minimali di un programma logico.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+a :- b.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+c :- d.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+e :- a.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+b.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tp(0) = {b} → interpretazione di partenza (fatti)
+\end_layout
+
+\begin_layout Standard
+Tp(1) = {a}.
+ → viene derivato a
+\end_layout
+
+\begin_layout Standard
+Tp(2) = {e}.
+ → modello minimale = { b, a, e }
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In un programma ground e positivo si ha la certezza che il Tp raggiunga
+ un punto fisso e che l’insieme dei predicati IDB sia finito.
+ In un programma non ground il Tp inizia con i predicati EDB e applicando
+ iterativamente questo procedimento deriva i predicati IDB.
+\end_layout
+
+\begin_layout Standard
+In un programma non positivo, invece, la negazione può causare problemi
+ se unita alla ricorsione.
+ La stratificazione è un vincolo che i programmi devono rispettare per escludere
+ la negazione all’interno della ricorsione.
+ Per chiarire la stratificazione facciamo uso del grafo delle dipendenze.
+ In questo grafo i nodi sono i predicati IDB e la presenza di un arco da
+ un nodo a un nodo b è data dalla presenza di a nel corpo di una regola
+ in cui b è in testa.
+ Un arco a → b viene marcato (con il simbolo -) se a è un letterale negativo.
+ Un programma si dice stratificato se il grafo delle dipendenze non contiene
+ cicli in cui appare un arco marcato.
+\end_layout
+
+\begin_layout Standard
+Un’ interpretazione I si dice essere un Answer Set per un programma positivo
+ P se è un modello minimale per P.
+ Per i programmi non positivi bisogna considerare il programma ridotto.
+ Dato un problema P e un’interpretazione I, P ridotto si ottiene cancellando
+ tutte le regole con un letterale negativo falso rispetto ad I e cancellando
+ tutti i letterali negativi nelle rimanenti regole.
+ Un Answer Set di un programma P è un’interpretazione I tale che essa sia
+ un Answer Set per P ridotto.
+ Gli Answer Set sono anche chiamati modelli stabili.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+P = {a :- d, not b.
+ b :- not d.
+ d.}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+I = {a, d}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+P ridotto = {a :- d.
+ d.}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nella prima regola viene rimosso not b perché è un letterale negativo e
+ la seconda regola viene rimossa perché not d è un letterale falso rispetto
+ a I.
+ I è un Answer Set per P ridotto dunque lo è anche per P.
+\end_layout
+
+\begin_layout Subsection
+Programmazione logica disgiuntiva
+\end_layout
+
+\begin_layout Standard
+Una importante estensione della programmazione logica è la programmazione
+ logica disgiuntiva.
+ Essa permette di avere nelle teste delle regole una disgiunzione di predicati,
+ con il significato che se il corpo è vero allora almeno uno dei predicati
+ presenti nella disgiunzione della testa sarà vero.
+ Sintatticamente la disgiunzione è rappresentata dal simbolo | nella testa
+ delle regole.
+\end_layout
+
+\begin_layout Standard
+Nella programmazione logica disgiuntiva i vincoli non sono intesi come in
+ Prolog, ovvero come obbiettivi da raggiungere, bensì come strumenti con
+ cui selezionare i modelli da scartare.
+ I vincoli scartano i modelli in cui tutti gli atomi nel corpo del vincolo
+ sono verificati contemporaneamente.
+ Sintatticamente i vincoli si presentano come delle regole senza testa.
+ 
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+a | b :- c.
+\end_layout
+
+\begin_layout Standard
+I programmi sono quindi un insieme di regole e vincoli.
+ Le soluzioni del programma sono dati dagli Answer Set risultanti.
+ Le regole disgiuntive generano gli Answer Set, i vincoli selezionano quelli
+ da scartare.
+ Questo approccio prende il nome di Guess and Check.
+ La programmazione logica disgiuntiva secondo la semantica dei modelli stabili
+ è anche conosciuta con il nome di Answer Set Programming (ASP).
+\end_layout
+
+\begin_layout Subsection
+Estensioni
+\end_layout
+
+\begin_layout Standard
+Il linguaggio ASP fin qui introdotto può essere usato per risolvere problemi
+ di ricerca complessi, ma non fornisce strumenti per affrontare problemi
+ di ottimizzazione, ad esempio problemi in cui oltre a risolvere il problema
+ di ricerca si desidera minimizzare o massimizzare una data funzione.
+ Per rimediare a queste limitazioni sono stati introdotti i vincoli deboli.
+ Nel linguaggio base, i vincoli rappresentano una condizione che deve essere
+ soddisfatta affinché l’ Answer Set sia valido, e per questa ragione sono
+ anche chiamati vincoli forti.
+ I vincoli deboli, invece, permetto di esprimere una condizione preferibilmente
+ da non violare, con lo scopo di preferire quegli Answer Set che minimizzano
+ la violazione di questo tipo di vincoli.
+ In aggiunta, può essere specificato un peso e un livello di priorità alla
+ violazione del vincolo debole.
+ In questo modo, ogni volta che un Answer Set viola un vincolo debole, gli
+ viene aggiunto il relativo peso del vincolo al livello di priorità specificato,
+ potendo così individuare l’ Answer Set ottimo.
+ La prima preferenza viene fatta per livello.
+ Partendo dal livello più alto, vengono scartati gli Answer Set che hanno
+ riscontrato pesi sul livello corrente, mentre ce ne sono altri che invece
+ non hanno riscontrato pesi su questo livello.
+ Si passa poi al livello inferiore e si ripete l’operazione finché non si
+ giunge al livello minimo, ovvero il livello per cui tutti gli Answer Set
+ rimanenti hanno riscontrato almeno un peso.
+ A questo punto viene preferito quello che minimizza la somma totale dei
+ pesi su questo livello.
+ L’aggiunta dei vincoli deboli permette di estendere l’approccio Guess and
+ Check aggiungendo la parte di ottimizzazione, in una tecnica di programmazione
+ che prende il nome di GCO (Guess/Check/Optimize), in cui la parte Guess
+ definisce lo spazio di ricerca, la parte Check verifica l’ammissibilità
+ delle soluzioni e la parte Optimize specifica i criteri di preferenza.
+\end_layout
+
+\begin_layout Standard
+Sintatticamente i vincoli deboli si presentano come quelli forti in cui
+ il simbolo :- è sostituito dal simbolo :~ , e il peso e il livello sono
+ espressi in seguito al vincolo in accordo con la specifica sintassi (nell’
+ esempio sottostante sarà usata la sintassi del solver DLV2 in cui in aggiunta
+ alla coppia peso@livello vengono elencate le variabili per le quali si
+ intende instanziare il vincolo [leone] ).
+\end_layout
+
+\begin_layout Standard
+Un’altra importante estensione al linguaggio ASP è l’aggiunta delle funzioni
+ aggregate.
+ Ci sono alcune semplici proprietà, spesso richieste nei programmi, che
+ non possono essere espresse in maniera naturale usando la sintassi ASP.
+ Specialmente le proprietà che fanno uso degli operatori aritmetici richiedono
+ una modellazione pesante usando esclusivamente la sintassi ASP di base.
+ Osservazioni simili sono state fatte in contesti come la gestione dei database,
+ nei quali è stato appunto aggiunto l’uso di funzioni aggregate, e quando
+ l’uso della programmazione ASP si è diffusa largamente il bisogno di integrarvi
+ le funzioni aggregate è apparso necessario.
+ Si definisce un insieme simbolico di elementi attraverso i predicati e
+ poi si chiama la funzione desiderata su quell’insieme.
+ Le funzioni più comuni sono il conteggio (#count), la somma (#sum), il
+ minimo (#min) e il massimo (#max).
+\end_layout
+
+\begin_layout Standard
+Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+numero(1).
+ numero(2).
+ → fatti 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+scelgo(X) | nonScelgo(X) :- numero(X).
+ → guess
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:- #count{ X : scelgo(X) } > 1.
+ → check 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:~ nonScelgo(X).
+ [X@X, X] → optimize
+\end_layout
+
+\begin_layout Standard
+Answer Sets:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A1 = { scelgo(1), scelgo(2) } → pesi [2:2] [1:1] → inammissibile 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A2 = { scelgo(1), nonScelgo(2) } → pesi [2:2] [0:1] → secondo 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A3 = { nonScelgo(1), scelgo(2) } → pesi [0:2] [1:1] → ottimo 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A4 = { nonScelgo(1), nonScelgo(2) } → pesi [2:2] [2:1] → terzo
+\end_layout
+
+\begin_layout Standard
+Notiamo che A1 è inammissibile perché la funzione #count ritorna il valore
+ 2 e il vincolo forte viene violato.
+ L’ Answer Set ottimo è A3 perché il livello minimo è il livello 1, a A2
+ e A4 vengono scartati in quanto hanno dei pesi a livello 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Programmazione PDDL
+\end_layout
+
+\begin_layout Subsection
+Introduzione ai problemi di pianificazione
+\end_layout
+
+\begin_layout Standard
+La pianificazione rappresenta un’importante attività di problem solving
+ ed è una componente particolarmente importante dell’intelligenza artificiale.
+ Con questo termine si intende l’elaborazione di un piano di azione per
+ raggiungere un determinato obiettivo.
+ 
+\end_layout
+
+\begin_layout Standard
+Un problema di pianificazione è dunque un problema di ricerca di una sequenza
+ di azioni che, rispettando i vincoli imposti dal problema, porti al raggiungime
+nto di un obiettivo.
+ Problemi di questo tipo si compongono di tre elementi: uno stato iniziale
+ (la situazione di partenza), uno stato finale (la situazione in cui vorremmo
+ arrivare, l’obiettivo da raggiungere) e un insieme di azioni che, quando
+ applicate, provocano un cambiamento di stato.
+\end_layout
+
+\begin_layout Standard
+Un’azione può essere o meno applicabile in un certo stato e, se applicata,
+ ha delle conseguenze sugli elementi del dominio e porta in un altro stato.
+ Gli stati, all’interno del problema, sono delle descrizioni del dominio
+ in cui stiamo operando e ne rispettano i vincoli.
+ Le azioni consistono in un insieme di precondizioni e in un insieme di
+ effetti.
+ Le prime sono dei vincoli che definiscono se una azione può essere applicata
+ o meno in un certo stato, i secondi rappresentano il risultato dell’esecuzione
+ di una azione in termini di cosa cambia all’interno del dominio.
+ Risolvere un problema di pianificazione vuol dire chiedersi se esiste una
+ sequenza ordinata di azioni che porti dallo stato iniziale a quello finale.
+\end_layout
+
+\begin_layout Standard
+Per realizzare un piano, con il tempo si sono tentati principalmente due
+ approcci: un approccio manuale e uno automatico.
+\end_layout
+
+\begin_layout Standard
+La pianificazione manuale prevede la costruzione del piano da parte di un
+ operatore umano.
+ Il risultato di una operazione di questo tipo dipende molto dalle capacità
+ e dall’esperienza dell’operatore nell’ordinare i compiti rispettando i
+ vincoli del problema.
+ Naturalmente l’utilizzo di questo approccio risulta molto complesso e costoso
+ in termini di tempo, ed è possibile solamente per problemi non particolarmente
+ articolati, in cui il numero di variabili e di vincoli è piccolo, e per
+ problemi riguardanti ambienti completamente deterministici e prevedibili.
+ Inoltre, anche riuscendo a trovare un piano, è molto improbabile che esso
+ sia ottimale, per via dell’enorme quantità di fattori di cui l’operatore
+ deve tener conto.
+\end_layout
+
+\begin_layout Standard
+La pianificazione automatica, al contrario, delega il compito di costruire
+ il piano interamente al sistema intelligente.
+ Questo approccio permette di risparmiare molto tempo rispetto a quello
+ manuale e può garantire una soluzione ottima.
+ Non si può però considerare come una tecnica perfetta.
+ È possibile infatti che una soluzione trovata dal pianificatore automatico,
+ non sia poi effettivamente applicabile in quanto il sistema può non essere
+ a conoscenza di informazioni non fornitegli perché impossibili da esprimere.
+ Inoltre, anche la pianificazione automatica può funzionare solamente con
+ domini deterministici e prevedibili.
+\end_layout
+
+\begin_layout Standard
+La pianificazione, così come descritta fino ad ora, è detta classica o proposizi
+onale, ed è in grado di trattare problemi non particolarmente complessi,
+ nei quali c’è la necessità di capire cosa fare e in quale ordine farlo,
+ ma non c’è bisogno di tener conto di fattori che durante l’esecuzione di
+ un piano possono variare, quali il tempo o il consumo di risorse.
+ Quando si trattano problemi reali, tuttavia, si ha a che fare con ambienti
+ molto dinamici e scarsamente prevedibili, di cui si ha spesso una conoscenza
+ solo parziale e in cui c’è la possibilità che si verifichino, a tempo di
+ esecuzione, degli inconvenienti inaspettati che possono andare a modificare
+ il mondo, rendendo inconsistente il piano realizzato in precedenza.
+\end_layout
+
+\begin_layout Standard
+Fino a qualche anno fa, per via delle limitate capacità tecnologiche, la
+ ricerca sulla pianificazione si è limitata quasi esclusivamente a problemi
+ di questo tipo.
+ Negli ultimi anni, invece, ci si è avvicinati sempre più alla pianificazione
+ di problemi realistici.
+ Quando si ha a che fare con problemi reali complessi sorge la necessità
+ di gestire anche elementi variabili.
+ Ogni azione che deve essere eseguita, infatti, ha una durata temporale
+ e consuma una determinata quantità di risorse.
+ In questi casi, perciò, occorre effettuare una pianificazione che tenga
+ conto di tali vincoli, associando ad ogni azione il corrispondente tempo
+ necessario per eseguirla e la quantità di risorse consumate.
+ Soluzioni a problemi di questo tipo devono dunque soddisfare, oltre ai
+ vincoli proposizionali, anche i vincoli numerici riguardanti le risorse
+ consumabili.
+ Inoltre devono tener conto dei vincoli numerici di ordine temporale, i
+ quali possono essere associati sia alla durata del piano in sè, sia allo
+ stesso utilizzo delle risorse, in relazione alla loro disponibilità rinnovabile
+/riutilizzabile o meno.
+ Questi accenni lasciano intuire quanto la pianificazione con vincoli su
+ risorse consumabili sia tutt’altro che banale e le ragioni per le quali
+ essa sia stata affrontata solamente in un tempo recente.
+\end_layout
+
+\begin_layout Subsection
+STRIPS - PDDL
+\end_layout
+
+\begin_layout Standard
+A livello pratico, la pianificazione classica si può trattare come un problema
+ di ricerca nello spazio degli stati.
+ Per rappresentare un problema è ormai consuetudine utilizzare linguaggi
+ STRIPS-like.
+ STRIPS (Stanford Research Institute Problem Solver) è un linguaggio basato
+ sulla logica proposizionale e sull’uso di predicati.
+ Esso permette di rappresentare ogni stato attraverso l’insieme di predicati
+ che sono validi in quel determinato stato.
+ Le azioni sono invece rappresentate attraverso precondizioni ed effetti.
+ Le precondizioni includono i predicati che devono essere veri affinché
+ si possa applicare l’azione.
+ Gli effetti sono invece le conseguenze dell’applicazione dell’azione, ossia
+ le modifiche che un’azione comporta sul dominio.
+ 
+\end_layout
+
+\begin_layout Standard
+STRIPS fa un’assunzione di mondo chiuso, cioè suppone che ogni fatto non
+ espressamente indicato sia falso.
+ Inoltre, mentre si effettua una operazione, si assume che nel mondo non
+ succeda nient’altro.
+ Per questa ragione negli effetti di una azione si specificano solamente
+ i cambiamenti che essa comporta, mentre tutto il resto non è esplicitato.
+ Questo è importante in quanto nella maggior parte degli ambienti in cui
+ si utilizza STRIPS, c’è una grande quantità di fatti che non cambiano nel
+ tempo.
+ Specificare solamente ciò che si modifica, dunque, permette di evitare
+ di dover ricopiare completamente l’intero modello del mondo ogni volta
+ che si passa da uno stato ad un altro.
+ Gli effetti di una azione sono indicati come due liste: una DELETE-LIST,
+ che contiene tutte le clausole che devono essere rimosse (e quindi implicitamen
+te rese false), e una ADD-LIST, che contiene tutte le clausole che non sono
+ presenti nello stato corrente e devono essere aggiunte (rese vere).
+\end_layout
+
+\begin_layout Standard
+Una volta definito il problema, il compito del pianificatore è verificare
+ se esiste una sequenza di azioni che faccia passare dallo stato iniziale
+ a quello finale, e in tal caso, dire qual è.
+ Per fare ciò il sistema intelligente esamina lo spazio degli stati, simulando,
+ in ogni stato, l’applicazione di tutte le azioni applicabili (quelle le
+ cui precondizioni sono soddisfatte), fino ad ottenere lo stato finale.
+\end_layout
+
+\begin_layout Standard
+Intorno agli anni 2000, in seguito alle prime due edizioni dell’ International
+ Planning Competition (IPC), si è affermato all’interno della comunità internazi
+onale, come linguaggio standard per la rappresentazione di domini, PDDL,
+ un linguaggio sviluppato da Drew McDermott e da alcuni suoi colleghi.
+ Attraverso tale standardizzazione si è cercato di incentivare il progresso
+ nel campo della pianificazione, favorendo la comunicazione tra i vari gruppi
+ di ricerca, lo scambio e la comparazione dei lavori da essi effettuati.
+\end_layout
+
+\begin_layout Standard
+PDDL (Planning Domain Definition Language), è dunque un Linguaggio di Descrizion
+e dei Domini di Pianificazione.
+ Esso si ispira a STRIPS e alla formulazione dei problemi secondo la sua
+ logica.
+ In particolare PDDL contiene STRIPS, e i domini scritti in PDDL si possono
+ scrivere in STRIPS.
+ Ci sono comunque alcune differenze tra i due linguaggi.
+ In PDDL gli effetti di una azione non sono esplicitamente divisi in ADD-LIST
+ e DELETE-LIST ma gli effetti negativi sono indicati con una negazione e
+ sono messi in congiunzione insieme a quelli positivi.
+ 
+\end_layout
+
+\begin_layout Standard
+Lo sviluppo della pianificazione con vincoli di risorse è stato favorito,
+ in particolare, dal rilascio di PDDL 2.1 il quale fornisce una notevole
+ potenza di modellazione.
+ Esso è infatti in grado di modellare classi di domini che richiedono una
+ pianificazione dell’uso delle risorse e del tempo, tramite l’uso di fluenti
+ numerici, permettendo di dividere, all’interno del problema, la parte predicati
+va da quella numerica.
+ 
+\end_layout
+
+\begin_layout Standard
+Tra le principali qualità di PDDL vi è una divisione delle caratteristiche
+ di un dominio da quelle dell’istanza di un problema.
+ Esso permette, cioè, di dividere la descrizione di azioni dalla descrizione
+ di oggetti specifici o di condizioni iniziali e finali.
+ In questo modo è possibile utilizzare delle variabili per parametrizzare
+ le azioni e ciò permette di riutilizzare un dominio con istanze di problemi
+ diversi, favorendo un’analisi di scenari differenti applicati allo stesso
+ dominio.
+\end_layout
+
+\begin_layout Standard
+Esempio (dominio):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(define (domain blocks)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:requirements :strips :typing :fluents)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:types block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:predicates (on ?x - block ?y - block) (ontable ?x - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(clear ?x - block) (handempty) (holding ?x - block) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:functions (moves) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:action pick-up
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:parameters (?x - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:precondition (and (clear ?x) (ontable ?x) (handempty))
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:effect (and (not (ontable ?x)) (not (clear ?x))
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(not (handempty)) (holding ?x) (increase (moves) 1) ) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:action put-down
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:parameters (?x - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:precondition (holding ?x)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:effect (and (not (holding ?x)) (clear ?x) (handempty)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(ontable ?x) (increase (moves) 1) ) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:action stack 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:parameters (?x - block ?y - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:precondition (and (holding ?x) (clear ?y))
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:effect (and (not (holding ?x)) (not (clear ?y)) (clear ?x)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(handempty) (on ?x ?y) (increase (moves) 1) ) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:action unstack
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:parameters (?x - block ?y - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:precondition (and (on ?x ?y) (clear ?x) (handempty))
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:effect (and (holding ?x) (clear ?y) (not (clear ?x)) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(not (handempty)) (not (on ?x ?y)) (increase (moves) 1) ) ) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In esso si può notare la descrizione delle azioni parametrizzate al fine
+ di lasciare poi all’istanza del problema il compito di sostituire i parametri
+ formali con dei parametri attuali.
+ Un’ importante caratteristica di PDDL riguarda quindi la definizione dei
+ tipi.
+ I tipi dei parametri di una azione vengono specificati esplicitamente all’inter
+no di :parameters in cui una variabile è indicata con il punto interrogativo
+ e il suo tipo è preceduto dal simbolo - .
+ Le stesse variabili definite nell’elenco degli argomenti, sono poi utilizzate
+ nella descrizione delle precondizioni e degli effetti dell’azione.
+ I nomi dei tipi devono essere dichiarati attraverso :types e se si intende
+ usarli è anche necessario dichiararlo all’interno dei requisiti (:requirements
+ :typing … ).
+ 
+\end_layout
+
+\begin_layout Standard
+Esempio (problema):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(define (problem blocks-01)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:domain blocks) (:objects A B C D - block)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:init (clear A) (clear B) (clear C) (clear D) (ontable A)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(ontable B) (ontable C) (ontable D) (handempty) (= (moves) 0) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:goal (and (on D C) (on C B) (on B A) ) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(:metric minimize (moves)) )
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In esso viene invece mostrata la descrizione di un problema molto semplice.
+ In questo caso, si può notare come le descrizioni degli oggetti specifici,
+ le condizioni iniziali e i goals, vengano indicate senza l’uso di parametri,
+ in quanto stiamo configurando l’istanza di un problema.
+\end_layout
+
+\begin_layout Standard
+Questi esempi sono espressi in una rappresentazione che è già propria di
+ PDDL 2.1.
+ Vengono già utilizzati, infatti, i fluenti numerici, e il loro uso va specifica
+to all’interno dei requisiti (:requirements :fluents … ).
+ Elementi di questo tipo sono molto importanti, soprattutto per quanto riguarda
+ la pianificazione di problemi realistici, in quanto permettono di modellare
+ risorse non binarie.
+ Essi sono indicati separatamente dai predicati.
+ All’interno della definizione di un dominio i predicati vengono specificati
+ in :predicates, mentre le funzioni numeriche sono inserite in :functions.
+\end_layout
+
+\begin_layout Standard
+I predicati possono essere veri o falsi e il loro significato non è intrinseco,
+ dipende invece dagli effetti che le azioni del dominio possono avere su
+ di essi.
+ Si possono distinguere a livello concettuale (a livello sintattico non
+ ci sono differenze) predicati statici e predicati dinamici.
+ I primi sono predicati che non vengono cambiati da nessuna azione e che
+ quindi dipendono solamente dallo stato iniziale del problema.
+ I secondi invece sono quei predicati il cui valore viene alterato dalle
+ azioni.
+ Le funzioni, invece, possono essere viste come dei predicati a cui è associato
+ un valore numerico anziché un valore booleano.
+ Anche per esse, in generale, valgono le stesse considerazioni fatte per
+ i predicati.
+ Sia i predicati che le funzioni possono essere utilizzati come vincoli
+ all’interno delle precondizioni di una azione, e i loro valori possono
+ essere alterati dagli effetti.
+ I vincoli numerici possono essere costruiti, usando operatori aritmetici,
+ a partire da espressioni numeriche primitive.
+ 
+\end_layout
+
+\begin_layout Standard
+In PDDL 2.1, oltre ai fluenti numerici, è stata anche introdotta la possibilità
+ di definire delle metriche.
+ Esse permettono di specificare i criteri su cui un piano deve essere valutato.
+ L’introduzione di tali vincoli è dovuta alla possibilità di utilizzare
+ dei fluenti numerici.
+ Essi permettono di chiedere al sistema che il piano generato, oltre ad
+ essere consistente, minimizzi o massimizzi una certa espressione.
+ Naturalmente l’espressione da minimizzare (o massimizzare) può essere molto
+ complessa, ottenendola dalla combinazione di più funzioni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+EmbASP
+\end_layout
+
+\begin_layout Subsection
+Presentazione
+\end_layout
+
+\begin_layout Standard
+EmbASP è un framework sviluppato dal Dipartimento di Matematica e Informatica
+ dell’Università della Calabria che supporta l’integrazione di programmi
+ logici in sistemi esterni.
+ Un framework è una struttura astratta in cui vengono definiti gli elementi
+ che lo compongono e le relazioni tra di essi.
+ L’integrazione dei programmi logici avviene attraverso l’esecuzione di
+ un solver, uno strumento informatico in grado di risolvere il problema
+ logico.
+ Per sistema esterno si intende la piattaforma sulla quale si intende eseguire
+ il framewework.
+\end_layout
+
+\begin_layout Standard
+Esso è stato implementato in 3 linguaggi di programmazione: Java, Python
+ e C#.
+ Implementare un framework significa fornire un'implementazione delle classi
+ astratte.
+ L'insieme delle classi concrete eredita le relazioni e si ottiene in questo
+ modo un insieme di classi concrete messe in relazione tra di loro.
+ 
+\end_layout
+
+\begin_layout Standard
+Supporta due linguaggi logici: ASP e PDDL, dei quali si è discusso nei capitoli
+ 2 e 3.
+ ASP è supportato dai solver DLV, DLV2, DLVHEX e clingo.
+ Questi sono file in grado di essere eseguiti da un computer.
+ Possono essere scaricati dalla relativa fonte di appartenenza ed essere
+ eseguiti localmente dal proprio computer.
+ Essi richiedono in input il programma logico, lo risolvono, e restituiscono
+ in output la soluzione.
+ PDDL è supportato grazie al solver SPD.
+ Esso usa un cloud server per l’esecuzione remota.
+ Il problema viene generato localmente e inviato tramite internet ad un
+ server che si occupa di risolverlo e restituire la soluzione.
+\end_layout
+
+\begin_layout Standard
+EmbASP si occupa, attraverso il linguaggio di programmazione in cui è implementa
+to, di creare l’input e trasformarlo in un formato in grado di essere passato
+ al solver.
+ Al termine della risoluzione EmbASP raccoglie l’output e lo mostra all’utente
+ in un formato con cui egli può interagire.
+\end_layout
+
+\begin_layout Subsection
+Struttura
+\end_layout
+
+\begin_layout Standard
+EmbASP è strutturato in 4 moduli: Base, Platform, Languages e Specializations.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Tirocinio/Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
+	display false
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel modulo Base sono presenti i componenti fondamentali del Framework, che
+ saranno poi specializzati nei moduli successivi.
+ La classe Handler gestisce l’esecuzione del solver.
+ L’Handler si occupa di collezionare l’input ed eventuali opzioni aggiuntive
+ da specificare al solver, fornitegli dall’utente attraverso la classe InputProg
+ram e la classe OptionDescriptor.
+ Passa poi le informazioni alla classe Service che si occupa di comunicarle
+ al solver e avviare l’esecuzione del programma logico.
+ Terminata l’esecuzione il Service riceve l’output dal solver, lo passa
+ all’Handler il quale infine lo mostra all’utente grazie alla classe Output
+ o attraverso la classe Callback.
+ L’utente potrà poi esaminare l’output e gestirlo secondo le proprie necessità.
+\end_layout
+
+\begin_layout Standard
+Nel modulo Platform sono presenti le estensioni delle classi Handler e Service
+ per gestire le piattaforme supportate da EmbASP: Desktop in tutte e tre
+ le versioni e Android solo sulla versione Java.
+ La classe DesktopHandler gestisce il DesktopService per l’esecuzione del
+ solver su una piattaforma Desktop e, in modo simile, la classe AndroidHandler
+ gestisce l’AndroidService sulla piattaforma Android.
+\end_layout
+
+\begin_layout Standard
+Nel modulo Languages sono presenti le estensioni delle classi InputProgram
+ e Output, le quali hanno lo scopo di gestire l’input e l’output dei differenti
+ solver.
+ Per il linguaggio ASP l’InputProgram è esteso dalla classe ASPInputProgram
+ e l’Output è esteso dalla classe AnswerSets, composto da un insieme di
+ AnswerSet.
+ Mentre l’InputProgram del linguaggio PDDL è esteso dalla classe PDDLInputProgra
+m e l’Output dalla classe Plan, composto da un insieme di Action.
+ L’InputProgram permette la creazione dell’input del programma logico in
+ 3 modi: aggiungendo le informazioni sotto forma di stringhe, da essere
+ poi passate direttamente al solver; creando uno o più file in cui sono
+ contenute le informazioni e specificando gli indirizzi di tali file; oppure
+ creare delle classi che rappresentano i predicati del programma logico
+ e aggiungere all’input le loro istanze (oggetti).
+ Questo procedimento è assistito dalla classe Mapper, specializzato nell’ASPMapp
+er e nel PDDLMapper, e da ANTLR, uno strumento generatore di parser e traduttori
+ che permette di definire grammatiche, di cui EmbASP fa uso.
+ Le classi che intendono rappresentare predicati del programma logico sono
+ arricchite con delle informazioni che il Mapper è in grado di elaborare
+ per effettuare la traduzione degli oggetti in stringhe.
+ Per effettuare ciò la versione Java usa le Java Annotation, una forma di
+ meta-codice che marca le classi con delle informazioni che sono analizzate
+ a tempo di esecuzione.
+ Le classi che rappresentano un predicato specifico devono essere marcate
+ con l’annotazione @Id(nome_del_predicato) e ogni parametro della classe
+ deve essere annotato con @Param(posizione).
+ Grazie alle Java Reflection le annotazioni vengono esaminate e gli oggetti
+ vengono tradotte in stringe e passate al solver.
+ Nella versione Python viene usata una classe astratta Predicate.
+ Le classi che rappresentano i predicati devono estendere la classe Predicate.
+ Devono contenere al loro interno un parametro di nome “predicate_name”,
+ contenente una stringa rappresentante il nome del predicato, e una lista
+ contenente il valore dei parametri che il predicato ha.
+ Queste informazione sono poi usate dal Mapper per eseguire correttamente
+ la conversione delle classi in stringhe.
+ Nella versione C#, in modo simile alla versione Java, le classi che rappresenta
+no i predicati vengono marcate attraverso i C# Attributes.
+ La classe deve essere marcata con [Id(nome_del_predicato)] e i parametri
+ con [Param(posizione)] per poter permettere al Mapper, con il supporto
+ della C# Reflection, di eseguire la traduzione.
+ 
+\end_layout
+
+\begin_layout Standard
+Nel modulo Specialization sono contenute le specifiche estensioni delle
+ classi Service e Output, per poter gestire l’esecuzione dei differenti
+ solver.
+ Nello specifico, in tutte e tre le versioni sono contenute le estensioni
+ della classe DesktopService per i differenti solver (DLVDesktopService,
+ DLV2DesktopService, DLVHEXDesktopService, ClingoDesktopService e SPDDesktopServ
+ice) mentre solo nella versione Java sono presenti le estensioni dell’ AndroidSe
+rvice e solo per i solver DLV, DLV2 e SPD (DLVAndroidService, DLV2AndroidService
+ e SPDAndroidService).
+ Sono contenute anche le estensioni della classe AnswerSets per il linguaggio
+ ASP (DLVAnswerSets, DLV2AnswerSets, DLVHEXAnswerSets e ClingoAnswerSets)
+ e della classe Plan per il linguaggio PDDL (SPDPlan).
+ 
+\end_layout
+
+\begin_layout Subsection
+Esempi
+\end_layout
+
+\begin_layout Standard
+Di seguito sono mostrati due esempi del funzionamento di EmbASP.
+ Nel primo esempio sarà risolto il problema del cammino minimo usando la
+ programmazione ASP, usando la versione Java di EmbASP su una piattaforma
+ desktop e usando il solver DLV2.
+ Il problema del cammino minimo è un problema in cui, dato un grafo orientato
+ e pesato, bisogna riuscire a trovare il cammino, da un nodo sorgente a
+ un nodo di destinazione, che minimizzi la somma dei pesi negli archi inclusi
+ in tale cammino.
+ In questo esempio, dato il grafo riportato di seguito, si vuole trovare
+ il cammino minimo dal nodo 0 al nodo 7.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Tirocinio/Documentazione/immagini/shortest-path.png
+	display false
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per effettuare ciò, sono state create due classi, rappresentati gli archi
+ del grafo, che verranno poi usate come predicati del programma logico.
+ La classe Edge rappresenta gli archi in input del programma logico, mentre
+ la classe Path rappresenta gli archi inclusi nel cammino minimo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+@Id("edge") public class Edge {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(0) private int from;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(1) private int to;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(2) private int weight;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+public Edge(int from, int to, int weight) {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.from = from;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.to = to;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.weight = weight;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[…]
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+@Id("path") public class Path {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(0) private int from;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(1) private int to;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+@Param(2) private int weight;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+public Path(int from, int to, int weight) {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.from = from; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.to = to;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+this.weight = weight;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[...]
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A questo punto, supponendo di aver scaricato il solver DLV2 sul proprio
+ computer e di averlo incluso nel progetto, possiamo sviluppare la nostra
+ applicazione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+public class ShortestPath {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+// nodo sorgente e di destinazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+private static int from, to;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+// archi nel cammino minimo (ordinati)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+private static ArrayList<Integer> sortedPath; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+try {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Handler handler = new DesktopHandler(
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+new DLV2DesktopService("executable/dlv2"));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ASPMapper.getInstance().registerClass(Edge.class);
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ASPMapper.getInstance().registerClass(Path.class);
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+InputProgram input = new ASPInputProgram();
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+from = 0;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+to = 7;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+String rules = "from(" + from + ").
+ to(" + to + ")."
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++ "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++ "path(X,Y,W) | notPath(X,Y,W) :- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+path(_,X,_), edge(X,Y,W), not to(X)."
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++ "visited(X) :- path(_,X,_)." 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++ ":- to(X), not visited(X)."
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++ ":~ path(X,Y,W).
+ [W@1 ,X,Y]";
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+input.addProgram(rules); 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+for(Edge edge : getEdges())
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+input.addObjectInput(edge);
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+handler.addProgram(input);
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+AnswerSets answerSets = (AnswerSets) handler.startSync();
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+for(AnswerSet answerSet : answerSets.getOptimalAnswerSets()) { 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+// archi nel cammino minimo (non ordinati)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ArrayList<Path> path = new ArrayList<Path>();
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+int sum = 0; // peso totale del cammino
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+for(Object obj : answerSet.getAtoms()) {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+if(obj instanceof Path) {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+path.add((Path)obj);
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+sum += ((Path)obj).getWeight();
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+} 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+join(from,path,sortedPath); // ordina gli archi
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+print(sortedPath,sum); // mostra il cammino
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+} catch (Exception e) { e.printStackTrace(); }
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+private static ArrayList<Edge> getEdges() {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ArrayList<Edge> edges = new ArrayList<Edge>();
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(0,1,1));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(0,2,4));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(1,2,2));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(1,3,4));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(1,4,1));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(2,4,4));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(3,5,6));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(3,6,1));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(4,3,1));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(6,4,5));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(6,5,9));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(6,7,1));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+edges.add(new Edge(7,5,2));
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+return edges;
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[...]
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L’applicazione contiene un Handler, inizializzato con un DesktopHandler,
+ che usa come parametro un DLV2DesktopService con una stringa che rappresenta
+ il percorso in cui si trova il solver DLV2.
+ La classe ASPMapper registra le classi Edge e Path precedentemente create,
+ per poter poi effettuare la traduzione delle loro istanze in stringhe,
+ e viceversa.
+ E’ stato creato un InputProgram, inizializzato con un ASPInputProgram,
+ e gli sono stati aggiunti una stringa e una lista di Edge, rappresentanti
+ fatti, regole e vincoli del programma ASP.
+ L’InputProgram è stato passato all’Handler, che ha poi avviato l’esecuzione
+ del solver.
+ L’output è stato raccolto nella classe AnswerSets, che poi è stata esaminata.
+ Sono stati raccolti i Path, rappresentanti gli archi nel cammino minimo,
+ e la somma dei loro pesi.
+ Infine sono stati ordinati e visualizzati.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il secondo esempio riguarda il problema blocks-world, ed è stato usato il
+ linguaggio PDDL, usando l’implementazione in Python di EmbASP e usando
+ il solver SPD.
+ Blocks-world è un problema in cui dato un insieme di blocchi disposti in
+ una configurazione iniziale, bisogna trovare una serie di passaggi attraverso
+ i quali disporre i blocchi nella configurazione desiderata.
+ In questo esempio, data la configurazione iniziale a sinistra, ovvero 4
+ blocchi tutti separati tra loro, si vuole portarli nella configurazione
+ finale a destra, ovvero uno sopra l’altro.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Tirocinio/Documentazione/immagini/blocks-world.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per fare questo sono state create delle classi rappresentanti le azioni
+ che posso essere eseguite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+class PickUp(Predicate):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+predicateName="pick-up"
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+def __init__(self, block=None):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+super(PickUp, self).__init__([("block")])
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block = block
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[...]
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+class PutDown (Predicate):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+predicateName="put-down"
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+def __init__(self, block=None):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+super(PutDown, self).__init__([("block")])
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block = block
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[...]
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+class Stack (Predicate):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+predicateName="stack"
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+def __init__(self, block1=None, block2=None):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+super(Stack, self).__init__([("block1"), ("block2")])
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block1 = block1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block2 = block2
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[...]
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+class Unstack (Predicate):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+predicateName="unstack"
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+def __init__(self, block1=None, block2=None):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+super(Unstack, self).__init__([("block1"), ("block2")])
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block1 = block1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+self.block2 = block2
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[…]
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A questo punto, supponendo che siano stati creati due file (domain.pddl e
+ p01.pddl) contenenti le definizioni del dominio e del problema (di cui l’esempio
+ nel capito 2.2), si può iniziare a sviluppare l’ applicazione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+handler = DesktopHandler(SPDDesktopService())
+\end_layout
+
+\begin_layout Standard
+input_domain = PDDLInputProgram(PDDLProgramType.DOMAIN)
+\end_layout
+
+\begin_layout Standard
+input_problem= PDDLInputProgram(PDDLProgramType.PROBLEM)
+\end_layout
+
+\begin_layout Standard
+input_domain.add_files_path("../domain.pddl")
+\end_layout
+
+\begin_layout Standard
+input_problem.add_files_path("../p01.pddl")
+\end_layout
+
+\begin_layout Standard
+handler.add_program(input_domain)
+\end_layout
+
+\begin_layout Standard
+handler.add_program(input_problem)
+\end_layout
+
+\begin_layout Standard
+PDDLMapper.get_instance().register_class(PickUp)
+\end_layout
+
+\begin_layout Standard
+PDDLMapper.get_instance().register_class(PutDown)
+\end_layout
+
+\begin_layout Standard
+PDDLMapper.get_instance().register_class(Stack)
+\end_layout
+
+\begin_layout Standard
+PDDLMapper.get_instance().register_class(Unstack)
+\end_layout
+
+\begin_layout Standard
+output = handler.start_sync()
+\end_layout
+
+\begin_layout Standard
+for obj in output.get_actions_objects():
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+if isinstance(obj, PickUp) | isinstance(obj, PutDown) | isinstance(obj,
+ Stack) | isinstance(obj, Unstack) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+print(obj)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il file contiene un Handler, inizializzato con un DesktopHandler usando
+ il parametro SPDDesktopService.
+ Siccome PDDL richiede di definire separatamente il dominio e il problema,
+ sono stati creati due PDDLInputProgram, uno di tipo domain e l’altro di
+ tipo problem.
+ Ad essi sono stati specificati gli indirizzi dei percorsi dei file precedenteme
+nte creati, e poi sono stati passati all’Handler.
+ La classe PDDLMapper registra le classi precedentemente create, per poter
+ poi interagire con l’output del solver.
+ L’handler ha avviato l’esecuzione del solver e l’output è stato ricevuto,
+ esaminato e visualizzato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Portare EmbASP in Produzione
+\end_layout
+
+\begin_layout Standard
+Da fare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusioni
+\end_layout
+
+\begin_layout Standard
+Da fare
+\end_layout
+
+\end_body
+\end_document
