@@ -1125,7 +1125,7 @@ d.
 \end_layout
 
 \begin_layout Standard
-I1 = {b,c,d}, I2 = {a,b,c,d}, I3 = {c,d}
+Interpretazioni:
 \end_layout
 
 \begin_layout Standard
@@ -1136,9 +1136,28 @@ I1 = {b,c,d}, I2 = {a,b,c,d}, I3 = {c,d}
 \end_layout
 
 \begin_layout Standard
-I2 e I3 sono modelli, mentre I1 non lo è perché il corpo della prima regola
- è vero rispetto a I1 (b e c appartengono a I1) mentre la testa è falsa
- (a non appartiene a I1).
+I1 = {b, c, d}
+\end_layout
+
+\begin_layout Standard
+I2 = {a, b, c, d}
+\end_layout
+
+\begin_layout Standard
+I3 = {c, d}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notiamo che I2 e I3 sono modelli, mentre I1 non lo è perché il corpo della
+ prima regola è vero rispetto a I1 (b e c appartengono a I1) mentre la testa
+ è falsa (a non appartiene a I1).
  
 \end_layout
 
@@ -1292,7 +1311,7 @@ Tp(1) = {a}.
 
 \begin_layout Standard
 Tp(2) = {e}.
- → modello minimale = { b, a, e }
+ → modello minimale = {b, a, e}
 \end_layout
 
 \begin_layout Standard
@@ -1373,9 +1392,46 @@ Esempio:
 \begin_inset space ~
 \end_inset
 
-P = {a :- d, not b.
- b :- not d.
- d.}
+P = { a :- d, not b.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+b :- not d.
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+d.
+ 
+\begin_inset space ~
+\end_inset
+
+}
 \end_layout
 
 \begin_layout Standard
@@ -1422,7 +1478,23 @@ I = {a, d}
 \end_inset
 
 P ridotto = {a :- d.
- d.}
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+d.}
 \end_layout
 
 \begin_layout Standard
@@ -1446,9 +1518,16 @@ Programmazione logica disgiuntiva
 \begin_layout Standard
 Una importante estensione della programmazione logica è la programmazione
  logica disgiuntiva.
- Essa permette di avere nelle teste delle regole una disgiunzione di predicati,
- con il significato che se il corpo è vero allora almeno uno dei predicati
- presenti nella disgiunzione della testa sarà vero.
+ Essa è un potente formalismo per la rappresentazione della conoscenza e
+ il ragionamento di senso comune, che consente di formalizzare, in modo
+ semplice e naturale, problemi complessi.
+ La programmazione logica disgiuntiva permette di avere nelle teste delle
+ regole una disgiunzione di predicati, con il significato che se il corpo
+ è vero allora uno dei predicati presenti nella disgiunzione della testa
+ sarà vero.
+ Quello che ne risulta è un linguaggio la cui alta espressività ha importanti
+ implicazioni pratiche, consentendo la modellazione di situazioni reali,
+ quali la rappresentazione di conoscenza incompleta.
  Sintatticamente la disgiunzione è rappresentata dal simbolo | nella testa
  delle regole.
 \end_layout
@@ -1456,11 +1535,28 @@ Una importante estensione della programmazione logica è la programmazione
 \begin_layout Standard
 Nella programmazione logica disgiuntiva i vincoli non sono intesi come in
  Prolog, ovvero come obbiettivi da raggiungere, bensì come strumenti con
- cui selezionare i modelli da scartare.
- I vincoli scartano i modelli in cui tutti gli atomi nel corpo del vincolo
- sono verificati contemporaneamente.
+ cui selezionare gli Answer Set da scartare.
+ I vincoli scartano gli Answer Set in cui sono verificati contemporaneamente
+ tutti gli atomi nel corpo del vincolo.
  Sintatticamente i vincoli si presentano come delle regole senza testa.
  
+\end_layout
+
+\begin_layout Standard
+I programmi sono quindi un insieme di regole e vincoli.
+ Le soluzioni del programma sono dati dagli Answer Set risultanti.
+ Le regole disgiuntive generano gli Answer Set, i vincoli selezionano quelli
+ da scartare.
+ Questo approccio prende il nome di Guess and Check.
+ La programmazione logica disgiuntiva secondo la semantica dei modelli stabili
+ è anche conosciuta con il nome di Answer Set Programming (ASP).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1472,32 +1568,177 @@ Esempio:
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-a | b :- c.
 \end_layout
 
 \begin_layout Standard
-I programmi sono quindi un insieme di regole e vincoli.
- Le soluzioni del programma sono dati dagli Answer Set risultanti.
- Le regole disgiuntive generano gli Answer Set, i vincoli selezionano quelli
- da scartare.
- Questo approccio prende il nome di Guess and Check.
- La programmazione logica disgiuntiva secondo la semantica dei modelli stabili
- è anche conosciuta con il nome di Answer Set Programming (ASP).
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+a | b | c :- d.
+ → guess
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+:- d, c.
+ → check
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+d.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Answer Sets:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A1 = {d, a}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A2 = {d, b}
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+A3 = {d, c} → inammissibile
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notiamo che la regola disgiuntiva genera tre Answer Set, ma A3 risulta inammissi
+bile in quanto viola il vincolo.
+ Gli Answer Set risultanti sono dunque A1 e A2.
 \end_layout
 
 \begin_layout Subsection
@@ -1543,7 +1784,7 @@ Sintatticamente i vincoli deboli si presentano come quelli forti in cui
  espressi in seguito al vincolo in accordo con la specifica sintassi (nell’
  esempio sottostante sarà usata la sintassi del solver DLV2 in cui in aggiunta
  alla coppia peso@livello vengono elencate le variabili per le quali si
- intende instanziare il vincolo [leone] ).
+ intende instanziare il vincolo [2] ).
 \end_layout
 
 \begin_layout Standard
@@ -1564,7 +1805,21 @@ Un’altra importante estensione al linguaggio ASP è l’aggiunta delle funzion
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Esempio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1665,7 +1920,21 @@ scelgo(X) | nonScelgo(X) :- numero(X).
 \end_layout
 
 \begin_layout Standard
-Answer Sets:
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Answer Set:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1758,6 +2027,13 @@ A3 = { nonScelgo(1), scelgo(2) } → pesi [0:2] [1:1] → ottimo
 \end_inset
 
 A4 = { nonScelgo(1), nonScelgo(2) } → pesi [2:2] [2:1] → terzo
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1978,6 +2254,13 @@ Tra le principali qualità di PDDL vi è una divisione delle caratteristiche
  le azioni e ciò permette di riutilizzare un dominio con istanze di problemi
  diversi, favorendo un’analisi di scenari differenti applicati allo stesso
  dominio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2920,6 +3203,13 @@ no di :parameters in cui una variabile è indicata con il punto interrogativo
  usarli è anche necessario dichiararlo all’interno dei requisiti (:requirements
  :typing … ).
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
