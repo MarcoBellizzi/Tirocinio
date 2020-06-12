@@ -122,7 +122,6 @@ ità umane.
  Artificiale come la disciplina che si occupa di realizzare macchine (hardware
  e software) in grado di “agire” autonomamente (risolvere problemi, compiere
  azioni, ecc.).
- 
 \end_layout
 
 \begin_layout Standard
@@ -165,9 +164,8 @@ macchina di Turing
  verso il moderno computer, e per questo contributo è solitamente considerato
  il padre dell'Informatica e dell'Intelligenza Artificiale.
  Il termine Intelligenza Artificiale in realtà parte “ufficialmente” dal
- matematico statunitense John McCarthy, nel 1956, e con esso il “lancio”
- dei primi linguaggi di programmazione (Lisp nel 1958 e Prolog nel 1973)
- specifici per l’AI.
+ matematico statunitense John McCarthy, nel 1956, e con esso i primi linguaggi
+ di programmazione (Lisp nel 1958 e Prolog nel 1973) specifici per l’AI.
  Da lì in poi la storia dell’Intelligenza Artificiale è stata abbastanza
  altalenante, caratterizzata da avanzate significative dal punto di vista
  dei modelli matematici ma con alti e bassi dal punto di vista della ricerca
@@ -315,26 +313,24 @@ Lo scopo di questa tesi è la presentazione di EmbASP, un framework sviluppato
 \begin_layout Itemize
 Nel Capitolo 2 verrà esposta la programmazione ASP (Answer Set Programming),
  partendo dai principi base della programmazione logica.
- Sarà poi esposto il linguaggio Prolog, che rappresenta le origini del linguaggi
-o ASP.
- Ne sarà analizzata la semantica e sarà introdotta la programmazione logica
- disgiuntiva.
- Saranno poi presentate le principali estenzioni sintattiche del linguaggio
+ Sarà esposto il linguaggio Prolog, che rappresenta le origini del linguaggio
  ASP.
+ Sarà in seguito analizzata la semantica del liguaggio ASP e saranno introdotte
+ la programmazione logica disgiuntiva e le principali estenzioni sintattiche.
 \end_layout
 
 \begin_layout Itemize
 Nel Capitolo 3 varrà esposta la programmazione PDDL (Planning Domain Definition
- Language), introducendo inizialmente i problemi di pianificazione e presentando
- poi STRIPS, un linguaggio basato sulla logica in grado di affrontare tali
- problemi.
- Verrà poi esposto come PDDL implementi STRIPS e come PDDL2.1 favorisca la
+ Language), introducendo i problemi di pianificazione e presentando poi
+ STRIPS, un linguaggio basato sulla logica in grado di affrontare tali problemi.
+ Verrà poi esposto come PDDL implementa STRIPS e come PDDL2.1 favorisce la
  pianificazione con vincoli sulle risorse.
 \end_layout
 
 \begin_layout Itemize
-Nel capitolo 4 sarà presentato EmbASP, ne sarà analizzata la struttura e
- verranno esposti degli esempi pratici del suo funzionamento.
+Nel capitolo 4 sarà presentato EmbASP.
+ Ne sarà analizzata la struttura e verranno esposti degli esempi pratici
+ del suo funzionamento.
 \end_layout
 
 \begin_layout Itemize
@@ -483,7 +479,7 @@ In programmazione logica un problema viene descritto con un insieme di formule
 \begin_layout Standard
 Il linguaggio formale alla base della programmazione logica è rappresentato
  dalle clausole di Horn.
- Un letterale è una formula atomica e viene definito positivo oppure negativo
+ Un letterale è un predicato, e viene definito positivo oppure negativo
  a seconda che sia della forma p oppure ¬p, con p una proposizione.
  Una clausola è una disgiunzione di letterali.
  Chiamiamo clausola di Horn una clausola che contiene al più un letterale
@@ -875,16 +871,19 @@ Esempio:
 Il raggiungimento dell’obiettivo viene perseguito applicando il metodo di
  risoluzione basato sulla strategia SLD ai fatti e alle regole del programma
  e all’obiettivo dato.
- Dati un programma Prolog (insieme di clausole C) ed un obiettivo (clausola
- iniziale c1), bisogna trovare per tutte le formule atomiche dell’obiettivo
- considerate, dei fatti che siano unificabili con quelle formule o delle
- regole le cui teste siano unificabili con quelle formule.
+ Dati un programma Prolog ed un obiettivo, bisogna trovare per tutti i predicati
+ nell’obiettivo considerato, dei fatti che siano unificabili con quei predicati
+ o delle regole le cui teste siano unificabili con quei predicati.
  Nel caso la risoluzione avvenga con una regola, bisogna poi procedere nello
- stesso modo con le formule atomiche del corpo della regola considerate.
- Poiché ogni formula atomica presente in un obiettivo potrebbe essere unificabil
-e con più fatti e teste di regole di un programma, in Prolog la risoluzione
- della formule atomiche vengono esaminate rispetto a tutte le clausole del
- programma considerate nell’ordine in cui sono scritte.
+ stesso modo con i predicati del corpo della regola considerati da sinistra
+ a destra, seguendo l’ordine LIFO per coerenza con la strategia SLD.
+ Per motivi di efficienza, conviene che le regole ricorsive siano ricorsive
+ a destra, cioè che il predicato in testa di tali regole compaia nei predicati
+ più a destra del corpo delle regole.
+ Poiché ogni predicato presente in un obiettivo potrebbe essere unificabile
+ con più fatti e teste di regole di un programma, in Prolog la risoluzione
+ dei predicati viene esaminata rispetto a tutte le regole del programma,
+ considerate nell’ordine in cui sono state scritte.
  Perciò, per motivi di efficienza, nei programmi conviene elencare i fatti
  prima delle regole.
  Posta una domanda, il Prolog risponde Yes o No per confermarne o meno la
@@ -905,11 +904,10 @@ L’esecuzione di un programma Prolog su un obiettivo può essere rappresentata
 
 \begin_layout Standard
 La radice dell’albero e-o contiene l’obiettivo iniziale, mentre ogni foglia
- può contenere # oppure un obiettivo alla cui formula atomica più a sinistra
- non è applicabile la risoluzione.
+ può contenere # oppure un obiettivo al cui predicato più a sinistra non
+ è applicabile la risoluzione.
  Ogni ramo dell’albero è etichettato con i legami creati per unificazione
- durante la corrispondente applicazione della regola di inferenza per risoluzion
-e.
+ durante la corrispondente applicazione della regola di risoluzione.
  Ogni cammino dalla radice ad una foglia contenente # è un cammino di successo,
  mentre tutti gli altri cammini sono cammini di fallimento o cammini infiniti.
 \end_layout
@@ -1155,12 +1153,75 @@ e l’albero e-o risultante è il seguente:
 \end_layout
 
 \begin_layout Subsection
-Semantica
+Semantica ASP
 \end_layout
 
 \begin_layout Standard
-Un termine (un predicato, una regola o un programma) è detto ground se non
- contiene nessuna variabile [2].
+Nel capitolo precedente abbiamo brevemente descritto il metodo di risoluzione
+ SLD adottato nella realizzazione di interpreti Prolog reali.
+ Ciò che in pratica abbiamo fornito è una semantica operazionale della programma
+zione logica.
+ Ci si può chiedere a questo punto se esista un modo per descrivere il significa
+to di un programma logico senza fare riferimento a particolari strategie
+ o metodi di risoluzione.
+ Questo paragrafo illustra l’Answer Set Programming (ASP), un approccio
+ alternativo introdotto nel 1993, il quale si estende più in generale a
+ tutta la programmazione dichiarativa.
+ Questo stile di programmazione risulta sufficientemente espressivo da essere
+ proficuamente utilizzabile in diversi contesti.
+ 
+\end_layout
+
+\begin_layout Standard
+L’Answer Set Programming, si differenzia in molteplici punti dalla programmazion
+e Prolog, pur ereditandone quasi interamente la sintassi fin qui introdotta.
+ Ciò che differenzia i due approcci è, da un lato il modo in cui viene assegnata
+ la semantica ad un programma, dall’altro la procedura impiegata per trovare
+ le soluzioni.
+ Vediamo in modo informale una serie di punti in cui i due approcci si differenz
+iano:
+\end_layout
+
+\begin_layout Itemize
+In una regola ASP l’ordine dei predicati non ha alcuna importanza.
+ Ciò è in contrasto con le convenzioni adottate in Prolog.
+ Abbiamo infatti visto come il comportamento dell’interprete Prolog sia
+ fortemente influenzato dall’ordine in cui i predicati occorrono in una
+ regola.
+ In ASP quindi il corpo di una regola si può considerare come un vero e
+ proprio insieme di letterali.
+\end_layout
+
+\begin_layout Itemize
+In Prolog l’esecuzione di un goal avviene in modo top-down e goal-directed:
+ a partire dal goal si procede utilizzando le clausole e costruendo una
+ derivazione che porta alla soluzione/risposta.
+ Contrariamente a ciò, solitamente un interprete per l’ASP opera bottom-up,
+ partendo dai fatti si procede verso le conclusioni che portano alla soluzione.
+\end_layout
+
+\begin_layout Itemize
+La procedura risolutiva solitamente implementata in Prolog (risoluzione
+ SLD), con le sue particolari scelte relative alle regole di selezione di
+ letterali e clausole, può causare la generazione di computazioni infinite
+ (anche in assenza della negazione).
+ Ciò non accade invece per i solver ASP.
+\end_layout
+
+\begin_layout Standard
+Le differenze tra Prolog e ASP nascono essenzialmente dal modo in cui viene
+ assegnata la semantica ai programmi.
+ Possiamo dire che l’ASP sia una forma di programmazione dichiarativa in
+ cui si fissa la semantica dei programmi.
+ Per descrivere la semantica di un programma ASP dobbiamo prima introdurre
+ la nozione di 
+\emph on
+Answer Set
+\emph default
+.
+ Innanzitutto affrontiamo il caso più semplice dei programmi ground.
+ Un termine (un predicato, una regola o un programma) è detto ground se
+ non contiene nessuna variabile [2].
  Dato un programma logico P, chiamiamo Universo di Herbrand (Up) l’insieme
  di tutte le costanti in P.
  Chiamiamo Base di Herbrand l’insieme di tutti i possibili predicati ground
@@ -1169,7 +1230,7 @@ Un termine (un predicato, una regola o un programma) è detto ground se non
 \end_layout
 
 \begin_layout Standard
-Un’interpretazione I è un insieme di atomi ground.
+Un’interpretazione I è un insieme di predicati ground.
  Un letterale positivo è vero rispetto ad I se appartiene ad I, falso altrimenti
 ; mentre un letterale negativo è vero rispetto ad I se non appartiene ad
  I, falso altrimenti.
@@ -1311,7 +1372,7 @@ Notiamo che I2 e I3 sono modelli, mentre I1 non lo è perché il corpo della
 \begin_layout Standard
 L’intersezione di tutti i possibili modelli è detto modello minimale.
  Dato un programma P e un interpretazione I, si definisce conseguenza immediata
- di I l’insieme di tutti gli atomi che compaiono in testa a qualche regola
+ di I l’insieme di tutti i predicati che compaiono in testa a qualche regola
  in P di cui il corpo è vero rispetto ad I.
  Applicando questo metodo più volte ad un programma, nella prima iterazione
  si analizzano i corpi delle regole con i predicati nell’insieme di partenza
@@ -1474,15 +1535,15 @@ In un programma positivo (ovvero che non contiene negazione in nessuna regola)
  IDB all'infinito.
  Inoltre, in un programma non positivo, la negazione può causare problemi
  se unita alla ricorsione.
- La stratificazione è un vincolo che i programmi devono rispettare per escludere
- la negazione all’interno della ricorsione.
+ Per escludere la negazione all'interno della ricorsione, i programmi devono
+ essere stratificati.
  Per chiarire la stratificazione facciamo uso del grafo delle dipendenze.
  In questo grafo i nodi sono i predicati IDB e la presenza di un arco da
  un nodo a un nodo b è data dalla presenza di a nel corpo di una regola
  in cui b è in testa.
  Un arco a → b viene marcato (con il simbolo -) se a è un letterale negativo.
- Un programma si dice stratificato se il grafo delle dipendenze non contiene
- cicli in cui appare un arco marcato.
+ Un programma si dice stratificato se il relativo grafo delle dipendenze
+ non contiene cicli in cui appare un arco marcato.
 \end_layout
 
 \begin_layout Standard
@@ -1658,7 +1719,7 @@ Notiamo che nella prima regola viene rimosso not b perché è un letterale
 \end_layout
 
 \begin_layout Subsection
-Programmazione logica disgiuntiva
+Estensioni
 \end_layout
 
 \begin_layout Standard
@@ -1683,7 +1744,7 @@ Nella programmazione logica disgiuntiva i vincoli non sono intesi come in
  Prolog, ovvero come obbiettivi da raggiungere, bensì come strumenti con
  cui selezionare gli Answer Set da scartare.
  I vincoli scartano gli Answer Set in cui sono verificati contemporaneamente
- tutti gli atomi nel corpo del vincolo.
+ tutti i predicati nel corpo del vincolo.
  Sintatticamente i vincoli si presentano come delle regole senza testa.
  
 \end_layout
@@ -1883,12 +1944,15 @@ A3 = {d, c} → inammissibile
 
 \begin_layout Standard
 Notiamo che la regola disgiuntiva genera tre Answer Set, ma A3 risulta inammissi
-bile in quanto viola il vincolo.
+bile in quanto viola il vincolo (d e c sono veri entrambi contemporaneamente).
  Gli Answer Set risultanti sono dunque A1 e A2.
 \end_layout
 
-\begin_layout Subsection
-Estensioni
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3574,7 +3638,7 @@ EmbASP è un framework sviluppato dal Dipartimento di Matematica e Informatica
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Scaricati/attività.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/attività.png
 	display false
 	scale 50
 
