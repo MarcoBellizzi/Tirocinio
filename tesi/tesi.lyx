@@ -38,7 +38,16 @@ figs-within-sections
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -7387,15 +7396,9 @@ In questo paragrafo sono analizzate le attività svolte durante il periodo
  dell' Università della Calabria.
  Queste attività riguardano portare EmbASP in produzione, ovvero curare
  tutti quegli aspetti riguardati la pubblicazione del software.
- Una delle attività più importanti riguardante questo settore riguarda fornire
- una documentazione chiara e esaustiva del software.
- Una documentazione che sia in grado di spiegare la struttura del software,
- e spiegare il suo funzionamento.
- EmbASP ha un sito internet (disponibile a questo indirizzo djksajks) nel
- quale è presente la documentazione di cui EmbASP dispone.
- Questo sito è mantenuto dal dipartimento e una delle prime attività da
- me svolte è stata aggiornare la documentazione sul sito alla attuale versione
- di EmbASP.
+ Una delle attività più importanti in questo settore riguarda la fornitura
+ di una documentazione chiara e esaustiva del software, che sia in grado
+ di spiegare la struttura del software, e spiegare il suo funzionamento.
  EmbASP è un progetto nato nel 2015, anno in cui è stata rilasciata la versione
  v1.0.0.
  Da allora sono state rilasicate varie versioni, in cui sono state aggiunte
@@ -7406,12 +7409,12 @@ In questo paragrafo sono analizzate le attività svolte durante il periodo
 
 \begin_layout Itemize
 v1.0.0 - Questa è la prima versione di EmbASP, una versione che supporta solo
- la programmazione ASP su una piattaforma Desktop, utilizzando solo il solver
+ la programmazione ASP su una piattaforma Desktop, supportando solo il solver
  DLV.
 \end_layout
 
 \begin_layout Itemize
-v1.1.0 - Sono stati corretti dei piccoli problemi.
+v1.1.0 - Sono stati corretti alcuni piccoli problemi.
 \end_layout
 
 \begin_layout Itemize
@@ -7431,7 +7434,7 @@ v2.0.2 - È stata ristrutturata la classe Output, inserendo il parametro 'error'
 
 \begin_layout Itemize
 v3.0.0 - È stato aggiunto il supporto al linguaggio PDDL, aggiungendo il supporto
- al solver SPD sulla piattaforme Desktop e Android ed è stato aggiunto il
+ al solver SPD sulle piattaforme Desktop e Android ed è stato aggiunto il
  supporto al sover DLV2 sulla piattaforma Desktop.
 \end_layout
 
@@ -7440,7 +7443,7 @@ v3.0.1 - Sono stati corretti alcuni errori nella piattaforma Android.
 \end_layout
 
 \begin_layout Itemize
-v3.1.0 - Sono state modificate le annotazioni 'Predicate' e 'Term' in 'Id'
+v3.1.0 - Sono state rinominate le annotazioni 'Predicate' e 'Term' in 'Id'
  e 'Param'.
 \end_layout
 
@@ -7455,7 +7458,7 @@ v4.0.0 - È stata aggiunta la versione in Python.
 
 \begin_layout Itemize
 v4.1.0 - È stata aggiornata la cartella contenente le risorse per i test,
- ed sono stati rinominate le classi e in metodi della versione Python, secondo
+ e sono state rinominate le classi e i metodi della versione Python seguendo
  la sintassi convenzionalmente usata in Python.
 \end_layout
 
@@ -7475,8 +7478,25 @@ v5.0.0 - È stata aggiunta la versione C#.
 
 \begin_layout Itemize
 v6.0.0 .
- È stato aggiunto il supporto al solver DLVHEX ed è stato introdotto l'uso
+ È stato aggiunto il supporto al solver DLVHEX, è stato introdotto l'uso
  di ANTLR4 e sono state rimosse le librerie Json-simple.
+\end_layout
+
+\begin_layout Standard
+EmbASP ha un sito internet (disponibile a questo indirizzo 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.mat.unical.it/calimeri/projects/embasp/
+\end_layout
+
+\end_inset
+
+) nel quale è presente la documentazione di cui EmbASP dispone.
+ Una delle prime attività svolte è stata l'aggiornamento della documentazione
+ sul sito alla attuale versione di EmbASP.
 \end_layout
 
 \begin_layout Standard
