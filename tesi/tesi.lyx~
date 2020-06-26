@@ -122,6 +122,10 @@ LatexCommand tableofcontents
 Introduzione
 \end_layout
 
+\begin_layout Subsection
+Introduzione all'Intelligenza Artificiale
+\end_layout
+
 \begin_layout Standard
 Cos’è l’Intelligenza Artificiale? In modo semplicistico potremmo definire
  l’Intelligenza Artificiale come l’abilità di un sistema tecnologico di
@@ -245,9 +249,16 @@ Intelligenza Artificiale forte (strong AI).
 Lo sviluppo dell’Intelligenza Artificiale ha avuto molta influenza in diversi
  campi dell’Informatica, poichè la realizzazione dei sistemi di AI ha portato
  allo sviluppo di tecniche e strumenti innovativi.
- Questo è certamente il caso dei linguaggi di programmazione: un campo nel
- quale molti linguaggi sono stati sviluppati inizialmente per rendere più
- efficiente la realizzazione di sistemi di AI.
+ Questo è certamente il caso dei linguaggi di programmazione 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "false"
+
+\end_inset
+
+ : un campo nel quale molti linguaggi sono stati sviluppati inizialmente
+ per rendere più efficiente la realizzazione di sistemi di AI.
  In particolare lo studio di metodi e tecniche per la rappresentazione della
  conoscenza ha portato alla realizzazione di ambienti basati sulla
 \emph on
@@ -306,6 +317,10 @@ ione che prescindono dal modello di funzionamento dell’elaboratore, cercando
 logica
 \emph default
 .
+\end_layout
+
+\begin_layout Subsection
+Struttura della tesi
 \end_layout
 
 \begin_layout Standard
@@ -378,7 +393,15 @@ La logica (dal greco logos, ovvero “parola”, “pensiero”, “idea”) è 
 Nella logica proposizionale esistono due valori (I cioè vero, e O cioè falso)
  e si basa su un insieme di proposizioni, e su un insieme di connettivi
  attraverso i quali è possibile combinare le proposizioni per creare formule
- arbitrariamente complesse.
+ arbitrariamente complesse 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "false"
+
+\end_inset
+
+ .
  Per proposizione intendiamo un’affermazione relativa ad un singolo fatto
  di cui può essere stabilita la verità.
  Il valore di verità di una formula ben formata può quindi variare a seconda
@@ -530,7 +553,15 @@ Prolog
 \begin_layout Standard
 Nato nel 1972 grazie alle ricerche di Alain Colmerauer e Robert Kowalski,
  il Prolog (acronimo per PROgramming in LOGic) è uno dei primi linguaggi
- di programmazione logica.
+ di programmazione logica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "false"
+
+\end_inset
+
+ .
  E' molto potente e flessibile, ed è adatto particolarmente all'Intelligenza
  Artificiale.
  Il programmatore pone la sua attenzione sugli oggetti e sulle relazioni
@@ -819,7 +850,15 @@ Il primo passo, nella programmazione Prolog, consiste nella creazione della
 
 \begin_layout Standard
 Per risolvere problemi definiti attraverso clausole di Horn, il Prolog impiega
- il metodo di risoluzione di Robinson basato sulla strategia SLD [1].
+ il metodo di risoluzione di Robinson basato sulla strategia SLD 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "false"
+
+\end_inset
+
+ .
  L’esecuzione di un programma Prolog viene attivata da un obiettivo.
  L’obiettivo è una clausola di Horn data da un vincolo ed è descritto sintattica
 mente come una regola senza testa in cui il simbolo :- è sostituito dal
@@ -908,7 +947,7 @@ L’esecuzione di un programma Prolog su un obiettivo può essere rappresentata
  le regole alternativi tra loro con i quali può avvenire la risoluzione
  (disgiunzione).
  Durante l’applicazione della risoluzione, l’albero viene costruito in profondit
-à per via dell’ordine LIFO imposto dalla strategia SLD [1].
+à per via dell’ordine LIFO imposto dalla strategia SLD.
 \end_layout
 
 \begin_layout Standard
@@ -1169,7 +1208,15 @@ Semantica ASP
 Nel capitolo precedente abbiamo brevemente descritto il metodo di risoluzione
  SLD adottato nella realizzazione di interpreti Prolog reali.
  Ciò che in pratica abbiamo fornito è una semantica operazionale della programma
-zione logica.
+zione logica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+literal "false"
+
+\end_inset
+
+ .
  Ci si può chiedere a questo punto se esista un modo per descrivere il significa
 to di un programma logico senza fare riferimento a particolari strategie
  o metodi di risoluzione.
@@ -1230,7 +1277,15 @@ Answer Set
 .
  Innanzitutto affrontiamo il caso più semplice dei programmi ground.
  Un termine (un predicato, una regola o un programma) è detto ground se
- non contiene nessuna variabile [2].
+ non contiene nessuna variabile 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-5"
+literal "false"
+
+\end_inset
+
+ .
  Dato un programma logico P, chiamiamo Universo di Herbrand (Up) l’insieme
  di tutte le costanti in P.
  Chiamiamo Base di Herbrand l’insieme di tutti i possibili predicati ground
@@ -2003,7 +2058,15 @@ Sintatticamente i vincoli deboli si presentano come quelli forti in cui
  espressi in seguito al vincolo in accordo con la specifica sintassi (nell’
  esempio sottostante sarà usata la sintassi del solver DLV2 in cui in aggiunta
  alla coppia peso@livello vengono elencate le variabili per le quali si
- intende instanziare il vincolo [2]).
+ intende instanziare il vincolo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-5"
+literal "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -2281,7 +2344,15 @@ Introduzione ai problemi di pianificazione
 La pianificazione rappresenta un’importante attività di problem solving
  ed è una componente particolarmente importante dell’Intelligenza Artificiale.
  Con questo termine si intende l’elaborazione di un piano di azione per
- raggiungere un determinato obiettivo.
+ raggiungere un determinato obiettivo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+literal "false"
+
+\end_inset
+
+ .
  
 \end_layout
 
@@ -7375,41 +7446,28 @@ nte creati, e poi sono stati passati all’Handler.
 \end_layout
 
 \begin_layout Section
-Portare EmbASP in Produzione
-\end_layout
-
-\begin_layout Itemize
-documentazione
-\end_layout
-
-\begin_layout Itemize
-versione stabile (correzione bug)
-\end_layout
-
-\begin_layout Itemize
-rilascio
+Portare EmbASP in produzione
 \end_layout
 
 \begin_layout Standard
-In questo paragrafo sono analizzate le attività svolte durante il periodo
- di tirocinio da me svolto presso il Dipartimnto di Matematica e Informatica
- dell' Università della Calabria.
- Queste attività riguardano portare EmbASP in produzione, ovvero curare
- tutti quegli aspetti riguardati la pubblicazione del software.
- Una delle attività più importanti in questo settore riguarda la fornitura
- di una documentazione chiara e esaustiva del software, che sia in grado
- di spiegare la struttura del software, e spiegare il suo funzionamento.
+In questo paragrafo sono analizzate le attività effettuate durante il periodo
+ di tirocinio da me svolto presso il Dipartimento di Matematica e Informatica
+ dell'Università della Calabria.
+ In questo periodo ho avuto l'opportunità di collaborare con alcuni membri
+ del dipartimento, contribuendo alla crescita e allo sviluppo di EmbASP.
+ Le attività effettuate riguardano la cura di tutti quegli aspetti pertinenti
+ alla pubblicazione e al rilascio di un software.
  EmbASP è un progetto nato nel 2015, anno in cui è stata rilasciata la versione
  v1.0.0.
  Da allora sono state rilasicate varie versioni, in cui sono state aggiunte
  gradualmente varie funzionalita.
- Di seguito è riportato un elenco delle varie versioni, con una descrizione
- delle modifiche apportate e delle funzionalità aggiunte in ogni versione.
+ Di seguito è riportato un elenco delle varie versioni, con una breve descrizion
+e delle modifiche apportate e delle funzionalità aggiunte in ogni versione.
 \end_layout
 
 \begin_layout Itemize
 v1.0.0 - Questa è la prima versione di EmbASP, una versione che supporta solo
- la programmazione ASP su una piattaforma Desktop, supportando solo il solver
+ la programmazione ASP su una piattaforma Desktop, attraverso il solver
  DLV.
 \end_layout
 
@@ -7419,7 +7477,7 @@ v1.1.0 - Sono stati corretti alcuni piccoli problemi.
 
 \begin_layout Itemize
 v2.0.0 - È stato aggiunto il supporto alla piattaforma Android e il supporto
- al solver Clingo sulla versione Desktop.
+ al solver Clingo sulla piattaforma Desktop.
 \end_layout
 
 \begin_layout Itemize
@@ -7433,7 +7491,7 @@ v2.0.2 - È stata ristrutturata la classe Output, inserendo il parametro 'error'
 \end_layout
 
 \begin_layout Itemize
-v3.0.0 - È stato aggiunto il supporto al linguaggio PDDL, aggiungendo il supporto
+v3.0.0 - È stato aggiunto il supporto al linguaggio PDDL aggiungendo il supporto
  al solver SPD sulle piattaforme Desktop e Android ed è stato aggiunto il
  supporto al sover DLV2 sulla piattaforma Desktop.
 \end_layout
@@ -7477,37 +7535,220 @@ v5.0.0 - È stata aggiunta la versione C#.
 \end_layout
 
 \begin_layout Itemize
-v6.0.0 .
- È stato aggiunto il supporto al solver DLVHEX, è stato introdotto l'uso
- di ANTLR4 e sono state rimosse le librerie Json-simple.
+v6.0.0 - È stato aggiunto il supporto al solver DLVHEX, è stato introdotto
+ l'uso di ANTLR4 ed è stata rimossa la libreria Json-simple.
+\end_layout
+
+\begin_layout Subsection
+Documentazione
 \end_layout
 
 \begin_layout Standard
-EmbASP ha un sito internet (disponibile a questo indirizzo https://www.mat.unical.i
-t/calimeri/projects/embasp/) nel quale è presente la documentazione di cui
- EmbASP dispone.
- Una delle prime attività svolte è stata l'aggiornamento della documentazione
- sul sito alla attuale versione di EmbASP.
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-href{https://www.mat.unical.it/calimeri/projects/embasp/}{indirizzo}
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.mat.unical.it/calimeri/projects/embasp/
-\end_layout
+Una delle attività più importanti in questo settore riguarda la creazione
+ di una documentazione chiara e esaustiva del software, che sia in grado
+ di spiegare all'utente la sua struttura e il suo funzionamento.
+ EmbASP ha un sito internet, disponibile a questo 
+\begin_inset CommandInset href
+LatexCommand href
+name "indirizzo"
+target "https://www.mat.unical.it/calimeri/projects/embasp/"
+literal "false"
 
 \end_inset
 
+, nel quale è presente la documentazione di cui EmbASP dispone.
+ Una delle prime attività svolte è stata aggiornare la documentazione sul
+ sito alla attuale versione di EmbASP.
+ Questa attività comprende:
+\end_layout
 
+\begin_layout Itemize
+Aggiornare la presentazione del framework.
+\end_layout
+
+\begin_layout Itemize
+Aggiornare la descrizione dei moduli in cui EmbASP è diviso.
+\end_layout
+
+\begin_layout Itemize
+Aggiornare le descrizioni e i diagrammi delle classi brevi delle versioni
+ Java e Python.
+\end_layout
+
+\begin_layout Itemize
+Creare e aggiungere una descrizione e il diagramma delle classi breve per
+ la versione C#.
+\end_layout
+
+\begin_layout Itemize
+Creare e aggiungere i diagrammi delle classi completi per tutte e tre le
+ versioni, con descrizione dei parametri e dei metodi di ogni classe.
+\end_layout
+
+\begin_layout Itemize
+Generare e aggiungere la documentazione Doxygen, uno strumento per la generazion
+e della documentazione che estrae commenti dal codice sorgente e, in maniera
+ automatica, genera file di tipo HTML.
+\end_layout
+
+\begin_layout Itemize
+Creare e aggiungere un esempio (blocks-world) dell'uso di EmbASP su una
+ piattaforma Desktop, usando il linguaggio PDDL nella versione C#.
+\end_layout
+
+\begin_layout Itemize
+Creare e aggiungere un esempio (cammino minimo) dell'uso di EmbASP su una
+ piattaforma Desktop, usando il linguaggio ASP in tutte e tre le versioni.
+\end_layout
+
+\begin_layout Itemize
+Aggiornare la sezione Applications Showcase in cui è presente la descrizione
+ di alcune applicazioni che fanno uso di EmbASP.
+\end_layout
+
+\begin_layout Standard
+Oltre al sito internet abbiamo deciso di aggiungere la documentazione di
+ EmbASP sul sito readthedocs.org.
+ Questo sito permette di “allegare” ad EmbASP una documentazione scritta
+ attraverso il linguaggio reStructuredText, un noto linguaggio di formattazione
+ del testo.
+ Attraverso Sphinx, un potente generatore di documentazione, readthedocs.org
+ converte la documentazione allegata in formato HTML e ne permette la visualizza
+zione.
+ Ho provveduto a creare la documentazione di EmbASP attraverso il linguaggio
+ reStructuredText e integrarla in readthedocs.org.
+ La documentazione di EmbASP così generata è attualmente disponibile a questo
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "indirizzo"
+target "https://readthedocs.org/projects/embasp/"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rilascio del software
+\end_layout
+
+\begin_layout Standard
+Prima di effettuare il rilascio del software all'utente, occorre testarlo
+ e assicurarsi che funzioni correttemente, che sia stabile e che non contenga
+ bug o malfunzionamenti.
+ Durante la fase di testing sono emersi alcuni problemi.
+ Uno di questi riguarda una differenza tra il solver DLV2 e gli altri solver.
+ Tutti gli altri solver offrono la possibilità di specificare l'input contempora
+neamente sia tramite file che tramite STDIN, mentre il DLV2 no.
+ L'input del solver DLV2 deve provenire o interamente da file esterni, o
+ interamente da STDIN.
+ EmbASP sfrutta la lettura da file quando l'utente specifica l'indirizzo
+ di uno o più file contenenti l'input del solver, e sfrutta la lettura da
+ STDIN quando l'utente genera dell'input attraverso stringhe o oggetti all'inter
+no dell'applicazione, aggiungendo, in questo caso, la relativa opzione di
+ lettura da STDIN del solver.
+ Per ovviare a queste restrizioni, nelle versioni Java e C# era stato introdotto
+ un meccanismo attraverso il quale l'input proveniente dall'applicazione
+ veniva scritto in un file di testo creato appositamente e veniva specificato
+ il percorso di tale file all'interno di EmbASP, usando in questo modo esclusiva
+mente la lettura dell'input attraverso file.
+ Mentre nella versione in Python questo problema non era stato gestito e
+ il solver DLV2 ignorava semplicemente l'input proveniante da STDIN, in
+ quanto, nella versione in Python, l'opzione di lettura da STDIN del solver
+ veniva aggiunta di default, a prescindere dalla presenza di input proveniente
+ dall'applicazione.
+ La strategia che si è deciso di usare per ovviare a questo è di limitare
+ EmbASP ad effettuare l'esecuzione del solver così come specificato dall'utente,
+ e restituire un messaggio di errore nel caso in cui l'utente, usando il
+ solver DLV2, effettua la lettura dell'input contemporaneamente da file
+ e da STDIN.
+ In questo modo si rende più stabile l'implementazione di EmbASP e più resilient
+e rispetto a modifiche future dei solver.
+ Ho provveduto a rimuovere l'uso del file temporaneo dalle versioni Java
+ e C#, e a modificare la versione Python in modo che aggiunga l'opzione
+ di lettura da STDIN del solver solo quando necessario, ovvero quando l'utente
+ genera dell'input attraverso l'applicazione.
+ In questo modo tutte le versioni non usano file temporanei, aggiungono
+ l'opzione di lettura da input solo quando necessario e, riguardo il DLV2,
+ se si prova a usare contemporaneamente la lettura dell'input da file e
+ da STDIN viene riportato un errore, come desiderato.
+ Funzionano invece correttemente utilizzando esclusivamente la lettura da
+ file o la lettura da STDIN.
+ Risolto questo problema, ho aggiunto ad ogni versione di EmbASP un test-case
+ (cammino minimo) in cui viene testata l'esecuzione del solver DLV2.
+\end_layout
+
+\begin_layout Standard
+Tutto il codice sorgente di EmbASP è depositato sul sito github.com, il noto
+ servizio di hosting per progetti software.
+ Tutto il codice era depositato in un unico repository, che era strutturato
+ come segue:
+\end_layout
+
+\begin_layout Itemize
+Java version - cartella contenente il codice sorgente della versione Java.
+\end_layout
+
+\begin_layout Itemize
+Python version - cartella contenente il codice sorgente della versione Python.
+\end_layout
+
+\begin_layout Itemize
+CSharp version - cartella contenente il codice sorgente della versione C#.
+\end_layout
+
+\begin_layout Itemize
+test-resource - cartella contenente le risorse per i test di EmbASP.
+\end_layout
+
+\begin_layout Itemize
+antlr-grammars - cartella contenente le risorse di cui ANTLR4 fa uso.
+\end_layout
+
+\begin_layout Standard
+Per permettere di lavorare su una singola versione di EmbASP indipendentemente
+ dalle altre, abbiamo provveduto a frammentare questo repository, depositando
+ ogni componente in nuovo repository.
+ I nuovi repository sono stati poi inclusi in quello principale attraverso
+ i “Git Submodules”, uno strumento che permette di integrare un repository
+ in un altro.
+ In questo modo è possibile sia scaricare EmbASP interamente (ovvero il
+ codice sorgente delle tre versioni e le risorse per i test e di ANTLR4),
+ e sia scaricare singolarmente una specifica versione, nel caso in cui si
+ avesse bisogno soltanto di quella.
+ Da questa nuova struttura del repository è emerso però un inconveniente,
+ ovvero che le modifiche apportante ai singoli componenti non venivano direttame
+nte incluse nel repository principale.
+ Per cercare di automatizzare l'aggiornamento dei submodules nel repository
+ principale è stato introdotto il Dependabot, uno strumento in grado di
+ controllare periodicamente lo stato dei submodules e, nel caso in cui in
+ essi sono presenti degli aggiornamenti, il Dependabot invia una richiesta
+ di aggiornamento nel repository principale.
+\end_layout
+
+\begin_layout Standard
+Github, oltre ad offrire la possibilità di depositare il codice sorgente,
+ permette anche di depositare le releases del software, attraverso un'interfacci
+a appositamente dedicata.
+ La versione Java di EmbASP è rilasciata al pubblico attravero un file JAR,
+ la versione Python attraverso un file Wheel e la versione C# attraverso
+ un file DLL.
+ Questi file contengono sia il codice sorgente delle versioni di EmbASP,
+ sia il codice sorgente di ANTLR4, quindi sono pronte per essere usate e
+ non necessitano di nient'altro.
+ Le releases, il codice sorgente e le risorse di EmbASP sono disponibile
+ nel repository Github di EmbASP al seguente 
+\begin_inset CommandInset href
+LatexCommand href
+name "indirizzo"
+target "https://github.com/DeMaCS-UNICAL/EmbASP"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -7523,6 +7764,85 @@ Conclusioni
 
 \begin_layout Standard
 Da fare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+literal "false"
+
+\end_inset
+
+ Daniele Nardi, Giorgio Grisetti (Università di Roma “La Sapienza”): Linguaggi
+ per L'Intelligenza Artificiale.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+literal "false"
+
+\end_inset
+
+ Marco Bernardo, Edoardo Bontà, Alessandro Aldini (Università degli Studi
+ di Urbino “Carlo Bo”): Programmazione Procedurale e Logica.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+literal "false"
+
+\end_inset
+
+ Stefano Ferilli (Università degli Studi di Bari): Programmazione Logica
+ e Prolog
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+literal "false"
+
+\end_inset
+
+ Agostino Dovier (Università di Udine): Programmazione Dichiarativa in Prolog,
+ CLP e ASP
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+literal "false"
+
+\end_inset
+
+ Nicola Leone (Università della Calabria): Disjunctive Logic Programming:
+ Knowledge Representation Techniques, Systems, and Application.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+literal "false"
+
+\end_inset
+
+Davide Dell'Anna (Università degli Studi di Torino): Un approccio mixed-initiati
+ve per la pianificazione con vincoli su risorse consumabili
 \end_layout
 
 \end_body
