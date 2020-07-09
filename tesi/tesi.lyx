@@ -36,7 +36,7 @@ figs-within-sections
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 11
 \spacing single
 \use_hyperref true
 \pdf_bookmarks false
@@ -96,10 +96,911 @@ figs-within-sections
 
 \begin_body
 
-\begin_layout Title
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/logo.png
+	display false
+	scale 130
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/dipartimento.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Corso di laurea Triennale in Informatica
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing double
+\align center
+
+\size giant
 EmbASP, un framework per l'integrazione della programmazione logica in sistemi
  esterni
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+Relatore 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Candidato
+\end_layout
+
+\begin_layout Standard
+\align left
+Prof.
+ Francesco Calimeri 
+\series bold
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series default
+Marco Bellizzi
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+Co-relatore
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ 
+\series default
+Matricola 176239
+\end_layout
+
+\begin_layout Standard
+\align left
+Dott.
+ Stefano Germano
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+\bar under
+Anno Accademico 2019/2020
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -327,6 +1228,9 @@ Struttura della tesi
 Lo scopo di questa tesi è la presentazione di EmbASP, un framework sviluppato
  dal dipartimento di Matematica e Informatica dell'Università della Calabria,
  che permette l'integrazione della programmazione logica in sistemi esterni.
+ Grazie ad esso è possibile aggiungere una componente intelligente all'interno
+ di applicazioni, facendo uso dei benefici che che la programmazione logica
+ offre nella risoluzione di un problema complesso.
  Verranno esposti i principi fondamentali dei due linguaggi logici attualmente
  supportati da EmbASP (ASP e PDDL) e verrà esposto come viene fatta la loro
  integrazione nei tre linguaggi di programmazione in cui il framework è
@@ -783,25 +1687,7 @@ Esempio:
 \end_layout
 
 \begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
+\align left
 antenato(X,Y) :- genitore(X,Y).
  → se X è genitore di Y allora X è antenato di Y
 \end_layout
@@ -1205,7 +2091,7 @@ Semantica ASP
 \end_layout
 
 \begin_layout Standard
-Nel capitolo precedente abbiamo brevemente descritto il metodo di risoluzione
+Nel paragrafo precedente abbiamo brevemente descritto il metodo di risoluzione
  SLD adottato nella realizzazione di interpreti Prolog reali.
  Ciò che in pratica abbiamo fornito è una semantica operazionale della programma
 zione logica 
@@ -2529,11 +3415,7 @@ Lo sviluppo della pianificazione con vincoli di risorse è stato favorito,
  pianificazione dell’uso delle risorse e del tempo, tramite l’uso di fluenti
  numerici, permettendo di dividere, all’interno del problema, la parte predicati
 va da quella numerica.
- 
-\end_layout
-
-\begin_layout Standard
-Tra le principali qualità di PDDL vi è una divisione delle caratteristiche
+ Tra le principali qualità di PDDL vi è una divisione delle caratteristiche
  di un dominio da quelle dell’istanza di un problema.
  Esso permette, cioè, di dividere la descrizione di azioni dalla descrizione
  di oggetti specifici o di condizioni iniziali e finali.
@@ -3638,10 +4520,7 @@ to all’interno dei requisiti (:requirements :fluents … ).
  Essi sono indicati separatamente dai predicati.
  All’interno della definizione di un dominio i predicati vengono specificati
  in :predicates, mentre le funzioni numeriche sono inserite in :functions.
-\end_layout
-
-\begin_layout Standard
-I predicati possono essere veri o falsi e il loro significato non è intrinseco,
+ I predicati possono essere veri o falsi e il loro significato non è intrinseco,
  dipende invece dagli effetti che le azioni del dominio possono avere su
  di essi.
  Si possono distinguere a livello concettuale (a livello sintattico non
@@ -3764,7 +4643,7 @@ EmbASP è diviso in 4 moduli: Base, Platform, Languages e Specializations.
 \begin_inset Graphics
 	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
 	display false
-	scale 35
+	scale 30
 
 \end_inset
 
@@ -3914,410 +4793,159 @@ Per effettuare ciò, sono state create due classi, rappresentati gli archi
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,extendedchars=true,keywordstyle={\color{red}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
 @Id("edge") public class Edge {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(0) private int from;
+ @Param(0) private int from;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(1) private int to;
+ @Param(1) private int to;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(2) private int weight;
+ @Param(2) private int weight;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-public Edge(int from, int to, int weight) {
+ public Edge(int from, int to, int weight) {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.from = from;
+  this.from = from;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.to = to;
+  this.to = to;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.weight = weight;
+  this.weight = weight;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+ }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
+
+ [...]
+\end_layout
+
+\begin_layout Plain Layout
 
 }
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[…]
-\end_layout
-
-\begin_layout Standard
-}
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 @Id("path") public class Path {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(0) private int from;
+ @Param(0) private int from;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(1) private int to;
+ @Param(1) private int to;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-@Param(2) private int weight;
+ @Param(2) private int weight;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-public Path(int from, int to, int weight) {
+ public Path(int from, int to, int weight) {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.from = from; 
+  this.from = from; 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.to = to;
+  this.to = to;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-this.weight = weight;
+  this.weight = weight;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+ }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
+
+ [...]
+\end_layout
+
+\begin_layout Plain Layout
 
 }
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[...]
-\end_layout
-
-\begin_layout Standard
-}
 \end_layout
 
 \begin_layout Standard
@@ -4341,2288 +4969,375 @@ A questo punto, supponendo di aver scaricato il solver DLV2 sul proprio
 \end_layout
 
 \begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,showstringspaces=false,keywordstyle={\color{red}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
 public class ShortestPath {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-// nodo sorgente e di destinazione
+ // nodo sorgente e di destinazione
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-private static int from = 0;
+ private static int from = 0;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-private static int to = 7;
+ private static int to = 7;
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-// archi nel cammino minimo (ordinati)
+ // archi nel cammino minimo (ordinati)
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-private static ArrayList<Integer> sortedPath; 
+ private static ArrayList<Integer> sortedPath; 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-public static void main(String[] args) {
+ public static void main(String[] args) {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-try {
+  try {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Handler handler = new DesktopHandler(
+   Handler handler = new DesktopHandler(
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-new DLV2DesktopService("executable/dlv2"));
+    new DLV2DesktopService("executable/dlv2"));
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-ASPMapper.getInstance().registerClass(Edge.class);
+   ASPMapper.getInstance().registerClass(Edge.class);
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-ASPMapper.getInstance().registerClass(Path.class);
+   ASPMapper.getInstance().registerClass(Path.class);
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-InputProgram input = new ASPInputProgram();
+   InputProgram input = new ASPInputProgram();
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-String rules = "from(" + from + ").
+   String rules = "from(" + from + ").
  to(" + to + ")."
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-+ "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
+    + "path(X,Y,W) | notPath(X,Y,W) :- from(X), edge(X,Y,W)."
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-+ "path(X,Y,W) | notPath(X,Y,W) :- 
+    + "path(X,Y,W) | notPath(X,Y,W) :- 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-path(_,X,_), edge(X,Y,W), not to(X)."
+      path(_,X,_), edge(X,Y,W), not to(X)."
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-+ "visited(X) :- path(_,X,_)." 
+    + "visited(X) :- path(_,X,_)." 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-+ ":- to(X), not visited(X)."
+    + ":- to(X), not visited(X)."
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-+ ":~ path(X,Y,W).
+    + ":~ path(X,Y,W).
  [W@1 ,X,Y]";
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-input.addProgram(rules); 
+   input.addProgram(rules); 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-for(Edge edge : getEdges())
+   for(Edge edge : getEdges())
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-input.addObjectInput(edge);
+    input.addObjectInput(edge);
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-handler.addProgram(input);
+   handler.addProgram(input);
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-AnswerSets answerSets = (AnswerSets) handler.startSync();
+   AnswerSets answerSets = (AnswerSets) handler.startSync();
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-for(AnswerSet answerSet : answerSets.getOptimalAnswerSets()) { 
+   for(AnswerSet answerSet : answerSets.getOptimalAnswerSets()) { 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-// archi nel cammino minimo (non ordinati)
+    // archi nel cammino minimo (non ordinati)
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-ArrayList<Path> path = new ArrayList<Path>();
+    ArrayList<Path> path = new ArrayList<Path>();
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-int sum = 0; // peso totale del cammino
+    int sum = 0; // peso totale del cammino
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-for(Object obj : answerSet.getAtoms()) {
+    for(Object obj : answerSet.getAtoms()) {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-if(obj instanceof Path) {
+     if(obj instanceof Path) {
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-path.add((Path)obj);
+      path.add((Path)obj);
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-sum += ((Path)obj).getWeight();
+      sum += ((Path)obj).getWeight();
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+     }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+    }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+    join(from,path,sortedPath); // ordina gli archi
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+    print(sortedPath,sum); // mostra il cammino
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+   }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+  } catch (Exception e) { e.printStackTrace(); }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+ }
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+ private static ArrayList<Edge> getEdges() {
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+  ArrayList<Edge> edges = new ArrayList<Edge>();
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+  edges.add(new Edge(0,1,1));
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+  edges.add(new Edge(0,2,4));
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
+  edges.add(new Edge(1,2,2));
+\end_layout
 
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
+
+  edges.add(new Edge(1,3,4));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(1,4,1));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(2,4,4));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(3,5,6));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(3,6,1));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(4,3,1));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(6,4,5));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(6,5,9));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(6,7,1));
+\end_layout
+
+\begin_layout Plain Layout
+
+  edges.add(new Edge(7,5,2));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  return edges;
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ [...]
+\end_layout
+
+\begin_layout Plain Layout
 
 }
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-} 
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-join(from,path,sortedPath); // ordina gli archi
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-print(sortedPath,sum); // mostra il cammino
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-}
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-} catch (Exception e) { e.printStackTrace(); }
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-}
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-private static ArrayList<Edge> getEdges() {
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-ArrayList<Edge> edges = new ArrayList<Edge>();
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(0,1,1));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(0,2,4));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(1,2,2));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(1,3,4));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(1,4,1));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(2,4,4));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(3,5,6));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(3,6,1));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(4,3,1));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(6,4,5));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(6,5,9));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(6,7,1));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-edges.add(new Edge(7,5,2));
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-return edges;
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-}
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[...]
-\end_layout
-
-\begin_layout Standard
-}
 \end_layout
 
 \begin_layout Standard
@@ -6717,546 +5432,188 @@ Per fare questo sono state create delle classi rappresentanti le azioni
 \end_layout
 
 \begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,showstringspaces=false,keywordstyle={\color{red}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
 class PickUp(Predicate):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-predicateName="pick-up"
+ predicateName="pick-up"
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-def __init__(self, block=None):
+ def __init__(self, block=None):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-super(PickUp, self).__init__([("block")])
+  super(PickUp, self).__init__([("block")])
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block = block
+  self.block = block
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[...]
+ [...]
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 class PutDown (Predicate):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-predicateName="put-down"
+ predicateName="put-down"
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-def __init__(self, block=None):
+ def __init__(self, block=None):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-super(PutDown, self).__init__([("block")])
+  super(PutDown, self).__init__([("block")])
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block = block
+  self.block = block
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[...]
+ [...]
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 class Stack (Predicate):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-predicateName="stack"
+ predicateName="stack"
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-def __init__(self, block1=None, block2=None):
+ def __init__(self, block1=None, block2=None):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-super(Stack, self).__init__([("block1"), ("block2")])
+  super(Stack, self).__init__([("block1"), ("block2")])
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block1 = block1
+  self.block1 = block1
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block2 = block2
+  self.block2 = block2
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[...]
+ [...]
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 class Unstack (Predicate):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-predicateName="unstack"
+ predicateName="unstack"
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-def __init__(self, block1=None, block2=None):
+ def __init__(self, block1=None, block2=None):
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-super(Unstack, self).__init__([("block1"), ("block2")])
+  super(Unstack, self).__init__([("block1"), ("block2")])
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block1 = block1
+  self.block1 = block1
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-self.block2 = block2
+  self.block2 = block2
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
+\begin_layout Plain Layout
+
+ [...]
+\end_layout
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-[…]
 \end_layout
 
 \begin_layout Standard
@@ -7281,140 +5638,118 @@ A questo punto, supponendo che siano stati creati due file (domain.pddl e
 \end_layout
 
 \begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,keywordstyle={\color{red}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
 handler = DesktopHandler(SPDDesktopService())
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 input_domain = PDDLInputProgram(PDDLProgramType.DOMAIN)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 input_problem= PDDLInputProgram(PDDLProgramType.PROBLEM)
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 input_domain.add_files_path("../domain.pddl")
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 input_problem.add_files_path("../p01.pddl")
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 handler.add_program(input_domain)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 handler.add_program(input_problem)
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 PDDLMapper.get_instance().register_class(PickUp)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 PDDLMapper.get_instance().register_class(PutDown)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 PDDLMapper.get_instance().register_class(Stack)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 PDDLMapper.get_instance().register_class(Unstack)
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 output = handler.start_sync()
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
 for obj in output.get_actions_objects():
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
+\begin_layout Plain Layout
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-if isinstance(obj, PickUp) | isinstance(obj, PutDown) | isinstance(obj,
- Stack) | isinstance(obj, Unstack) :
+ if isinstance(obj, PickUp) | isinstance(obj, PutDown) |
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
+\begin_layout Plain Layout
+
+ isinstance(obj, Stack) | isinstance(obj, Unstack) :
+\end_layout
+
+\begin_layout Plain Layout
+
+  print(obj)
+\end_layout
+
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-print(obj)
 \end_layout
 
 \begin_layout Standard
@@ -7607,8 +5942,8 @@ Aggiornare la sezione Applications Showcase in cui è presente la descrizione
 \end_layout
 
 \begin_layout Standard
-Oltre al sito internet abbiamo deciso di aggiungere la documentazione di
- EmbASP sul sito readthedocs.org.
+Per una documentazione più tecnica e dettagliata abbiamo deciso di usare
+ il sito readthedocs.org.
  Questo sito permette di “allegare” ad EmbASP una documentazione scritta
  attraverso il linguaggio reStructuredText, un noto linguaggio di formattazione
  del testo.
@@ -7617,17 +5952,8 @@ Oltre al sito internet abbiamo deciso di aggiungere la documentazione di
 zione.
  Ho provveduto a creare la documentazione di EmbASP attraverso il linguaggio
  reStructuredText e integrarla in readthedocs.org.
- La documentazione di EmbASP così generata è attualmente disponibile a questo
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "indirizzo"
-target "https://readthedocs.org/projects/embasp/"
-literal "false"
-
-\end_inset
-
-.
+ La documentazione così generata è attualmente disponibile sul sito internet
+ di EmbASP.
 \end_layout
 
 \begin_layout Subsection
@@ -7732,9 +6058,10 @@ nte incluse nel repository principale.
 Github, oltre ad offrire la possibilità di depositare il codice sorgente,
  permette anche di depositare le releases del software, attraverso un'interfacci
 a appositamente dedicata.
- La versione Java di EmbASP è rilasciata al pubblico attravero un file JAR,
- la versione Python attraverso un file Wheel e la versione C# attraverso
- un file DLL.
+ La versione Java di EmbASP è rilasciata al pubblico attravero un file JAR
+ per la piattaforma Desktop e un file AAR per la piattaforma Android, la
+ versione Python è rilasciata attraverso un file Wheel e la versione C#
+ attraverso un file DLL.
  Questi file contengono sia il codice sorgente delle versioni di EmbASP,
  sia il codice sorgente di ANTLR4, quindi sono pronte per essere usate e
  non necessitano di nient'altro.
@@ -7763,7 +6090,78 @@ Conclusioni
 \end_layout
 
 \begin_layout Standard
-Da fare
+Attraverso questo elaborato si è voluto mettere in risalto come la logica
+ abbia caratterizzato i linguaggi di programmazione per l'Intelligenza Artificia
+le.
+ Abbiamo visto come Prolog, uno dei primi linguaggi logici, tragga le sue
+ origini dalla logica proposizionale e dalla logica dei predicati, in particolar
+e dalla scoperta della doppia interpretazione della clausole di Horn.
+ Abbiamo visto come dalle strutture logiche di base del Prolog sia derivata
+ la attuale semantica ASP, e come essa sia particolarmente adatta nel campo
+ dell'AI.
+ Sono stati poi presentati i problemi di pianificazione, una componente
+ importante dell'AI.
+ Abbiamo visto come possono essere trattati attraverso il linguaggio PDDL
+ e come anch'esso sia caratterizzato dall'uso della logica dei predicati.
+\end_layout
+
+\begin_layout Standard
+È stato poi presentato EmbASP, un framework in grado di integrare programmi
+ scritti nei linguaggi ASP e PDDL in applicazione esterne, sviluppate in
+ linguaggi di programmazione ad oggetti.
+ Grazie ad esso è possibile aggiungere una componente intelligente all'interno
+ di applicazioni, facendo uso dei benefici che che la programmazione logica
+ offre nella risoluzione di un problema complesso.
+ Abbiamo esaminato la struttura di EmbASP, mettendo in luce come la risoluzione
+ di un programma logico avvenga tramite l'esecuzione di un solver, e come
+ EmbASP svolga una funzione di intermediazione tra l'applicazione e il solver.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ringraziamenti
+\end_layout
+
+\begin_layout Standard
+Desidero ringraziare tutti i docenti del corso di laurea in Informatica
+ dell'Università della Calabria per tutto quello che mi hanno insegnato
+ e per avermi fatto appassionare all'informatica, in particolar modo al
+ professor Francesco Calimeri per avermi dato l'opportunità di collaborare
+ con il team di EmbASP e redigere il presente elaborato di tesi.
+\end_layout
+
+\begin_layout Standard
+Ringrazio il dottor Stefano Germano per l'enorme disponibilità dimostrata
+ durante il periodo di tirocinio e per la sua costante presenza nello svolgiment
+o delle attività, grazie al quale ho avuto modo di imparare tanto.
+\end_layout
+
+\begin_layout Standard
+Ringrazio tutto il personale tecnico amministrativo del dipartimento di
+ Matematica e Informatica dell'Univeristà della Calabria per il loro costante
+ impegno di amministrazione, in particolar modo alla dottoressa Teresa Molinaro
+ per la sua cortesia e la sua disponibilità a risolvere i miei non pochi
+ problemi tecnici.
+\end_layout
+
+\begin_layout Standard
+Ringrazio tutti gli amici e compagni di studio di informatica per essermi
+ stati vicini in questi anni di studio, in particolar modo ad Artem e Ciccio
+ per la loro grande amicizia, e MariaConcetta per la sua amicizia e per
+ avermi incoraggiato e spronato a studiare sempre al meglio.
+\end_layout
+
+\begin_layout Standard
+Il ringraziamento più grande va a tutta la mia famiglia che mi ha sempre
+ sostenuto e incoraggiato, e senza la quale non ce l'avrei mai fatta.
+ Un grazie speciale va a mia madre, mio padre, i miei fratelli e mia nonna.
+ 
 \end_layout
 
 \begin_layout Standard

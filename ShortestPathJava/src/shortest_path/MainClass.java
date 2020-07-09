@@ -21,7 +21,7 @@ public class MainClass {
 		try {
 
 			Handler handler = new DesktopHandler(new DLV2DesktopService("executable/dlv2"));
-
+			
 			ASPMapper.getInstance().registerClass(Edge.class);
 			ASPMapper.getInstance().registerClass(Path.class);
 
