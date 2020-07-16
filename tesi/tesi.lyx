@@ -147,19 +147,9 @@ Corso di laurea Triennale in Informatica
 \paragraph_spacing double
 \align center
 
-\size giant
-EmbASP, un framework per l'integrazione della programmazione logica in sistemi
- esterni
-\end_layout
-
-\begin_layout Standard
-\align left
-
-\series bold
-\begin_inset space ~
-\end_inset
-
-
+\size huge
+EmbASP, un framework per l'integrazione di moduli di ragionamento dichiarativo
+ in sistemi esterni
 \end_layout
 
 \begin_layout Standard
@@ -976,6 +966,238 @@ Dott.
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/rhode/Documenti/documenti_consegna/firma.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1039,14 +1261,13 @@ ità umane.
 \end_layout
 
 \begin_layout Standard
-Il fermento attuale attorno a questa disciplina si spiega con la maturità
- tecnologica raggiunta sia nel calcolo computazionale sia nella capacità
- di analisi in real-time di enormi quantità di dati e di qualsiasi forma.
- L’interesse della comunità scientifica per l’Intelligenza Artificiale ha
- però origini molto lontane: il primo vero progetto di Intelligenza Artificiale
- (ormai nota con l’acronimo AI - Artificial Intelligence) risale al 1943
- quando i due ricercatori statunitensi Warren McCulloch e Walter Pitts proposero
- al mondo scientifico il primo neurone artificiale.
+L'avanzamento tecnologico e i risultati di ricerca hanno reso l'Intelligenza
+ Artificiale (ormai nota con l’acronimo AI - Artificial Intelligence) una
+ disciplina diffusa e di forte impatto anche sull'opinione pubblica.
+ L’interesse della comunità scientifica per l’AI ha però origini molto lontane:
+ il primo vero progetto di AI risale al 1943 quando i due ricercatori statuniten
+si Warren McCulloch e Walter Pitts proposero al mondo scientifico il primo
+ neurone artificiale.
  Ne seguì, nel 1949, il libro 
 \begin_inset Quotes fld
 \end_inset
@@ -1227,10 +1448,11 @@ Struttura della tesi
 \begin_layout Standard
 Lo scopo di questa tesi è la presentazione di EmbASP, un framework sviluppato
  dal dipartimento di Matematica e Informatica dell'Università della Calabria,
- che permette l'integrazione della programmazione logica in sistemi esterni.
- Grazie ad esso è possibile aggiungere una componente intelligente all'interno
- di applicazioni, facendo uso dei benefici che che la programmazione logica
- offre nella risoluzione di un problema complesso.
+ che permette l'integrazione di moduli di ragionamento dichiarativo in sistemi
+ esterni.
+ Grazie ad esso è possibile creare applicazioni che contengono programmi
+ logici al loro interno, facendo uso dei benefici che ciò comporta nella
+ risoluzione di un problema complesso.
  Verranno esposti i principi fondamentali dei due linguaggi logici attualmente
  supportati da EmbASP (ASP e PDDL) e verrà esposto come viene fatta la loro
  integrazione nei tre linguaggi di programmazione in cui il framework è
@@ -1239,34 +1461,34 @@ Lo scopo di questa tesi è la presentazione di EmbASP, un framework sviluppato
 \end_layout
 
 \begin_layout Itemize
-Nel Capitolo 2 verrà esposta la programmazione ASP (Answer Set Programming),
+Nel Capitolo 2 esponiamo la programmazione ASP (Answer Set Programming),
  partendo dai principi base della programmazione logica.
- Sarà esposto il linguaggio Prolog, che rappresenta le origini del linguaggio
+ Esponiamo poi il linguaggio Prolog, che rappresenta le origini del linguaggio
  ASP.
- Sarà in seguito analizzata la semantica del liguaggio ASP e saranno introdotte
- la programmazione logica disgiuntiva e le principali estenzioni sintattiche.
+ Analizziamo infine la semantica del liguaggio ASP e introduciamo la programmazi
+one logica disgiuntiva e le principali estenzioni sintattiche.
 \end_layout
 
 \begin_layout Itemize
-Nel Capitolo 3 varrà esposta la programmazione PDDL (Planning Domain Definition
+Nel Capitolo 3 esponiamo la programmazione PDDL (Planning Domain Definition
  Language), introducendo i problemi di pianificazione e presentando poi
  STRIPS, un linguaggio basato sulla logica in grado di affrontare tali problemi.
- Verrà poi esposto come PDDL implementa STRIPS e come PDDL2.1 favorisce la
- pianificazione con vincoli sulle risorse.
+ Trattiamo poi come PDDL implementa STRIPS e come PDDL2.1 favorisce la pianificaz
+ione con vincoli sulle risorse.
 \end_layout
 
 \begin_layout Itemize
-Nel capitolo 4 sarà presentato EmbASP.
- Ne sarà analizzata la struttura e verranno esposti degli esempi pratici
- del suo funzionamento.
+Nel capitolo 4 presentiamo EmbASP.
+ Ne analizziamo la struttura e le funzionalità che offre, e ne presentiamo
+ degli esempi pratici del suo funzionamento.
 \end_layout
 
 \begin_layout Itemize
-Nel capitolo 5 verranno esposte le principali attività effettuate durante
- il periodo di tirocinio da me svolto presso il dipartimento di Matematica
- e Informatica dell'Università della Calabria, durante il quale ho avuto
- l'opportunità di collaborare con alcuni membri del dipartimento per contribuire
- all'evoluzione di EmbASP.
+Nel capitolo 5 tratteremo le principali attività effettuate durante il periodo
+ di tirocinio da me svolto presso il dipartimento di Matematica e Informatica
+ dell'Università della Calabria, durante il quale ho avuto l'opportunità
+ di collaborare con alcuni membri del dipartimento per contribuire all'evoluzion
+e di EmbASP.
 \end_layout
 
 \begin_layout Standard
@@ -3212,6 +3434,28 @@ Notiamo che A1 è inammissibile perché la funzione #count ritorna il valore
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esistono molte altre notevoli estenzioni del linguaggio ASP, presenti in
+ varie pubblicazioni scientifiche internazionali.
+ Per approfondimenti riguardo le più recenti estenzioni invito a consultare
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-7"
+literal "false"
+
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -4570,23 +4814,20 @@ Presentazione
 
 \begin_layout Standard
 EmbASP è un framework sviluppato dal Dipartimento di Matematica e Informatica
- dell’Università della Calabria che supporta l’integrazione delle programmazione
- logica in sistemi esterni.
- Esso cioè consente la creazione di applicazioni in cui sono trattati problemi
- complessi, usando la programmazione logica per la loro risoluzione.
- L'utilizzo di linguaggi logici all'interno di applicazioni generiche scritte
- il linguaggi di programmazione ad oggetti, permette di inserire al loro
- interno una componente intelligente, integrando maccanismi di Intelligenza
- Artificiale in applicazioni normalmente prive.
+ dell’Università della Calabria che supporta l’integrazione di moduli di
+ ragionamento dichiarativo in sistemi esterni.
+ Grazie ad esso è possibile creare applicazioni che contengono programmi
+ logici al loro interno, facendo uso dei benefici che ciò comporta nella
+ risoluzione di un problema complesso.
  Questo permette di modellare il problema in maniera molto intuitiva, affidando
  il compito di risolverlo al sistema, e lasciando al programmatore il solo
  compito di formularlo.
  Problemi complessi che normalmente richiederebbero algoritmi di alto livello
  per essere risolti, possono così essere dichiarati e risolti in maniera
  semplice e naturale.
- L’integrazione della programmazione logica avviene attraverso l’esecuzione
- di un solver, uno strumento informatico in grado di risolvere il problema
- logico.
+ L’integrazione dei moduli di ragionamento dichiarato avviene attraverso
+ l’esecuzione di un solver, uno strumento informatico in grado di risolvere
+ il problema logico.
  Dato in input il programma, il solver lo risolve e comunica in output la
  soluzione.
  EmbASP si occupa di creare l’input rappresentante il programma logico e
@@ -5882,10 +6123,10 @@ Documentazione
 Una delle attività più importanti in questo settore riguarda la creazione
  di una documentazione chiara e esaustiva del software, che sia in grado
  di spiegare all'utente la sua struttura e il suo funzionamento.
- EmbASP ha un sito internet, disponibile a questo 
+ EmbASP ha un sito internet, disponibile a questo indirizzo 
 \begin_inset CommandInset href
 LatexCommand href
-name "indirizzo"
+name "https://www.mat.unical.it/calimeri/projects/embasp/"
 target "https://www.mat.unical.it/calimeri/projects/embasp/"
 literal "false"
 
@@ -5952,8 +6193,53 @@ Per una documentazione più tecnica e dettagliata abbiamo deciso di usare
 zione.
  Ho provveduto a creare la documentazione di EmbASP attraverso il linguaggio
  reStructuredText e integrarla in readthedocs.org.
- La documentazione così generata è attualmente disponibile sul sito internet
+ La documentazione così generata è attualmente accessibile dal sito internet
  di EmbASP.
+ La documentazione si divide in due parti: "documentazione" ed "esempi".
+ Nella sezione "documentazione" troviamo una descrizione dettagliata delle
+ 3 implementazioni, con vari dettagli tecnici riguardanti il linguaggio
+ e una descrizione più dettagliata riguardo le classi appartenenti al framework.
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/svg/class_diagram_java_v6.svg
+	display false
+	scale 37
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nella sezione "esempi" troviamo alcuni esempi pratici del funzionamento
+ di EmbASP.
+ Sono presenti un esempio per il linguaggio ASP per ognuna delle tre implementaz
+ioni su una piattaforma Desktop (cammino-minimo), un esempio per il linguaggio
+ PDDL per ognuna delle tre implementazioni su una piattaforma Desktop (blocks-wo
+rld) e un esempio per la piattaforma Android per il linguaggio ASP solo
+ nella implementazione Java.
+ In tutta la documentazione, ogni classe presente può essere analizzata
+ in dettaglio, grazie all'integrazione di Doxygen.
+ Doxygen offre una visualizzazione in formato HTML della descrizione di
+ ogni classe presente in EmbASP, analizzandone in dettaglio i campi e i
+ metodi.
+ Permette anche di visualizzare direttamente il codice sorgente, per ulteriori
+ dettagli implementativi.
+\end_layout
+
+\begin_layout Standard
+La documentazione creata offre quindi diversi gradi di dettaglio.
+ Sul sito internet è presente solo l'architettura generale del framework,
+ con una descrizione dei moduli in cui è diviso.
+ Sul sito è presente il collegamento alla documentazione su readthedocs.org,
+ nel quale troviamo una descrizione più dettagliata delle implementazioni
+ e degli esempi del suo funzionamento.
+ In esso troviamo anche la documentazione Doxygen in cui è presente una
+ descrizione di ogni classe di ogni implementazione, e la possibilità di
+ visualizzare direttamente il codice sorgente.
 \end_layout
 
 \begin_layout Subsection
@@ -6066,10 +6352,10 @@ a appositamente dedicata.
  sia il codice sorgente di ANTLR4, quindi sono pronte per essere usate e
  non necessitano di nient'altro.
  Le releases, il codice sorgente e le risorse di EmbASP sono disponibile
- nel repository Github di EmbASP al seguente 
+ nel repository Github di EmbASP al seguente indirizzo 
 \begin_inset CommandInset href
 LatexCommand href
-name "indirizzo"
+name "https://github.com/DeMaCS-UNICAL/EmbASP"
 target "https://github.com/DeMaCS-UNICAL/EmbASP"
 literal "false"
 
@@ -6241,6 +6527,21 @@ literal "false"
 
 Davide Dell'Anna (Università degli Studi di Torino): Un approccio mixed-initiati
 ve per la pianificazione con vincoli su risorse consumabili
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+literal "false"
+
+\end_inset
+
+ Francesco Calimeri, Giovambattista Ianni, Nicola Leone, Francesco Ricca
+ (Università della Calabria), Wolfgang Faber (Institut für Angewandte Informatik
+), Martin Gebser (Alpen-Adria-Universität), Roland Kaminski, Torsten Schaub
+ (Institute of Computer Science, University of Potsdam), Thomas Krennwallner
+ (XIMES GmbH): ASP-Core-2.03c
 \end_layout
 
 \end_body
