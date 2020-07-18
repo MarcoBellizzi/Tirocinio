@@ -144,6 +144,14 @@ Corso di laurea Triennale in Informatica
 \end_layout
 
 \begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Tesi di Laurea
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing double
 \align center
 
@@ -1245,23 +1253,11 @@ LatexCommand tableofcontents
 Introduzione
 \end_layout
 
-\begin_layout Subsection
-Introduzione all'Intelligenza Artificiale
-\end_layout
-
 \begin_layout Standard
-Cos’è l’Intelligenza Artificiale? In modo semplicistico potremmo definire
- l’Intelligenza Artificiale come l’abilità di un sistema tecnologico di
- risolvere problemi o svolgere compiti e attività tipici della mente e dell’abil
-ità umane.
- Guardando al settore informatico, potremmo identificare l’Intelligenza
- Artificiale come la disciplina che si occupa di realizzare macchine (hardware
- e software) in grado di “agire” autonomamente (risolvere problemi, compiere
- azioni, ecc.).
-\end_layout
-
-\begin_layout Standard
-L'avanzamento tecnologico e i risultati di ricerca hanno reso l'Intelligenza
+Potremmo identificare l’Intelligenza Artificiale come la disciplina che
+ si occupa di realizzare macchine (hardware e software) in grado di “agire”
+ autonomamente (risolvere problemi, compiere azioni, ecc.).
+ L'avanzamento tecnologico e i risultati di ricerca hanno reso l'Intelligenza
  Artificiale (ormai nota con l’acronimo AI - Artificial Intelligence) una
  disciplina diffusa e di forte impatto anche sull'opinione pubblica.
  L’interesse della comunità scientifica per l’AI ha però origini molto lontane:
@@ -1317,57 +1313,6 @@ macchina di Turing
 \end_layout
 
 \begin_layout Standard
-Prendendo come base di partenza il funzionamento del cervello umano (pur
- sapendo che ancora oggi non se ne comprende ancora a fondo l’esatto meccanismo)
-, un'Intelligenza Artificiale dovrebbe saper compiere alcune azioni/funzioni
- tipiche dell’uomo:
-\end_layout
-
-\begin_layout Itemize
-agire umanamente (cioè in modo indistinto rispetto ad un essere umano);
-\end_layout
-
-\begin_layout Itemize
-pensare umanamente (risolvendo un problema con funzioni cognitive);
-\end_layout
-
-\begin_layout Itemize
-pensare razionalmente (sfruttando cioè la 
-\emph on
-logica
-\emph default
- come fa un essere umano);
-\end_layout
-
-\begin_layout Itemize
-agire razionalmente (avviando un processo per ottenere il miglior risultato
- atteso in base alle informazioni a disposizione, che è ciò che un essere
- umano, spesso anche inconsciamente, fa d’abitudine).
-\end_layout
-
-\begin_layout Standard
-Queste considerazioni sono di assoluta importanza perché permettono di classific
-are l’AI in due grandi “filoni” di indagine:
-\end_layout
-
-\begin_layout Itemize
-Intelligenza Artificiale debole (weak AI).
- Identifica sistemi tecnologici in grado di simulare alcune funzionalità
- cognitive dell’uomo senza però raggiungere le reali capacità intellettuali
- tipiche dell’uomo (parliamo di programmi matematici di problem-solving
- con cui si sviluppano funzionalità per la risoluzione dei problemi o per
- consentire alle macchine di prendere decisioni); 
-\end_layout
-
-\begin_layout Itemize
-Intelligenza Artificiale forte (strong AI).
- In questo caso si parla di “sistemi sapienti” (alcuni scienziati si spingono
- a dire addirittura “coscienti di sé”) che possono quindi sviluppare una
- propria intelligenza senza emulare processi di pensiero o capacità cognitive
- simili all’uomo ma sviluppandone una propria in modo autonomo.
-\end_layout
-
-\begin_layout Standard
 Lo sviluppo dell’Intelligenza Artificiale ha avuto molta influenza in diversi
  campi dell’Informatica, poichè la realizzazione dei sistemi di AI ha portato
  allo sviluppo di tecniche e strumenti innovativi.
@@ -1396,38 +1341,19 @@ ando nel linguaggio di rappresentazione le conoscenze sul dominio e offrendo
 \end_layout
 
 \begin_layout Standard
-In genere un elaboratore offre la possibilità di usare uno o più linguaggi
- di comandi (o linguaggi macchina) ed uno o più linguaggi di programmazione.
- Questi due tipi di linguaggi hanno, nella maggior parte dei casi, scopi
- distinti: i linguaggi di comandi vengono utilizzati per la creazione, l’esecuzi
-one e la gestione dei programmi; i linguaggi di programmazione vengono utilizzat
-i dall’utente per scrivere i programmi che risolvono i problemi specifici
- alle sue applicazioni.
- La distinzione tra linguaggio di comandi e linguaggio di programmazione
- deriva da esigenze di costruzione piuttosto che da un reale vantaggio per
- l’utente.
- Infatti, da un punto di vista realizzativo, è conveniente separare le operazion
-i che consentono l’utilizzo dell’elaboratore (linguaggio di comandi), dal
- linguaggio di programmazione, che permette la specifica di operazioni di
- carattere più generale.
- I linguaggi di programmazione evoluti che sono stati introdotti a partire
+I linguaggi di programmazione evoluti che sono stati introdotti a partire
  dagli anni ’50 sono detti linguaggi ad alto livello; essi sono stati progettati
  con lo scopo di rendere il linguaggio indipendente dalle caratteristiche
  dell’elaboratore e più vicino alla logica del programmatore.
  I programmmi scritti in un linguaggio ad alto livello non sono direttamente
  eseguibili dall’elaboratore, ma devono essere prima tradotti da un interprete
  o da un compilatore nel linguaggio macchina dell’elaboratore.
- Osserviamo inoltre che i linguaggi ad alto livello consentono di utilizzare
- lo stesso programma anche su macchine di tipo diverso.
-\end_layout
-
-\begin_layout Standard
-Linguaggi di questo tipo sono detti linguaggi imperativi o anche linguaggi
+ Linguaggi di questo tipo sono detti linguaggi imperativi o anche linguaggi
  di Von Neumann, perchè fanno riferimento all’omonimo modello di calcolo.
- Come i linguaggi di basso livello, essi fanno riferimento al modello di
- esecuzione delle istruzioni fornito dall’elaboratore: un programma è cioè
- costituito da una sequenza di istruzioni il cui effetto è quello di modificare
- il contenuto della memoria dell’elaboratore.
+ Essi fanno riferimento al modello di esecuzione delle istruzioni fornito
+ dall’elaboratore: un programma è cioè costituito da una sequenza di istruzioni
+ il cui effetto è quello di modificare il contenuto della memoria dell’elaborato
+re.
  I linguaggi per l’AI appartengono ad altre categorie di linguaggi di programmaz
 ione che prescindono dal modello di funzionamento dell’elaboratore, cercando
  di fornire un mezzo espressivo per specificare il compito da eseguire in
@@ -1450,7 +1376,7 @@ Lo scopo di questa tesi è la presentazione di EmbASP, un framework sviluppato
  dal dipartimento di Matematica e Informatica dell'Università della Calabria,
  che permette l'integrazione di moduli di ragionamento dichiarativo in sistemi
  esterni.
- Grazie ad esso è possibile creare applicazione che contengono programmi
+ Grazie ad esso è possibile creare applicazioni che contengono programmi
  logici al loro interno, facendo uso dei benefici che ciò comporta nella
  risoluzione di un problema complesso.
  Verranno esposti i principi fondamentali dei due linguaggi logici attualmente
