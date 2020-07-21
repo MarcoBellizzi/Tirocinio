@@ -970,249 +970,11 @@ Dott.
 \align left
 
 \series bold
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset Graphics
-	filename /home/rhode/Documenti/documenti_consegna/firma.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/firme.png
 	display false
-	scale 70
+	scale 60
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align left
-
-\series bold
-\begin_inset space ~
 \end_inset
 
 
@@ -1228,6 +990,15 @@ Anno Accademico 2019/2020
 
 \begin_layout Standard
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/ID-176239-Bellizzi Marco.png
+
 \end_inset
 
 
@@ -1348,8 +1119,9 @@ I linguaggi di programmazione evoluti che sono stati introdotti a partire
  I programmmi scritti in un linguaggio ad alto livello non sono direttamente
  eseguibili dall’elaboratore, ma devono essere prima tradotti da un interprete
  o da un compilatore nel linguaggio macchina dell’elaboratore.
- Linguaggi di questo tipo sono detti linguaggi imperativi o anche linguaggi
- di Von Neumann, perchè fanno riferimento all’omonimo modello di calcolo.
+ Linguaggi di questo tipo sono anche detti linguaggi imperativi o anche
+ linguaggi di Von Neumann, perchè fanno riferimento all’omonimo modello
+ di calcolo.
  Essi fanno riferimento al modello di esecuzione delle istruzioni fornito
  dall’elaboratore: un programma è cioè costituito da una sequenza di istruzioni
  il cui effetto è quello di modificare il contenuto della memoria dell’elaborato
