@@ -98,7 +98,7 @@ figs-within-sections
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/logo.png
+	filename ../Documentazione/immagini/logo.png
 	display false
 	scale 130
 
@@ -109,7 +109,7 @@ figs-within-sections
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/dipartimento.png
+	filename ../Documentazione/immagini/dipartimento.png
 	display false
 	scale 80
 
@@ -971,7 +971,7 @@ Dott.
 
 \series bold
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/firme.png
+	filename ../Documentazione/immagini/firme.png
 	display false
 	scale 60
 
@@ -997,8 +997,16 @@ Anno Accademico 2019/2020
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/ID-176239-Bellizzi Marco.png
+	filename ../Documentazione/immagini/ID-176239-Bellizzi Marco.png
+	display false
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -1997,7 +2005,7 @@ e l’albero e-o risultante è il seguente:
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Immagini/albero.png
+	filename ../Documentazione/immagini/albero.png
 	display false
 	scale 60
 
@@ -4536,9 +4544,9 @@ EmbASP è un framework sviluppato dal Dipartimento di Matematica e Informatica
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/attività.png
+	filename ../Documentazione/immagini/attività.png
 	display false
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -4580,9 +4588,9 @@ EmbASP è diviso in 4 moduli: Base, Platform, Languages e Specializations.
 
 
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
+	filename ../Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
 	display false
-	scale 30
+	scale 31
 
 \end_inset
 
@@ -4701,7 +4709,7 @@ Di seguito sono mostrati due esempi del funzionamento di EmbASP.
 
 
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/shortest-path.png
+	filename ../Documentazione/immagini/shortest-path.png
 	display false
 	scale 25
 
@@ -5342,7 +5350,7 @@ Il secondo esempio riguarda il problema blocks-world, ed è stato usato il
 
 
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/blocks-world.png
+	filename ../Documentazione/immagini/blocks-world.png
 	display false
 	scale 60
 
@@ -5902,9 +5910,9 @@ zione.
 \begin_layout Standard
 \align left
 \begin_inset Graphics
-	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/svg/class_diagram_java_v6.svg
+	filename ../Documentazione/diagrammi_delle_classi/png/class_diagram_java_v6.png
 	display false
-	scale 37
+	scale 27
 
 \end_inset
 

@@ -59,7 +59,7 @@ public class MainClass {
 					}
 				}
 
-				sortedPath = new ArrayList<Integer>();    // edges in the shorted path (sorted)
+				sortedPath = new ArrayList<Integer>();    // edges in the shortest path (sorted)
 				sortedPath.add(from);
 				
 				join(from,path,sortedPath);   // sorts the edges

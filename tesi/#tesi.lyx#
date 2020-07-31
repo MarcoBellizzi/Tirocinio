@@ -4546,7 +4546,7 @@ EmbASP è un framework sviluppato dal Dipartimento di Matematica e Informatica
 \begin_inset Graphics
 	filename ../Documentazione/immagini/attività.png
 	display false
-	scale 58
+	scale 50
 
 \end_inset
 
@@ -4588,9 +4588,9 @@ EmbASP è diviso in 4 moduli: Base, Platform, Languages e Specializations.
 
 
 \begin_inset Graphics
-	filename ../Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/png/abstract_architecture.png
 	display false
-	scale 31
+	scale 30
 
 \end_inset
 
@@ -4709,7 +4709,7 @@ Di seguito sono mostrati due esempi del funzionamento di EmbASP.
 
 
 \begin_inset Graphics
-	filename ../Documentazione/immagini/shortest-path.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/shortest-path.png
 	display false
 	scale 25
 
@@ -5350,7 +5350,7 @@ Il secondo esempio riguarda il problema blocks-world, ed è stato usato il
 
 
 \begin_inset Graphics
-	filename ../Documentazione/immagini/blocks-world.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/immagini/blocks-world.png
 	display false
 	scale 60
 
@@ -5910,9 +5910,9 @@ zione.
 \begin_layout Standard
 \align left
 \begin_inset Graphics
-	filename ../Documentazione/diagrammi_delle_classi/png/class_diagram_java_v6.png
+	filename /home/rhode/Scrivania/Tirocinio/Documentazione/diagrammi_delle_classi/svg/class_diagram_java_v6.svg
 	display false
-	scale 27
+	scale 37
 
 \end_inset
 
